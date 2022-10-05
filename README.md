@@ -1,8 +1,14 @@
-![McGraths Logo](#)
+![McGraths Logo](https://)
 
-# Connect Consulting
 
-For my **Portfolio 5 Project** on the **Code Institute's Diploma in Software Development (E-commerce Applications)** course I have created
+# McGraths Sweet Shop
+
+For my **Portfolio  Project** on the **Code Institute's Diploma in Software Development (E-commerce Applications)** course I have created an online e-commerce Website for a sweet shop called McGraths.  
+
+McGraths is an old fashioned type sweet shop that sells sweets, ice-cream and also stocks cake making supplies.  It’s main objective is to provide a service that was found  prior to the 1990's where children could go in and pick a variety of sweets which were then weighed and paid for.   McGraths stock sweets that are not usually found in large supermakets these days so the novelty of buying old style sweets is not only for the children but also for their parents who remember these sweets when they were children.  
+
+From the website McGraths also sell cake supplies.  Their main objective here is to provide a variety of cake supplies for making occasion cakes such as birthday and wedding cakes.  
+
 
 Link to the deployed app is [here](#).
 
@@ -40,7 +46,7 @@ For better organisation I used both the Table View and Kanban view. The Kanban v
 
 <details open>
 <summary>Kanban View</summary> 
-<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1663778544/connectconsulting/readme/kanban-view_zon2gk.png"></p>
+<p align="center"><img src=#"></p>
 
 </details>
 
@@ -48,7 +54,7 @@ The table view allowed me to view all of the issues in each section clearly.
 
 <details open>
 <summary>Table View</summary> 
-<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1663778544/connectconsulting/readme/table-view_udld80.png"></p>
+<p align="center"><img src="#"></p>
 
 </details>
 
