@@ -1,108 +1,296 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![McGraths Logo](#)
 
-Welcome USER_NAME,
+# Connect Consulting
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+For my **Portfolio 5 Project** on the **Code Institute's Diploma in Software Development (E-commerce Applications)** course I have created
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Link to the deployed app is [here](#).
 
-## Gitpod Reminders
+![alt text](#)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+-----
 
-`python3 -m http.server`
+## Objective?
 
-A blue button should appear to click: _Make Public_,
+-----
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: _Make Public_,
+## User Experience
 
-Another blue button should appear to click: _Open Browser_.
+Site Aims
+1. To create a website to...
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+### Agile Methodology - UX
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+To plan this project I used agile methodology.  This was done using Github and the Project Board.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+Link to the project app is [here](https://github.com/users/rockymiss/projects/7).
 
-------
+By using the Kanban board and in particular Milestones I was able to divide the project into difference epics such as:
 
-## Release History
+1. Development
+1. Design
+1. Content
+1. Authoristation
+1. Comments
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+For better organisation I used both the Table View and Kanban view. The Kanban view meant I could put each issue into a different section, Backlog, In progress, Completed and Wishlist.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+<details open>
+<summary>Kanban View</summary> 
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1663778544/connectconsulting/readme/kanban-view_zon2gk.png"></p>
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+</details>
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+The table view allowed me to view all of the issues in each section clearly.  
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+<details open>
+<summary>Table View</summary> 
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1663778544/connectconsulting/readme/table-view_udld80.png"></p>
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+</details>
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+Issues were created by way of User Stories or Admin User Stories and any other elements required to complete the database.  While working on a particular user story they were moved into ‘In progress’.  Once completed they were moved to ‘completed’.  This gave a better view of what was to be completed and what had already been completed.  As work was committed to the github repository each issue was marked completed which automatically moved to the ‘completed’ section on the Kanban Board.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### From a User's Perspective
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+#### Admin User's Perspective
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+1. As an Admin User I can ?? so that I can ??
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+#### User's Perspective
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+1. As a user I can ?? so that I can ??
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Wireframes
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+Wireframes below.
 
-------
+<details open>
+<summary>Wireframes</summary> 
+<p align="center"><img src="#"></p>
 
-## FAQ about the uptime script
+<p align="center"><img src="#"></p>
 
-**Why have you added this script?**
+<p align="center"><img src="#"></p>
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+</details>
 
-**How will this affect me?**
+## Database Schema
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+<p align="center"><img src="#"></p>
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## Site Structure 
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+The website consists of ? pages
 
-**So….?**
+## Design
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### Colours
 
-**Can I opt out?**
+Colour info here
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+![Colour Palette](#)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+![Gradient](#)
 
-**Anything more?**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### Typography
 
----
+font info here
 
-Happy coding!
+
+## Features
+
+### Existing Features
+
+#### Navigation
+
+Navigation appears on each page.  The design remains consistent throughout, however the menu options change depending of whether a user or admin user is logged in or out. 
+
+<details open>
+<summary>Navigation</summary> 
+<p align="center"><img src="#"></p>
+
+<p align="center"><img src="#"></p>
+
+<p align="center"><img src="#"></p>
+
+<p align="center"><img src="#"></p>
+
+</details>
+
+
+#### Home Page
+
+This page is the landing page and is the first page that users will see when the site loads.  The page has a logo clearly showing that the website is about hospitalilty specialists.  Information about what the company does is shown on this page.
+
+Page info
+
+<details open>
+<summary>Image</summary> 
+<p align="center"><img src="#"></p>
+
+<p align="center"><img src="#"></p>
+</details>
+
+
+#### Page Name
+
+Page info
+
+<details open>
+<summary>Image</summary> 
+<p align="center"><img src="#"></p>
+
+<p align="center"><img src="#"></p>
+</details>
+
+-----
+
+## Future Implementation
+
+-----
+
+## Technologies Used
+
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5) to provide content and structure to the website.
+- [CSS3](https://en.wikipedia.org/wiki/CSS) provides styles for the website.
+- [Python](https://www.python.org/) to provide functionality to the website. Libraries used can be found in [requirements.txt](requirements.txt)
+- [Django](https://docs.djangoproject.com/en/4.1/)
+- [Javascript](https://www.javascript.com/) for timeout functions on messages.
+- [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) for layout and style of templates.
+- [a11y](https://color.a11y.com/Contrast/) to test contrast.
+- [TinyPNG](https://tinypng.com/) to compress images.
+- [Cloudinary](https://cloudinary.com/) to store images.
+- [GitPod](https://www.gitpod.io/) to create and edit the website.
+- [GitHub](https://github.com/) to host website
+- [GitBash](https://www.atlassian.com/git/tutorials/git-bash#:~:text=What%20is%20Git%20Bash%3F,operating%20system%20through%20written%20commands.) to push changes to GitHub.
+- [Heroku](https://id.heroku.com/login) to deploy the website.
+- [Heroku PostgreSQL](https://id.heroku.com/login) to database during development and deployment
+- [Balsamiq](https://balsamiq.com/) to create wireframes.
+
+-----
+## Resources 
+
+- [Code Institute](https://codeinstitute.net/ie/) for course materials, tutor and mentor support, Boutique Ado
+- [Slack](https://slack.com/intl/en-ie/) in particular the Code Institute Slack Community.
+- [W3schools](https://www.w3schools.com/)
+- [Django](https://docs.djangoproject.com/en/4.1/)
+- [Pexels](https://www.pexels.com/) for images
+- [Stack OverFlow](https://stackoverflow.com/) 
+- [Dango Central](https://djangocentral.com/building-a-blog-application-with-django/)
+
+-----
+
+## Testing
+
+I have created a seperate md file for [Testing](TESTING.md).
+
+## Version Control
+
+
+### Git and GitHub 
+
+Local repository and IDE used: GitPod
+Remote repository used: GitHub
+
+Steps followed: 
+- I created a new public repository on GitHub using the Code Institute template.
+- I then created a workspace and started coding on GitPod. 
+- All relevant files were created. 
+- To save my work safely I continued to use the terminal consistently by using: 
+    - **git add .** to add work to git
+    - **git commit -m""** to commit the work 
+    - **git push** to update work to GitHub 
+
+
+### Deployment to Heroku
+
+Deployment is done after Creating the Django Project in your virtual environment.  To create the project the following need to be carried out:-
+
+| Steps | **Notes/Code**
+|:-------:|:--------|
+| Install Django and gunicorn| pip install django gunicorn
+| Install any supporting libraries| pip install dj_database_url psycopg2
+| Create requirements.txt| pip3 freeze --local > requirements.txt
+| Create Django Project  | django-admin startproject **project name**
+| Create apps | python manage.py startapp **app name**
+| Add app to list of installed apps in settings.py ||
+| Make migrations | python3 manage.py makemigrations
+| Migrate Changes | python3 manage.py migrate
+| Test server locally | python3 manage.py runserver
+| Procfile | python run.py > Procfile
+| Push changes to github repository | git add. git commit and git push
+| Create new app on Heroku | https://dashboard.heroku.com/
+
+
+1. Click on "Resources tab" underneath the "Add-ons" section.
+1. Search of Heroku Postgres and attach it to your app.
+1. Click on "Settings" tab and open "Config Vars" where you will see that a new Postgrest database URL has been automatically applied.
+1. The following environment variables should be included:
+
+|  | **Environment Variables**
+|:-------:|:--------|
+| DATABASE_URL ||
+| CLOUDINARY_URL| Found on cloudinary dashboard|
+| PORT | 8000|
+| SECRET_KEY |: Key or your choice|
+| DEBUG | Set to True|
+| DISABLE_COLLECTSTATIC | 1|
+
+
+
+1. Update the settings.py file in particular change the debug setting, DEBUG = False to DEBUG = True
+1. In Heroku settings, config vars change the DISABLE_COLLECTSTATIC value from 1 to 0.
+1. Click the deploy tab in Heroku.
+1. In deployment method select 'Github' and click the 'connect to Github button.
+1. Searh for your repository name.
+1. Deploy Branch. 
+
+
+  ### Fork a Repository: 
+        
+    A copy can be made of a repository by forking the repository.  The copy can then be viewed and changed without affecting the original repository. 
+    
+      - From your list of repositories select the repository you want to fork.
+      - On the top of the page to the right had side you will see a fork image.  Click on the button to create a copy. 
+
+      
+  <details open>
+<summary>Fork Preview Image</summary>
+<br>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1642789173/kitchen-nippers/fork-preview_xraeo2.png"></p>
+
+</details>
+
+### Clone a Repository:
+
+    Cloning this project from GitHub can be done by following these steps: 
+    
+      - From your list of repositories select the repository you want to deploy.
+      - Click on the code tabe. 
+      - Click on the clipboard icon to copy the URL.  
+      - Open Git Bash in your IDE. 
+      - Change the current working directory to the location you want to place the clone. 
+      - Type git clone and paste the copied URL.  
+      - Press enter for the clone to be created. 
+
+  <details open>
+<summary>Clone Preview Image</summary>
+<br>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1642790166/kitchen-nippers/clone-preview_kkvsfx.png"></p>
+
+</details>
+<br>
+
+-----
+## Acknowledegments/Conclusion
+
+
+
+Rachel Rock 2022
