@@ -106,7 +106,7 @@ Colour info here
 
 ### Typography
 
-font info here
+Clean font - Albert Sans - content text weight 400 headings weight 700 bold
 
 
 ## Features
