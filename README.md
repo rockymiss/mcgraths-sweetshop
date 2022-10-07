@@ -158,6 +158,54 @@ Page info
 
 -----
 
+## SEO & Marketing
+
+-----
+
+### Marketing
+
+Questions that I asked myself before starting this website:
+
+
+1. Who are your users?
+
+1. Which online platforms would you find lots of your users?
+
+1. Would your users use social media? If yes, which platforms do you think yuou would find them on?
+
+1. What do your users need?  Could you meet that need with useful content? If yes, how could you bets deliver that content to them?
+
+1. Would your business run sales or offer discounts?  How do you think your users would most like to hear about these offers?
+
+1. What are the goals of your business?  Which marketing strategies would offer the best ways to meet those goals?
+
+1. Would your business have a budget to spend on advertising?  Or woudl it need to work with free or low cost options to market itself?
+
+
+### Keywords
+
+After brainstorming keywords for this website I used the following:
+
+### Content
+
+Questions I asked myself in relation to content?
+
+1. What do your users need?
+
+1. What information and features can you provide to meet those needs?
+
+1. How can you make the information easy to understand?
+
+1. How can you demonstrate expertise, authoritativeness and trustworthiness in your content?
+
+1. Would there be other pages within your own site you could link to from your chosen page?
+
+1. Are there opportunities to link back to external websites that already rank highly on Google?
+
+1. How can you help users discover other relevant parts of your web application?
+
+-----
+
 ## Future Implementation
 
 -----
