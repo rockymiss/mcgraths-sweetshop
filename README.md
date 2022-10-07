@@ -5,10 +5,11 @@
 
 For my **Portfolio  Project** on the **Code Institute's Diploma in Software Development (E-commerce Applications)** course I have created an online e-commerce Website for a sweet shop called McGraths.  
 
-McGraths is an old fashioned type sweet shop that sells sweets, ice-cream and also stocks cake making supplies.  It’s main objective is to provide a service that was found  prior to the 1990's where children could go in and pick a variety of sweets which were then weighed and paid for.   McGraths stock sweets that are not usually found in large supermakets these days so the novelty of buying old style sweets is not only for the children but also for their parents who remember these sweets when they were children.  
+McGraths is a traditional irish sweet shop that sells sweets, ice-cream and also stocks cake making supplies.  It’s main objective is to provide a service that was found prior to the 1990's where children could go in and pick a variety of sweets which were then weighed and paid for.   McGrath's stock sweets that are not usually found in large supermakets these days so the novelty of buying old style sweets is not only for the children but also for their parents who remember these sweets when they were children.  
 
 From the website McGraths also sell cake supplies.  Their main objective here is to provide a variety of cake supplies for making occasion cakes such as birthday and wedding cakes.  
 
+Ice-cream can be bought in the shop itself and will be advertised on the website.
 
 Link to the deployed app is [here](#).
 
