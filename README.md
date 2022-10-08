@@ -166,30 +166,30 @@ Page info
 
 Questions that I asked myself before starting this website:
 
-**bold text**Who are your users?**bold text**
+**Who are your users?**
 
 children
 parents
 amateur cake makers
 professional cake makers
 
-**bold text**Which online platforms and social media would you find lots of your users?**bold text**
+**Which online platforms and social media would you find lots of your users?**
 
 Facebook, Instagram, TikTok
 
-**bold text**What do your users need?  Could you meet that need with useful content? If yes, how could you best deliver that content to them?**bold text**
+**What do your users need?  Could you meet that need with useful content? If yes, how could you best deliver that content to them?**
 
 Gift ideas for occasions and cake making tips or ideas.  I would like to showcase users cakes which would give amateur cake makers ideas for making their own cakes. 
 
-**bold text**Would your business run sales or offer discounts?  How do you think your users would most like to hear about these offers?**bold text**
+**Would your business run sales or offer discounts?  How do you think your users would most like to hear about these offers?**
 
 Yes it would run offers.  I would like to do this by way of newsletter so that only members that have signed up will receive the offer.  This would hopefully get more users to sign up to the newsletter.
 
-**bold text**What are the goals of your business?  Which marketing strategies would offer the best ways to meet those goals?**bold text**
+**What are the goals of your business?  Which marketing strategies would offer the best ways to meet those goals?**
 
 To sell sweets and cake supplies.  I would use email marketing and social media marketing.
 
-**bold text**Would your business have a budget to spend on advertising?  Or would it need to work with free or low cost options to market itself?**bold text**
+**Would your business have a budget to spend on advertising?  Or would it need to work with free or low cost options to market itself?**
 
 No the business is too small for an advertising budget so marketing will be done on social media and email for now with a few to having a budget further down the line when the business expands.
 
@@ -202,7 +202,7 @@ After brainstorming keywords for this website I used the following:
 
 Questions I asked myself in relation to content?
 
-**bold text**What do your users need?**bold text**
+**What do your users need?**
 
 sweets
 sweet gift boxes for birthdays and weddings
@@ -216,23 +216,23 @@ piping bags and nozzles
 icing
 food colouring
 
-**bold text**What information and features can you provide to meet those needs?**bold text**
+**What information and features can you provide to meet those needs?**
 
 A clear display of all sweets and cake supplies on offer.  The titles for each item must be clear and in the correct category.  Pricing should be easily seen and it should be easy for the user to purchase items and add or remove from the shopping cart. 
 
-**bold text**How can you make the information easy to understand?**bold text**
+**How can you make the information easy to understand?**
 
 By using clear and easy language with easy to read typography for all readers.  Clear images with a good description on alt text, clear categories and titles, simple payment process, and an intuitive and clear design.  
 
-**bold text**How can you demonstrate expertise, authoritativeness and trustworthiness in your content?**bold text**
+**How can you demonstrate expertise, authoritativeness and trustworthiness in your content?**
 
 Pages such as Home, About Us, Returns Policy, Frequently Ask Questions, Privacy and Contact.
 
-**bold text**Would there be other pages within your own site you could link to from your chosen page?**bold text**
+**Would there be other pages within your own site you could link to from your chosen page?**
 
 Cake Supplies, Sweet Products, Post a picture of your cake, error pages
 
-**bold text**Are there opportunities to link back to external websites that already rank highly on Google?**bold text**
+**Are there opportunities to link back to external websites that already rank highly on Google?**
 
 Links to purchasers who are local cake makers.  This would show loyality to clients with a view to keeping them as clients.  
 
