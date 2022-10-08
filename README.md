@@ -166,20 +166,32 @@ Page info
 
 Questions that I asked myself before starting this website:
 
-
 1. Who are your users?
 
-1. Which online platforms would you find lots of your users?
+- children
+- parents
+- amateur cake makers
+- professional cake makers
 
-1. Would your users use social media? If yes, which platforms do you think yuou would find them on?
+1. Which online platforms and social media would you find lots of your users?
 
-1. What do your users need?  Could you meet that need with useful content? If yes, how could you bets deliver that content to them?
+- Facebook, Instagram, TikTok
+
+1. What do your users need?  Could you meet that need with useful content? If yes, how could you best deliver that content to them?
+
+Gift ideas for occasions and cake making tips or ideas.  I would like to showcase users cakes which would give amateur cake makers ideas for making their own cakes. 
 
 1. Would your business run sales or offer discounts?  How do you think your users would most like to hear about these offers?
 
+Yes it would run offers.  I would like to do this by way of newsletter so that only members that have signed up will receive the offer.  This would hopefully get more users to sign up to the newsletter.
+
 1. What are the goals of your business?  Which marketing strategies would offer the best ways to meet those goals?
 
-1. Would your business have a budget to spend on advertising?  Or woudl it need to work with free or low cost options to market itself?
+To sell sweets and cake supplies.  I would use email marketing and social media marketing.
+
+1. Would your business have a budget to spend on advertising?  Or would it need to work with free or low cost options to market itself?
+
+No the business is too small for an advertising budget so marketing will be done on social media and email for now with a few to having a budget further down the line when the business expands.
 
 
 ### Keywords
