@@ -168,14 +168,14 @@ Questions that I asked myself before starting this website:
 
 1. Who are your users?
 
-- children
-- parents
-- amateur cake makers
-- professional cake makers
+children
+parents
+amateur cake makers
+professional cake makers
 
 1. Which online platforms and social media would you find lots of your users?
 
-- Facebook, Instagram, TikTok
+Facebook, Instagram, TikTok
 
 1. What do your users need?  Could you meet that need with useful content? If yes, how could you best deliver that content to them?
 
@@ -204,17 +204,17 @@ Questions I asked myself in relation to content?
 
 1. What do your users need?
 
-- Sweets
-- sweet gift boxes for birthdays and weddings
-- sweet boxes for Christmas, Easter, Valentines Day and Halloween,
-- cake supplies
-- cake boards and boxes
-- cake toppers
-- cake toppings
-- cookie cutters
-- piping bags and nozzles
-- icing
-- food colouring
+sweets
+sweet gift boxes for birthdays and weddings
+sweet boxes for Christmas, Easter, Valentines Day and Halloween,
+cake supplies
+cake boards and boxes
+cake toppers
+cake toppings
+cookie cutters
+piping bags and nozzles
+icing
+food colouring
 
 1. What information and features can you provide to meet those needs?
 
@@ -235,7 +235,6 @@ Cake Supplies, Sweet Products, Post a picture of your cake, error pages
 1. Are there opportunities to link back to external websites that already rank highly on Google?
 
 Links to purchasers who are local cake makers.  This would show loyality to clients with a view to keeping them as clients.  
-
 
 -----
 
