@@ -192,17 +192,38 @@ Questions I asked myself in relation to content?
 
 1. What do your users need?
 
+- Sweets
+- sweet gift boxes for birthdays and weddings
+- sweet boxes for Christmas, Easter, Valentines Day and Halloween,
+- cake supplies
+- cake boards and boxes
+- cake toppers
+- cake toppings
+- cookie cutters
+- piping bags and nozzles
+- icing
+- food colouring
+
 1. What information and features can you provide to meet those needs?
+
+A clear display of all sweets and cake supplies on offer.  The titles for each item must be clear and in the correct category.  Pricing should be easily seen and it should be easy for the user to purchase items and add or remove from the shopping cart. 
 
 1. How can you make the information easy to understand?
 
+By using clear and easy language with easy to read typography for all readers.  Clear images with a good description on alt text, clear categories and titles, simple payment process, and an intuitive and clear design.  
+
 1. How can you demonstrate expertise, authoritativeness and trustworthiness in your content?
+
+Pages such as Home, About Us, Returns Policy, Frequently Ask Questions, Privacy and Contact.
 
 1. Would there be other pages within your own site you could link to from your chosen page?
 
+Cake Supplies, Sweet Products, Post a picture of your cake, error pages
+
 1. Are there opportunities to link back to external websites that already rank highly on Google?
 
-1. How can you help users discover other relevant parts of your web application?
+Links to purchasers who are local cake makers.  This would show loyality to clients with a view to keeping them as clients.  
+
 
 -----
 
