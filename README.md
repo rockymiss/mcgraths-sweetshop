@@ -1,5 +1,4 @@
-![McGraths Logo](https://res.cloudinary.com/rockymiss/image/upload/v1665313281/mcgraths/mcgrath-logo_bu0cyy.png)
-
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1665314044/mcgraths/mcgraths-logo-blue_wmulkk.png"></p>
 
 # McGraths Sweet Shop
 
@@ -47,7 +46,7 @@ For better organisation I used both the Table View and Kanban view. The Kanban v
 
 <details open>
 <summary>Kanban View</summary> 
-<p align="center"><img src=#"></p>
+<p align="center"><img src="#"></p>
 
 </details>
 
