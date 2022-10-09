@@ -1,4 +1,4 @@
-![McGraths Logo](https://)
+![McGraths Logo](https://res.cloudinary.com/rockymiss/image/upload/v1665313281/mcgraths/mcgrath-logo_bu0cyy.png)
 
 
 # McGraths Sweet Shop
