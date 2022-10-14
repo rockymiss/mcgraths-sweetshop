@@ -87,7 +87,7 @@ Wireframes below.
 
 ## Database Schema
 
-<p align="center"><img src="#"></p>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1665759831/mcgraths/database-schema-image_r35snj.png"></p>
 
 ## Site Structure 
 
