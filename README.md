@@ -12,7 +12,7 @@ Ice-cream can be bought in the shop itself and will be advertised on the website
 
 Link to the deployed app is [here](#).
 
-![alt text](#)
+![](#)
 
 -----
 
@@ -32,7 +32,7 @@ Site Aims
 
 To plan this project I used agile methodology.  This was done using Github and the Project Board.
 
-Link to the project app is [here](https://github.com/users/rockymiss/projects/7).
+Link to the project app is [here](https:#).
 
 By using the Kanban board and in particular Milestones I was able to divide the project into difference epics such as:
 
@@ -99,7 +99,7 @@ The website consists of ? pages
 
 Colour info here
 
-![Colour Palette](#)
+![Colour Palette](https://res.cloudinary.com/rockymiss/image/upload/v1667417074/mcgraths/mcgraths-palette_hg1u8q.png)
 
 ![Gradient](#)
 
