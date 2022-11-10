@@ -1,14 +1,10 @@
-<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1665314044/mcgraths/mcgraths-logo-blue_wmulkk.png"></p>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1668102505/McRocks/mcrocks_logo_gy1d0b.png"></p>
 
-# McGraths Sweet Shop
+# McRocks Cake Supplies Shop
 
-For my **Portfolio  Project** on the **Code Institute's Diploma in Software Development (E-commerce Applications)** course I have created an online e-commerce Website for a sweet shop called McGraths.  
+For my **Portfolio  Project** on the **Code Institute's Diploma in Software Development (E-commerce Applications)** course I have created an online e-commerce Website for a shop called McRocks.  
 
-McGraths is a traditional irish sweet shop that sells sweets, ice-cream and also stocks cake making supplies.  It’s main objective is to provide a service that was found prior to the 1990's where children could go in and pick a variety of sweets which were then weighed and paid for.   McGrath's stock sweets that are not usually found in large supermakets these days so the novelty of buying old style sweets is not only for the children but also for their parents who remember these sweets when they were children.  
-
-From the website McGraths also sell cake supplies.  Their main objective here is to provide a variety of cake supplies for making occasion cakes such as birthday and wedding cakes.  
-
-Ice-cream can be bought in the shop itself and will be advertised on the website.
+McRocks is a cake supply shop that sells cakes supplies for professional and amateur cake makers.  It’s main objective is to provide a variety of cake supplies for making occasion cakes such as birthday and wedding cakes.  The website will also provide a space for customers to display their cake designs.
 
 Link to the deployed app is [here](#).
 
@@ -87,7 +83,7 @@ Wireframes below.
 
 ## Database Schema
 
-<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1665759831/mcgraths/database-schema-image_r35snj.png"></p>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1668103542/mcgraths/mcrock_database-schema_w33wqq.png"></p>
 
 ## Site Structure 
 
@@ -99,7 +95,7 @@ The website consists of ? pages
 
 Colour info here
 
-![Colour Palette](https://res.cloudinary.com/rockymiss/image/upload/v1667417074/mcgraths/mcgraths-palette_hg1u8q.png)
+![Colour Palette](https://res.cloudinary.com/rockymiss/image/upload/v1668102505/mcgraths/mcrocks_logo_gy1d0b.png)
 
 ![Gradient](#)
 
@@ -132,8 +128,7 @@ Navigation appears on each page.  The design remains consistent throughout, howe
 
 #### Home Page
 
-This page is the landing page and is the first page that users will see when the site loads.  The page has a logo clearly showing that the website is about hospitalilty specialists.  Information about what the company does is shown on this page.
-
+This page is the landing page and is the first page that users will see when the site loads.  logo etc.
 Page info
 
 <details open>
@@ -178,7 +173,7 @@ Facebook, Instagram, TikTok
 
 **What do your users need?  Could you meet that need with useful content? If yes, how could you best deliver that content to them?**
 
-Gift ideas for occasions and cake making tips or ideas.  I would like to showcase users cakes which would give amateur cake makers ideas for making their own cakes. 
+Gift ideas for occasions and cake making tips or ideas.  I would like to showcase users cakes which would give amateur cake makers ideas for making their own cakes.
 
 **Would your business run sales or offer discounts?  How do you think your users would most like to hear about these offers?**
 
@@ -186,7 +181,7 @@ Yes it would run offers.  I would like to do this by way of newsletter so that o
 
 **What are the goals of your business?  Which marketing strategies would offer the best ways to meet those goals?**
 
-To sell sweets and cake supplies.  I would use email marketing and social media marketing.
+To sell cake supplies and bring people back to the website.  I would use email marketing and social media marketing.  The space for users to upload their cake images is also a way to bring people back to the website. 
 
 **Would your business have a budget to spend on advertising?  Or would it need to work with free or low cost options to market itself?**
 
@@ -203,9 +198,6 @@ Questions I asked myself in relation to content?
 
 **What do your users need?**
 
-sweets
-sweet gift boxes for birthdays and weddings
-sweet boxes for Christmas, Easter, Valentines Day and Halloween,
 cake supplies
 cake boards and boxes
 cake toppers
@@ -217,7 +209,7 @@ food colouring
 
 **What information and features can you provide to meet those needs?**
 
-A clear display of all sweets and cake supplies on offer.  The titles for each item must be clear and in the correct category.  Pricing should be easily seen and it should be easy for the user to purchase items and add or remove from the shopping cart. 
+A clear display of all cake supplies.  The titles for each item must be clear and in the correct category.  Pricing should be easily seen and it should be easy for the user to purchase items and add or remove from the shopping cart.
 
 **How can you make the information easy to understand?**
 
@@ -229,7 +221,7 @@ Pages such as Home, About Us, Returns Policy, Frequently Ask Questions, Privacy 
 
 **Would there be other pages within your own site you could link to from your chosen page?**
 
-Cake Supplies, Sweet Products, Post a picture of your cake, error pages
+Cake Supplies, Post a picture of your cake, error pages
 
 **Are there opportunities to link back to external websites that already rank highly on Google?**
 
