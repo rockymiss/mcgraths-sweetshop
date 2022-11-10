@@ -69,11 +69,7 @@ Issues were created by way of User Stories or Admin User Stories and any other e
 
 ## Wireframes
 
-<details open>
-<summary>Wireframes</summary> 
-<p align="center"><img src=https://github.com/rockymiss/mcrocks-shop/blob/main/Wireframes.pdf></p>
-
-</details>
+Link to the wireframes app is [here](https://github.com/rockymiss/mcrocks-shop/blob/main/Wireframes.pdf).
 
 ## Flow Chart
 
