@@ -1,4 +1,4 @@
-<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1668102505/McRocks/mcrocks_logo_gy1d0b.png"></p>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1668102505/mcgraths/mcrocks_logo_gy1d0b.png"></p>
 
 # McRocks Cake Supplies Shop
 
