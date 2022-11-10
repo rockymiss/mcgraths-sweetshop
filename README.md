@@ -69,15 +69,9 @@ Issues were created by way of User Stories or Admin User Stories and any other e
 
 ## Wireframes
 
-Wireframes below.
-
 <details open>
 <summary>Wireframes</summary> 
-<p align="center"><img src="#"></p>
-
-<p align="center"><img src="#"></p>
-
-<p align="center"><img src="#"></p>
+<p align="center"><img src=https://github.com/rockymiss/mcrocks-shop/blob/main/Wireframes.pdf></p>
 
 </details>
 
