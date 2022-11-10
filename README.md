@@ -81,6 +81,15 @@ Wireframes below.
 
 </details>
 
+## Flow Chart
+
+I used this simple flow chart to give me a basic flow of the website. 
+
+<details open>
+<summary>Flow Chart</summary>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1668103769/mcgraths/mcRocksflowchart_n8e2z8.png"></p>
+</details>
+
 ## Database Schema
 
 <p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1668103542/mcgraths/mcrock_database-schema_w33wqq.png"></p>
