@@ -104,7 +104,7 @@ The website consists of ? pages
 
 Colour info here
 
-![Colour Palette](https://res.cloudinary.com/rockymiss/image/upload/v1668102505/mcgraths/mcrocks_logo_gy1d0b.png)
+![Colour Palette](https://res.cloudinary.com/rockymiss/image/upload/v1668103000/mcgraths/mcrocks-palette_rmuxd0.png)
 
 ![Gradient](#)
 
