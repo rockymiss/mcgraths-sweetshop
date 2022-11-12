@@ -16,12 +16,34 @@ Link to the deployed app is [here](#).
 
 -----
 
-
+McRocks Cake Supplies is designed as an e-commerce website to get users to purchase cake supplies and encourage them to post their cake designs. 
 
 ## User Experience
 
-Site Aims
-1. To create a website to...
+### User Stories
+
+|Link | User Story | How it was satisfied |
+|---------|---------|---------|
+|[Click here](https:#)|Story|satsified|
+|[Click here](https:#)|Story|satsified|
+|[Click here](https:#)|Story|satsified|
+|[Click here](https:#)|Story|satsified|
+|[Click here](https:#)|Story|satsified|
+|[Click here](https:#)|Story|satsified|
+|[Click here](https:#)|Story|satsified|
+|[Click here](https:#)|Story|satsified|
+|[Click here](https:#)|Story|satsified|
+|[Click here](https:#)|Story|satsified|
+|[Click here](https:#)|Story|satsified|
+|[Click here](https:#)|Story|satsified|
+|[Click here](https:#)|Story|satsified|
+|[Click here](https:#)|Story|satsified|
+|[Click here](https:#)|Story|satsified|
+|[Click here](https:#)|Story|satsified|
+|[Click here](https:#)|Story|satsified|
+|[Click here](https:#)|Story|satsified|
+|[Click here](https:#)|Story|satsified|
+
 
 
 ### Agile Methodology - UX
