@@ -6,9 +6,7 @@ For my **Portfolio  Project** on the **Code Institute's Diploma in Software Deve
 
 McRocks is a cake supply shop that sells cakes supplies for professional and amateur cake makers.  It’s main objective is to provide a variety of cake supplies for making occasion cakes such as birthday and wedding cakes.  The website will also provide a space for customers to display their cake designs.
 
-Link to the deployed app is [here](#).
-
-![](#)
+Link to the deployed app is [here](https://mcgrathsshop.herokuapp.com/).
 
 -----
 
@@ -24,33 +22,34 @@ McRocks Cake Supplies is designed as an e-commerce website to get users to purch
 
 |Link | User Story | Sprint/Satisfied |
 |---------|---------|---------|
-|[Click here](https:#)|As a User I can access the website in a public domain so that I can view the website|Basic Setup|
-|[Click here](https:#)|As a User I can see a list of products so that I can view what I can shop for|Basic Setup|
-|[Click here](https:#)|As a User I can sort products so that I can easily look for what I want to buy|Basic Setup|
-|[Click here](https:#)|As a User I can search products so that I can find the product I am looking for by name or description|Basic Setup|
-|[Click here](https:#)|As a User I can add and remove items from the shopping trolley so that I can see what I am spending/spend within my budget|Payments|
-|[Click here](https:#)|As a User I can put in my card details so that I can buy the items in the shopping trolley|Payments|
-|[Click here](https:#)|As a User I can have my payment detailed processed so that I can buy the products I want|Payments|
-|[Click here](https:#)|As a User I can receive confirmation of payment being processed so that I can see that I have bought the items I wanted|Payments|
-|[Click here](https:#)|As a User I can receive and email in my inbox so that I can get permanent confirmation that my order has been processed|Payments|
-|[Click here](https:#)|As a User I can post a picture of my cake designs so that I can let others see what I made|Cake Display|
-|[Click here](https:#)|As a User I can delete my posted cake image so that I can have control over my posted content|Cake Display|
-|[Click here](https:#)|As a User I can edit the cake image I posted so that I can have control over what I post|Cake Display|
-|[Click here](https:#)|As a User I can see a list of others cakes designs so that I can view others cake designs|Cake Display|
-|[Click here](https:#)|As a Super User I can approve cake posts from users so that I can monitor what is posted on the website|Cake Display|
-|[Click here](https:#)|As a Super User I can delete cake design images so that I can have control over what is posted on the webistes|Cake Display|
-|[Click here](https:#)|Story|satsified|
-|[Click here](https:#)|Story|satsified|
-|[Click here](https:#)|Story|satsified|
-|[Click here](https:#)|Story|satsified|
-|[Click here](https:#)|Story|satsified|
-|[Click here](https:#)|Story|satsified|
-|[Click here](https:#)|Story|satsified|
-|[Click here](https:#)|Story|satsified|
-|[Click here](https:#)|Story|satsified|
-|[Click here](https:#)|Story|satsified|
-|[Click here](https:#)|Story|satsified|
-|[Click here](https:#)|Story|satsified|
+|[28](https:https://github.com/rockymiss/mcrocks-shop/issues/28)|As a User I can access the website in a public domain so that I can view the website|Basic Setup|
+|[19](https:https://github.com/rockymiss/mcrocks-shop/issues/19)|As a User I can register so that my data is saved for future use on the website|Basic Setup|
+|[20](https:https://github.com/rockymiss/mcrocks-shop/issues/21)|As a User I can see a list of products so that I can view what I can shop for|Basic Setup|
+|[21](https:https://github.com/rockymiss/mcrocks-shop/issues/21)|As a User I can sort products so that I can easily look for what I want to buy|Basic Setup|
+|[22](https:https://github.com/rockymiss/mcrocks-shop/issues/22)|As a User I can search products so that I can find the product I am looking for by name or description|Basic Setup|
+|[23](https:https://github.com/rockymiss/mcrocks-shop/issues/23)|As a User I can add and remove items from the shopping trolley so that I can see what I am spending/spend within my budget|Payments|
+|[24](https:https://github.com/rockymiss/mcrocks-shop/issues/24)|As a User I can put in my card details so that I can buy the items in the shopping trolley|Payments|
+|[25](https:https://github.com/rockymiss/mcrocks-shop/issues/25)|As a User I can have my payment detailed processed so that I can buy the products I want|Payments|
+|[26](https:https://github.com/rockymiss/mcrocks-shop/issues/26)|As a User I can receive confirmation of payment being processed so that I can see that I have bought the items I wanted|Payments|
+|[27](https:https://github.com/rockymiss/mcrocks-shop/issues/27)|As a User I can receive and email in my inbox so that I can get permanent confirmation that my order has been processed|Payments|
+|[29](https:https://github.com/rockymiss/mcrocks-shop/issues/29)|As a User I can post a picture of my cake designs so that I can let others see what I made|Cake Display|
+|[30](https:https://github.com/rockymiss/mcrocks-shop/issues/30)|As a User I can delete my posted cake image so that I can have control over my posted content|Cake Display|
+|[31](https:https://github.com/rockymiss/mcrocks-shop/issues/31)|As a User I can edit the cake image I posted so that I can have control over what I post|Cake Display|
+|[32](https:https://github.com/rockymiss/mcrocks-shop/issues/32)|As a User I can see a list of others cakes designs so that I can view others cake designs|Cake Display|
+|[33](https:https://github.com/rockymiss/mcrocks-shop/issues/33)|As a Super User I can approve cake posts from users so that I can monitor what is posted on the website|Cake Display|
+|[34](https:https://github.com/rockymiss/mcrocks-shop/issues/34)|As a Super User I can delete cake design images so that I can have control over what is posted on the webistes|Cake Display|
+|[35](https:https://github.com/rockymiss/mcrocks-shop/issues/35)|As a User I can complete a form so that I can contact the shop owner|New Models|
+|[36](https:https://github.com/rockymiss/mcrocks-shop/issues/36)|As a User I can see a confirmation that my contact message has been sent so that I can be sure that the message went to the shop owner|New Models|
+|[37](https:https://github.com/rockymiss/mcrocks-shop/issues/37)|As a Super User I can see messages sent to me from customers so that I can communicate with customers|Contact|
+|[38](https:https://github.com/rockymiss/mcrocks-shop/issues/38)|As a Super User I can delete messages from users after reading them so that I can keep the contacts tidy|New Models|
+|[39](https:https://github.com/rockymiss/mcrocks-shop/issues/39)|As a User I can write a testimonial so that I can leave feedback to the shop which can be displayed|New Models|
+|[40](https:https://github.com/rockymiss/mcrocks-shop/issues/40)|As a Super User I can add and remove testimonials left by users so that I can have control over the feedback displayed on the website|New Models|
+|[41](https:https://github.com/rockymiss/mcrocks-shop/issues/41)|As a Super User I can display testimonials left by users so that visitors to the website can see positive feedback from customers|New Models|
+|[42](https:https://github.com/rockymiss/mcrocks-shop/issues/42)|As a Super User I can complete a form so that I can add and remove stock easily|Store Management|
+|[43](https:https://github.com/rockymiss/mcrocks-shop/issues/43)|As a Super User I can edit or update stock so that I can control changes easily made to stock i.e. price|Store Management|
+|[44](https:https://github.com/rockymiss/mcrocks-shop/issues/44)|As a Super User I can delete stock easily so that I can remove stock that is no longer available|Store Management|
+|[45](https:https://github.com/rockymiss/mcrocks-shop/issues/45)|As a User I can sign up to the shop's newsletter so that I can see up to date offers or anything else the shop has to say|New Models|
+|[27](https:https://github.com/rockymiss/mcrocks-shop/issues/47)|As a User I can unsubscribe to the newsletter so that I can no longer receive it|New Models|
 
 
 
