@@ -22,15 +22,23 @@ McRocks Cake Supplies is designed as an e-commerce website to get users to purch
 
 ### User Stories
 
-|Link | User Story | How it was satisfied |
+|Link | User Story | Sprint/Satisfied |
 |---------|---------|---------|
-|[Click here](https:#)|Story|satsified|
-|[Click here](https:#)|Story|satsified|
-|[Click here](https:#)|Story|satsified|
-|[Click here](https:#)|Story|satsified|
-|[Click here](https:#)|Story|satsified|
-|[Click here](https:#)|Story|satsified|
-|[Click here](https:#)|Story|satsified|
+|[Click here](https:#)|As a User I can access the website in a public domain so that I can view the website|Basic Setup|
+|[Click here](https:#)|As a User I can see a list of products so that I can view what I can shop for|Basic Setup|
+|[Click here](https:#)|As a User I can sort products so that I can easily look for what I want to buy|Basic Setup|
+|[Click here](https:#)|As a User I can search products so that I can find the product I am looking for by name or description|Basic Setup|
+|[Click here](https:#)|As a User I can add and remove items from the shopping trolley so that I can see what I am spending/spend within my budget|Payments|
+|[Click here](https:#)|As a User I can put in my card details so that I can buy the items in the shopping trolley|Payments|
+|[Click here](https:#)|As a User I can have my payment detailed processed so that I can buy the products I want|Payments|
+|[Click here](https:#)|As a User I can receive confirmation of payment being processed so that I can see that I have bought the items I wanted|Payments|
+|[Click here](https:#)|As a User I can receive and email in my inbox so that I can get permanent confirmation that my order has been processed|Payments|
+|[Click here](https:#)|As a User I can post a picture of my cake designs so that I can let others see what I made|Cake Display|
+|[Click here](https:#)|As a User I can delete my posted cake image so that I can have control over my posted content|Cake Display|
+|[Click here](https:#)|As a User I can edit the cake image I posted so that I can have control over what I post|Cake Display|
+|[Click here](https:#)|As a User I can see a list of others cakes designs so that I can view others cake designs|Cake Display|
+|[Click here](https:#)|As a Super User I can approve cake posts from users so that I can monitor what is posted on the website|Cake Display|
+|[Click here](https:#)|As a Super User I can delete cake design images so that I can have control over what is posted on the webistes|Cake Display|
 |[Click here](https:#)|Story|satsified|
 |[Click here](https:#)|Story|satsified|
 |[Click here](https:#)|Story|satsified|
