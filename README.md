@@ -22,7 +22,7 @@ McRocks Cake Supplies is designed as an e-commerce website to get users to purch
 
 |Link | User Story | Sprint/Satisfied |
 |---------|---------|---------|
-|[28](https:https://github.com/rockymiss/mcrocks-shop/issues/28)|As a User I can access the website in a public domain so that I can view the website|Basic Setup|
+|[28](https://github.com/rockymiss/mcrocks-shop/issues/28)|As a User I can access the website in a public domain so that I can view the website|Basic Setup|
 |[19](https:https://github.com/rockymiss/mcrocks-shop/issues/19)|As a User I can register so that my data is saved for future use on the website|Basic Setup|
 |[20](https:https://github.com/rockymiss/mcrocks-shop/issues/21)|As a User I can see a list of products so that I can view what I can shop for|Basic Setup|
 |[21](https:https://github.com/rockymiss/mcrocks-shop/issues/21)|As a User I can sort products so that I can easily look for what I want to buy|Basic Setup|
