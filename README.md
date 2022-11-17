@@ -55,46 +55,36 @@ McRocks Cake Supplies is designed as an e-commerce website to get users to purch
 
 ### Agile Methodology - UX
 
-To plan this project I used agile methodology.  This was done using Github and the Project Board.
+To plan this project I used agile methodology.  This was done using Github and the Project Board before starting the project.
 
-Link to the project app is [here](https:#).
+Link to the project app is [here](https://github.com/users/rockymiss/projects/8).
 
-By using the Kanban board and in particular Milestones I was able to divide the project into difference epics such as:
+I used the the Kanban board and in particular Milestones for sprints.  I was able to divide the project into different sprints such as:
 
-1. Development
-1. Design
-1. Content
-1. Authoristation
-1. Comments
+1. Preparation
+1. Basic Setup
+1. Payments
+1. Cake Display
+1. New Models
+1. Store Management
 
-For better organisation I used both the Table View and Kanban view. The Kanban view meant I could put each issue into a different section, Backlog, In progress, Completed and Wishlist.
+For better organisation I used both the Table View and Kanban view. The Kanban view meant I could put each issue into a different section, No status, In progress, Complete and Wishlist.
 
 <details open>
 <summary>Kanban View</summary> 
-<p align="center"><img src="#"></p>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1668720459/mcgraths/kanban-view_hsmknk.png"></p>
 
 </details>
 
-The table view allowed me to view all of the issues in each section clearly.  
+The table view allowed me to view all of the issues in each sprint clearly so I could see what was left to be done in each sprint.  
 
 <details open>
 <summary>Table View</summary> 
-<p align="center"><img src="#"></p>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1668720518/mcgraths/table-view-agile_dzhxti.png"></p>
 
 </details>
 
-Issues were created by way of User Stories or Admin User Stories and any other elements required to complete the database.  While working on a particular user story they were moved into ‘In progress’.  Once completed they were moved to ‘completed’.  This gave a better view of what was to be completed and what had already been completed.  As work was committed to the github repository each issue was marked completed which automatically moved to the ‘completed’ section on the Kanban Board.
-
-### From a User's Perspective
-
-#### Admin User's Perspective
-
-1. As an Admin User I can ?? so that I can ??
-
-#### User's Perspective
-
-1. As a user I can ?? so that I can ??
-
+Issues were created by way of User Stories or Admin User Stories and any other elements required to complete the database.  User stories were labelled/grouped according to MoSCoW prioritization technique.While working on a particular user story they were moved into ‘In progress’.  Once completed they were moved to ‘completed’.  This gave a better view of what was to be completed and what had already been completed.  As work was committed to the github repository each issue was marked completed which automatically moved to the ‘completed’ section on the Kanban Board.
 
 ## Wireframes
 
