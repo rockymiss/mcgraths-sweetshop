@@ -218,7 +218,19 @@ No the business is too small for an advertising budget so marketing will be done
 
 ### Keywords
 
-After brainstorming keywords for this website I used the following:
+After brainstorming keywords for this website using wordtracker.com[Wordtracker.com](https://www.wordtracker.com/) I used the following:
+
+1. Simple cake design
+1. Decorating cake ideas
+1. Cake design ideas
+1. Cake toppers ireland
+1. personalised cake toppers
+1. birthday cake design
+1. wedding cake design
+
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1668719894/mcgraths/cake-toppers-keywords_kwixxj.png"></p>
+
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1668719894/mcgraths/cake-design-keywords_g2xxpz.png"></p>
 
 ### Content
 
