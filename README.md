@@ -76,6 +76,14 @@ For better organisation I used both the Table View and Kanban view. The Kanban v
 
 </details>
 
+I could also use the Kanban view to move all or remaining issues for each sprint into the "in progress" section so I was only working on issues for a particularl sprint. 
+
+<details open>
+<summary>Kanban View Sprints</summary> 
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1669152493/mcgraths/sprint-view_ylaloh.png"></p>
+
+</details>
+
 The table view allowed me to view all of the issues in each sprint clearly so I could see what was left to be done in each sprint.  
 
 <details open>
