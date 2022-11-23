@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
+
 /* Colour Palette */
 
 :root {
@@ -23,6 +25,7 @@
 /* Main */
 
 * {
+  font-family: 'Sarabun', sans-serif;
   background-color: var(--pink) !important;
   color: var(--brown);
   font-size: 1rem;
