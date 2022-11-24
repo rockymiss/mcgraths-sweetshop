@@ -280,6 +280,7 @@ Links to purchasers who are local cake makers.  This would show loyality to clie
 - [Django](https://docs.djangoproject.com/en/4.1/)
 - [Javascript](https://www.javascript.com/) for timeout functions on messages.
 - [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) for layout and style of templates.
+- [Bootstrap MD](https://mdbootstrap.com/snippets/standard/mdbootstrap/2885096?view=side) to create footer.
 - [a11y](https://color.a11y.com/Contrast/) to test contrast.
 - [TinyPNG](https://tinypng.com/) to compress images.
 - [Cloudinary](https://cloudinary.com/) to store images.
@@ -289,6 +290,8 @@ Links to purchasers who are local cake makers.  This would show loyality to clie
 - [Heroku](https://id.heroku.com/login) to deploy the website.
 - [Heroku PostgreSQL](https://id.heroku.com/login) to database during development and deployment
 - [Balsamiq](https://balsamiq.com/) to create wireframes.
+
+
 
 -----
 ## Resources 
