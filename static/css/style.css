@@ -34,6 +34,10 @@
   box-sizing: border-box;
 }
 
+.text-col-brown {
+  color: var(--brown);
+}
+
 body {
   background: url('https://res.cloudinary.com/rockymiss/image/upload/v1669155071/mcgraths/mcrock-fav_ktyi6i.png') no-repeat center center fixed !important;
   display: flex;
