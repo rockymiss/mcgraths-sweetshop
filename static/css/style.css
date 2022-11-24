@@ -15,7 +15,7 @@
 }
 
 .cream-bg {
-  background-color: var(--cream);
+  background-color: var(--cream) !important;
 }
 
 .lightpink-bg {
@@ -39,8 +39,16 @@
 }
 
 body {
-  background: url('https://res.cloudinary.com/rockymiss/image/upload/v1669155071/mcgraths/mcrock-fav_ktyi6i.png') no-repeat center center fixed !important;
+
+  background-color: var(--pink);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+footer {
+  position:fixed;
+  bottom:0;
+  width:100%;
+  
 }
