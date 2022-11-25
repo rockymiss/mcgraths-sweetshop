@@ -40,7 +40,7 @@
 
 body {
 
-  background-color: var(--pink);
+  background-color: var(--blue);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -51,4 +51,12 @@ footer {
   bottom:0;
   width:100%;
   
+}
+
+/*index page*/
+
+.index-back {
+  background-image: url("https://res.cloudinary.com/rockymiss/image/upload/v1669412093/mcgraths/pexels-tima-miroshnichenko-7034524_qxhdol.jpg");
+  height: 100vh;
+  background-size: cover;
 }
