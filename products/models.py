@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+DISCOUNT = ((0, "DiscountNo"), (1, "DiscountYes"))
 
 
 class Category(models.Model):
@@ -29,6 +29,7 @@ class Products(models.Model):
     image_url = models.URLField(max_length=1050, null=True, blank=True)
     product_price = models.DecimalField(max_digits=8, decimal_places=2)
     description = models.TextField()
+    status = models.IntegerField(choices=DISCOUNT, default="0")
 
     def __str__(self):
         return self.product_name
