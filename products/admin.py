@@ -13,10 +13,13 @@ class ProductAdmin(admin.ModelAdmin):
 
     search_fields = ['product_name', 'description']
     list_display = ('product_name',
-                    'product_description',
+                    'category',
+                    'description',
                     'product_price',
                     'product_image',
                     'image_url')
+    
+    ordering = ('category',)
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
