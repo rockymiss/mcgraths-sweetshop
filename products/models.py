@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 DISCOUNT = ((0, "DiscountNo"), (1, "DiscountYes"))
 
@@ -25,7 +26,7 @@ class Products(models.Model):
 
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     product_name = models.CharField(max_length=240)
-    product_image = models.ImageField(null=True, blank=True)
+    product_image = CloudinaryField('image', default='placeholder')
     image_url = models.URLField(max_length=1050, null=True, blank=True)
     product_price = models.DecimalField(max_digits=8, decimal_places=2)
     description = models.TextField()

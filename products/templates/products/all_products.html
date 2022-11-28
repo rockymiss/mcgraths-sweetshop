@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% load static %} {% block title %}
+<title>All Products</title>
+{% endblock %}
+
+
+{% block content %}
+<
+
+  <!--Main display for list of blogs -->
+    <div class="row">
+        
+        <div class="col-xl-12 col-l-6 mt-3 justify-content-center">
+            <div class="row justify-content-around">
+                {% for product in products %}
+
+            <div class="card m-3" style="width: 18rem;">
+                {% if "placeholder" in product.product_image.url %}
+                <img class="card-img-top hide">
+                {% else %}
+                <img src="{{ product.product_image.url }}"  alt="{{ product.product_name }}">
+                {% endif %}
+                <div class="card-body">
+                  <h5 class="card-title">{{ product.product_name }}</h5>
+                  <p class="card-text">{{ product.product_price }}</p>
+                  {% if product.status = 1 %}
+                  <p>This Product is on offer</p>
+                  {% else %}
+                  <p>This Product is NOT on offer</p>
+                  {% endif %}     
+                </div>
+                {% endfor %}
+
+{% endblock %}
