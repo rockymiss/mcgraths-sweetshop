@@ -10,6 +10,6 @@ class ProductList(generic.ListView):
     using the BlogPost Model
     """
     model = Products
-    queryset = Products.objects.all()
+    queryset = Products.objects.order_by('product_name')
     template_name = 'products/all_products.html'
     context_object_name = "products"
