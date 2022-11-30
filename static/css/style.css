@@ -53,24 +53,5 @@ footer {
   
 }
 
-/*index page*/
 
-.index-back {
- 
-  flex: 1 0 auto;
-  background-image: url(https://res.cloudinary.com/rockymiss/image/upload/v1669757928/mcgraths/pexels-%D1%81%D0%BE%D1%81%D0%BB%D0%B0%D0%BD-6421862_ptdj3f.jpg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  margin-top: 3em;
- 
-}
 
-/*products*/
-
-.shop-now {
-  height: 30px;
- 
-  padding: 2em;
-  
- 
-}
