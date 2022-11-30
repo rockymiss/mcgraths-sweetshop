@@ -15,7 +15,7 @@
 
             <div class="card m-3" style="width: 18rem;">
                 {% if "placeholder" in product.product_image.url %}
-                <img class="card-img-top hide">
+                <img src="https://res.cloudinary.com/rockymiss/image/upload/v1669840754/mcgraths/Add_a_subheading_be2xr1.png"  alt="Sorry no image available">
                 {% else %}
                 <img src="{{ product.product_image.url }}"  alt="{{ product.product_name }}">
                 {% endif %}
@@ -28,6 +28,10 @@
                   <p>This Product is NOT on offer</p>
                   {% endif %}     
                 </div>
-                {% endfor %}
-
+                
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
 {% endblock %}
