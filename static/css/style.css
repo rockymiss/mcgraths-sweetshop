@@ -10,12 +10,20 @@
    --brown: #551E00;
 }
 
+.pink-border {
+  border-color: var(--pink) !important;
+}
+
 .pink-bg {
   background-color: var(--pink) !important;
 }
 
 .cream-bg {
   background-color: var(--cream) !important;
+}
+
+.blue-bg {
+  background-color: var(--blue) !important;
 }
 
 .lightpink-bg {
@@ -53,5 +61,22 @@ footer {
   
 }
 
+/*index page */
 
+.index-container {
+  position: relative;
+  text-align: center;
+  
+}
+
+.shop-now {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  color: var(--brown);
+  border-width: 1em;
+  border: solid;
+}
 
