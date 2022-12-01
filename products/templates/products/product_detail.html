@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% load static %} {% block title %}
+<title>Product</title>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <!--Main display for list of blogs -->
+    <div class="row">
+        
+        
+                  <h5 class="card-title">{{ product.product_name }}</h5>
+                  <p class="card-text">{{ product.product_price }}</p>
+                  
+        </div>
+{% endblock %}

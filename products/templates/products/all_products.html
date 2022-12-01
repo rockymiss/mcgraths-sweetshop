@@ -22,6 +22,7 @@
                 <div class="card-body">
                   <h5 class="card-title">{{ product.product_name }}</h5>
                   <p class="card-text">{{ product.product_price }}</p>
+                   <a href= "{% url 'product_detail' %}">All products</a>
                   {% if product.status == 1 %}
                   <p>This Product is on offer</p>
                   {% else %}
