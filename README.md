@@ -300,7 +300,7 @@ Links to purchasers who are local cake makers.  This would show loyality to clie
 - [Slack](https://slack.com/intl/en-ie/) in particular the Code Institute Slack Community.
 - [W3schools](https://www.w3schools.com/)
 - [Django](https://docs.djangoproject.com/en/4.1/)
-- [Pexels](https://www.pexels.com/) for images
+- [Pixabay](https://pixabay.com/photos/cupcake-dessert-cake-food-3723832/) for cupcake image on home page
 - [Stack OverFlow](https://stackoverflow.com/) 
 - [Dango Central](https://djangocentral.com/building-a-blog-application-with-django/)
 
