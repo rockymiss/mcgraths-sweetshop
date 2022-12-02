@@ -17,11 +17,21 @@ class ProductList(generic.ListView):
 
 class ProductDetail(View):
     """
-    Shows individual products on their own page
+    This class will display the product the user selects from
+    the Product list.
     """
 
-    model = Products
-    template_name = 'products/product_detail.html'
+    def get(self, request, pk, *args, **kwargs):
+        """
+        gets the objects instance's and assigns primary key
+        """
+        product = get_object_or_404(Products, pk=pk)
+        context = {
+            'product': product,
+        }
 
-    def get_success_url(self):
-        return reverse('product_detail', kwargs={'pk': self.object.id})
+        return render(
+            request,
+            "products/product_detail.html",
+            context
+            )
