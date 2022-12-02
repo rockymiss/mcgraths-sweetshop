@@ -1,5 +1,7 @@
 from django.shortcuts import render, reverse, get_object_or_404
 from django.views.generic import ListView, DetailView
+from django.contrib import messages
+from django.db.models import Q
 from django.views import generic, View
 from .models import Products
 
@@ -10,9 +12,17 @@ class ProductList(generic.ListView):
     using the BlogPost Model
     """
     model = Products
-    queryset = Products.objects.order_by('product_name')
     template_name = 'products/all_products.html'
     context_object_name = "products"
+
+    def get_queryset(self):
+        """
+        overrides the get_queryset method and filters the product by what the 
+        user typed in to search
+        """
+        search = self.request.GET.get('q')
+        products = Q(product_name__icontains=search) | Q(description__icontains=search)
+        return Products.objects.filter(products)
 
 
 class ProductDetail(View):
