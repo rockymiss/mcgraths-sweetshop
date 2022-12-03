@@ -52,7 +52,6 @@ McRocks Cake Supplies is designed as an e-commerce website to get users to purch
 |[47](https://github.com/rockymiss/mcrocks-shop/issues/47)|As a User I can unsubscribe to the newsletter so that I can no longer receive it|New Models|
 
 
-
 ### Agile Methodology - UX
 
 To plan this project I used agile methodology.  This was done using Github and the Project Board before starting the project.
@@ -67,6 +66,7 @@ I used the the Kanban board and in particular Milestones for sprints.  I was abl
 1. Cake Display
 1. New Models
 1. Store Management
+1. Design Completion
 
 For better organisation I used both the Table View and Kanban view. The Kanban view meant I could put each issue into a different section, No status, In progress, Complete and Wishlist.
 
