@@ -291,10 +291,9 @@ Links to purchasers who are local cake makers.  This would show loyality to clie
 - [Heroku PostgreSQL](https://id.heroku.com/login) to database during development and deployment
 - [Balsamiq](https://balsamiq.com/) to create wireframes.
 
-
-
 -----
-## Resources 
+
+## Resources
 
 - [Code Institute](https://codeinstitute.net/ie/) for course materials, tutor and mentor support, Boutique Ado
 - [Slack](https://slack.com/intl/en-ie/) in particular the Code Institute Slack Community.
@@ -303,6 +302,7 @@ Links to purchasers who are local cake makers.  This would show loyality to clie
 - [Pixabay](https://pixabay.com/photos/cupcake-dessert-cake-food-3723832/) for cupcake image on home page
 - [Stack OverFlow](https://stackoverflow.com/) 
 - [Dango Central](https://djangocentral.com/building-a-blog-application-with-django/)
+- [Dango Mastery YouTube](https://www.youtube.com/watch?v=NhWVl5Z7SHU) for search functionality with Class Based View
 
 -----
 
