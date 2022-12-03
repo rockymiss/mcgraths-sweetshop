@@ -8,10 +8,11 @@
 
   <!--Main display for list of blogs -->
     <div class="row">
+     
         
         <div class="col-xl-12 col-l-6 mt-3 justify-content-center">
             <div class="row justify-content-around">
-                {% for product in products %}
+                {% for product in object_list %}
             <div class="card m-3" style="width: 18rem;">
                 {% if "placeholder" in product.product_image.url %}
                 <img src="https://res.cloudinary.com/rockymiss/image/upload/v1669840754/mcgraths/Add_a_subheading_be2xr1.png"  alt="Sorry no image available">
@@ -22,6 +23,7 @@
                   <a href="{% url 'product_detail' product.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">View Item</a>
                   <h5 class="card-title">{{ product.product_name }}</h5>
                   <p class="card-text">{{ product.product_price }}</p>
+                  <p class="card-text">{{ product.description }}</p>
                  
                   {% if product.status == 1 %}
                   <p>This Product is on offer</p>

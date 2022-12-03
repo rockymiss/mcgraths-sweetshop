@@ -59,9 +59,13 @@
               </li>
             </ul>
             <form method="GET" action="{% url 'products' %}" class="d-flex">
-              <input class="form-control me-2 cream-bg" type="text" name="q" placeholder="Search for Products" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <div class="input-group mb-3">
+                <input class="form-control me-2 cream-bg" type="text" name="q" placeholder="Search for Products" aria-label="Search" value="{{ request.GET.q }}">
+                <button class="btn btn-secondary" type="submit" title="Search"><i class="fas fa-search"></i></button>
+                <a href="{% url 'products' %}" class="btn btn-dark" title="Refresh"><i class="fas fa-sync-alt"></i></a>
+              </div>
             </form>
+            
           </div>
         </div>
       </nav>
