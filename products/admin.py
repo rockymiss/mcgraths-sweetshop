@@ -30,6 +30,6 @@ class CategoryAdmin(admin.ModelAdmin):
     and what fields are displayed
     """
 
-    search_fields = ['category_name']
-    list_display = ('category_name',
+    search_fields = ['name']
+    list_display = ('name',
                     'cat_friendly_name')
