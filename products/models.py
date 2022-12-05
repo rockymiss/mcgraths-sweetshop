@@ -9,11 +9,11 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = 'Categories'
 
-    category_name = models.CharField(max_length=240)
+    name = models.CharField(max_length=240)
     cat_friendly_name = models.CharField(max_length=240, null=True, blank=True)
 
     def __str__(self):
-        return self.category_name
+        return self.name
 
     def __stf__(self):
         return self.cat_friendly_name
