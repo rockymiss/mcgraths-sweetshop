@@ -17,8 +17,14 @@ def product_list(request):
 
     products = Products.objects.all()
     query = None
+    categories = None
 
     if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            products = products.filter(category__in=categories)
+            categories = Category.objects.filter(name__in=categories)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -33,6 +39,7 @@ def product_list(request):
     context = {
         'products': products,
         'search_term': query,
+        'current_categories': categories,
     }
 
     return render(request, 'products/all_products.html', context)
@@ -78,11 +85,11 @@ class ProductDetail(View):
     from the Product list.
     """
 
-    def get(self, request, pk, *args, **kwargs):
+    def get(self, request, product_id):
         """
         gets the objects instance's and assigns primary key
         """
-        product = get_object_or_404(Products, pk=pk)
+        product = get_object_or_404(Products, pk=product_id)
         context = {
             'product': product,
         }

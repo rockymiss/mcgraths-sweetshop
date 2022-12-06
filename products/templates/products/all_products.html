@@ -22,7 +22,7 @@
                 <img src="{{ product.product_image.url }}"  alt="{{ product.product_name }}">
                 {% endif %}
                 <div class="card-body">
-                  <a href="{% url 'product_detail' product.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">View Item</a>
+                  <a href="{% url 'product_detail' product.id %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">View Item</a>
                   <h5 class="card-title">{{ product.product_name }}</h5>
                   <p class="card-text">{{ product.product_price }}</p>
                   <p class="card-text">{{ product.description }}</p>
