@@ -3,7 +3,7 @@ from django.views.generic import DetailView
 from django.contrib import messages
 from django.db.models import Q
 from django.views import generic, View
-from .models import Products
+from .models import Products, Category
 
 
 def product_list(request):
@@ -17,9 +17,13 @@ def product_list(request):
 
     products = Products.objects.all()
     query = None
-
+    categories = None
 
     if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            products = products.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -35,6 +39,7 @@ def product_list(request):
     context = {
         'products': products,
         'search_term': query,
+        'current_categories': categories,
 
     }
 
@@ -95,3 +100,21 @@ class ProductDetail(View):
             "products/product_detail.html",
             context
             )
+
+
+def offers(request):
+    """
+    Displays a list of all products that are currently on offer
+
+    """
+
+    offers = Products.objects.filter(status=1)
+
+    context = {
+        'offers': offers,
+    }
+
+    return render(
+        request,
+        'products/offers.html',
+        context)
