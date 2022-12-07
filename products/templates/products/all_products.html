@@ -7,9 +7,23 @@
 
 
   <!--Main display for list of products -->
-  <div class="container-fluid pt-5  justify-content-center">
-  
+  <div class="spacer py-5 cream-bg"></div>
+  <div class="container-fluid pt-5  justify-content-center cream-bg">
+
     <div class="row cream-bg">
+    <div class="dropdown cream-bg text-center">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Sort by
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="{% url 'products' %}?sort=product_price&direction=desc">Price (high to low)</a></li>
+        <li><a class="dropdown-item" href="{% url 'products' %}?sort=product_price&direction=asc">Price(low to high</a></li>
+        <li><a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc">Category</a></li>
+        <li><a class="dropdown-item" href="{% url 'products' %}?sort=name&direction=asc">Name (A-Z)</a></li>
+        <li><a class="dropdown-item" href="{% url 'products' %}?sort=name=desc">Name (Z-A)</a></li>
+      </ul>
+    </div>
+   
         <div class="col-xl-12 col-l-6 mt-3">
             <div class="row justify-content-around cream-bg">
                 {% for product in products %}
