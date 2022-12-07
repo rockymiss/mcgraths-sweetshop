@@ -33,4 +33,4 @@ class Products(models.Model):
     status = models.IntegerField(choices=DISCOUNT, default="0")
 
     def __str__(self):
-        return self.product_name
+        return self.name
