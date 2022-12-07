@@ -20,8 +20,20 @@
         <li><a class="dropdown-item" href="{% url 'products' %}?sort=product_price&direction=asc">Price(low to high</a></li>
         <li><a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc">Category</a></li>
         <li><a class="dropdown-item" href="{% url 'products' %}?sort=name&direction=asc">Name (A-Z)</a></li>
-        <li><a class="dropdown-item" href="{% url 'products' %}?sort=name=desc">Name (Z-A)</a></li>
+        <li><a class="dropdown-item" href="{% url 'products' %}?sort=name&direction=desc">Name (Z-A)</a></li>
       </ul>
+    </div>
+
+    <div class="col-12 col-md-6 order-md-first cream-bg m-auto">
+      <p class="text.muted mt-3 text-center text-md-left cream-bg">
+        
+        {% if search_term or current_categories or current_sorting != 'None_None' %}
+          <span class="small text-center cream-bg"><a href="{% url 'products' %}">Go back to all Products</a> | </span>
+        {% endif %}
+       {{ products|length }} Products{% if search_term %} found {% endif %}
+        
+      </p>
+
     </div>
    
         <div class="col-xl-12 col-l-6 mt-3">
@@ -38,6 +50,12 @@
                   <h5 class="card-title">{{ product.product_name }}</h5>
                   <p class="card-text">{{ product.product_price }}</p>
                   <p class="card-text">{{ product.description }}</p>
+                  {% if product.category %}
+                  <p class="card-text small mt-1">
+                  <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                    {{ product.category.cat_friendly_name }}</p></a>
+                  {% endif %}
+
                  
                   {% if product.status == 1 %}
                   <p>This Product is on offer</p>
