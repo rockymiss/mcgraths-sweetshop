@@ -95,39 +95,19 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   All products             </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'products' %}">All Products</a>
+                  </li>
+                  {% for product in products%}
+                  {% if product.category %}
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.cat_friendly_name }}</a>
+                  </li>
+                  {% endif %}
+                  {% endfor %}
+
                   
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}?category=Bakeware">Bakeware</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}?category=Ocassions">Occassions</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}?category=Tools">Tools</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}?category=Boxes">Boxes</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}?category=cake-toppers">Cake Toppers</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}?category=sprinkle-decorations">Sprinkles</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}?category=Icing">Icing</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}?category=cake-boards">Cake Boards</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}?category=food-colouring">Food Colouring</a>
-                  </li>
-
-                
-
               
-                  
                 </ul>
               </li>
 
