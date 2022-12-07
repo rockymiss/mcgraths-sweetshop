@@ -93,20 +93,35 @@
               
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Shop                </a>
+                  All products             </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}">Cake Supplies</a>
+                    <a class="nav-link" href="{% url 'products' %}">All Products</a>
                   </li>
+                  {% for product in products%}
+                  {% if product.category %}
                   <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}?category=Occasions">Occasions</a>
+                    <a class="nav-link" href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.cat_friendly_name }}</a>
                   </li>
+                  {% endif %}
+                  {% endfor %}
+
                   
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}">Offers</a>
-                  </li>
+              
                 </ul>
               </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Offers             </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'products' %}?status=1">All Offers</a>
+                  </li>
+                  
+                </ul>
+              </li>
+
             </ul>
           </div>
         </div>
