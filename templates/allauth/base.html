@@ -90,9 +90,9 @@
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                   <li><a class="dropdown-item" href="{% url 'products' %}">All Products</a></li>
                     {% for product in products %}
-                            {% if product.category %}
+                         
                             <li><a class="dropdown-item" href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.cat_friendly_name }}</a></li>
-                            {% endif %}
+                           
                     {% endfor %}
                 </div>
               </div>
