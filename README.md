@@ -303,6 +303,7 @@ Links to purchasers who are local cake makers.  This would show loyality to clie
 - [Stack OverFlow](https://stackoverflow.com/) 
 - [Dango Central](https://djangocentral.com/building-a-blog-application-with-django/)
 - [Dango Mastery YouTube](https://www.youtube.com/watch?v=NhWVl5Z7SHU) for search functionality with Class Based View
+- [bbootstrap](https://bbbootstrap.com/search?query=navbar&page=1) for the website's navbar
 
 -----
 
