@@ -57,7 +57,7 @@ def product_list(request):
                 name__icontains=query
                 ) | Q(description__icontains=query)
             products = products.filter(query)
-    
+
     current_sorting = f'{sort}_{direction}'
 
     context = {
@@ -69,40 +69,6 @@ def product_list(request):
     }
 
     return render(request, 'products/all_products.html', context)
-
-
-# class ProductList(ListView):
-#     """
-#     Displays a list of all products and provides a 
-#     search functionality to display products that the 
-#     user has searched for
-#     """
-#     model = Products
-#     template_name = 'products/all_products.html'
-#     queryset = Products.objects.all()
-
-#     def get_queryset(self):
-#         """
-#         Overrides queryset and allows user to search
-#         by name or description of product
-#         """
-#         query = self.request.GET.get('q')
-#         category = self.request.GET.get('category')
-
-#         if category:
-#             object_list = self.model.objects.filter(
-#                 Q(category__icontains=category) 
-#             )
-
-#         if query:
-#             object_list = self.model.objects.filter(
-#                 Q(product_name__icontains=query) |
-#                 Q(description__icontains=query)
-#             )
-#         else:
-#             object_list = Products.objects.all()
-
-#         return object_list
 
 
 class ProductDetail(View):
