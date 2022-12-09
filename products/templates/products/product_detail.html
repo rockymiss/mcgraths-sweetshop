@@ -6,33 +6,79 @@
 {% block content %}
 
 
-  <!--Main display for list of blogs -->
-  <div class="row">
-        
-    <div class="col-xl-12 col-l-6 mt-3 justify-content-center">
-        <div class="row justify-content-around">
-            
-        <div class="card m-3" style="width: 18rem;">
-            {% if "placeholder" in product.product_image.url %}
-            <img src="https://res.cloudinary.com/rockymiss/image/upload/v1669840754/mcgraths/Add_a_subheading_be2xr1.png"  alt="Sorry no image available">
-            {% else %}
-            <img src="{{ product.product_image.url }}"  alt="{{ product.product_name }}">
-            {% endif %}
-            <div class="card-body">
-              <a href="{% url 'product_detail' product.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">View Item</a>
-              <h5 class="card-title">{{ product.product_name }}</h5>
-              <p class="card-text">{{ product.product_price }}</p>
-             
-              {% if product.status == 1 %}
-              <p>This Product is on offer</p>
-              {% else %}
-              <p>This Product is NOT on offer</p>
-              {% endif %}     
+  <!--Main display for product detail-->
+    <div class="spacer py-3 cream-bg"></div>
+    <div class="super_container">
+   
+      <div class="single_product">
+          <div class="container-fluid p-3">
+              <div class="row">
+                  <div class="col-lg-4 order-lg-2 order-1">
+                    {% if "placeholder" in product.product_image.url %}
+                        <img class="img-fluid" src="https://res.cloudinary.com/rockymiss/image/upload/v1669840754/mcgraths/Add_a_subheading_be2xr1.png"  alt="Sorry no image available">
+                    {% else %}
+                        <img class="img-fluid" src="{{ product.product_image.url }}"  alt="{{ product.product_name }}">
+                    {% endif %}
+                  </div>
+                  <div class="col-lg-6 order-3">
+                    <div class="product_description">
+                        
+                        <div class="product_name">
+                            <p>{{ product.product_name }}</p>
+                            <p>{{ product.description }}</p>
+                            {% if product.status == 1 %}
+                                <p><small><small>This Product is on offer</small></small></p>
+                            {% endif %}     
+                        </div>
+                        <div> <span class="product_price">€ {{ product.product_price }}</span> </div>
+                        
+                        <div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="br-dashed">
+                                        <div class="row">
+                                            <div class="col-md-3 col-xs-3"> <i class="fa-solid fa-truck"></i> </div>
+                                            <div class="col-md-9 col-xs-9">
+                                                <div class="pr-info"> <span class="shipping">Get free shipping when you spend over €50</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7"> </div>
+                            </div>
+                           
+                        </div>
+                        <hr class="singleline">
+                        <div class="order_info d-flex flex-row">
+                            <form action="#">
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6" style="margin-left: pb-2;">
+                                <div class="product_quantity"> <span>QTY: </span> <input id="quantity_input" type="text" pattern="[0-9]*" value="1">
+                                    <div class="quantity_buttons">
+                                        <div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
+                                        <div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="col-xs-6 pb-2"> 
+                                    <button type="button" class="btn shop-button pink-bg">Add to Cart</button>
+                                </div> 
+                                <div class="col-xs-6 pb-2"> 
+                                    <a href="{% url 'products' %}">
+                                        <button type="button" class="btn shop-button pink-bg">Continue Shopping</button>
+                                    </a>
+                                </div>   
+                        </div>
+                    </div>
+                </div>
             </div>
-            
+                </div>
+
+                 
           </div>
-         
-        </div>
       </div>
     </div>
+  </div>
+</div>
 {% endblock %}
