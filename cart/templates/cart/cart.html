@@ -2,7 +2,42 @@
 <title>McRocks Shopping Cart</title>
 {% endblock %}
 
-{% block content %}
+{% block page_header %}
 
-    
+<div>
+    <div class="row">
+        <div class="col">
+            HEADER
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content%}
+<div class="spacer py-5 cream-bg"></div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            {% if cart_items %}
+                <div class="table-responsive rounded"></div>
+            {% else %}
+            <p class="lease mb-5">The Cart is Empty</p>
+            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span>
+            </a>
+            {% endif %}
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            
+        </div>
+    </div>
+
+</div>
 {% endblock %}
