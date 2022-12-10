@@ -324,6 +324,10 @@ button.btn.shop-button {
   padding: 15px
 }
 
+.increment {
+  width: auto !important; 
+}
+
 @media (max-width: 390px) {
   .product_fav {
       display: none

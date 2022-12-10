@@ -52,35 +52,44 @@
                   <p class="lead fw-normal mb-2">{{ item.product.name }}</p>
                   
                 </div>
-                <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                  <button class="btn btn-link px-2"
-                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                    <i class="fas fa-minus"></i>
-                  </button>
-  
-                  <input id="form1" min="0" name="quantity" value="2" type="number"
-                    class="form-control form-control-sm" />
-  
-                  <button class="btn btn-link px-2"
-                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                    <i class="fas fa-plus"></i>
-                  </button>
-                </div>
+                <div class="col-md-3 col-lg-3 col-xl-2 d-flex ">
+                                    <button class="btn btn-link px-2"
+                                      onclick="this.parentNode.querySelector('input[type=number]').stepDown(); return false;">
+                                      <i class="fas fa-minus"></i>
+                                    </button>
+                    
+                                    <input id="id_qty_{{ product.id }}" min="1" max="99" name="quantity" value="1" type="number" data-item_id="{{ product.id }}"
+                                      class="form-control form-control-sm text-center increment"  />
+                    
+                                    <button class="btn btn-link px-2"
+                                      onclick="this.parentNode.querySelector('input[type=number]').stepUp(); return false;">
+                                      <i class="fas fa-plus"></i>
+                                    </button>
+                                  </div>
                 <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                   <h5 class="mb-0">€ {{ item.product.product_price }}</h5>
                 </div>
                 <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                   <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
                 </div>
+            
               </div>
-            </div>
-            {% endfor %}
-            {% else %}
-            <p>No products here</p>
-            {% endif %}
-
           </div>
+            
+            {% endfor %}
+
+        </div>
   <!-- End Added Items -->
+
+  <div class="card mb-4">
+            <div class="card-body p-4 d-flex flex-row">
+              <div class="form-outline flex-fill">
+                <input type="text" id="form1" class="form-control form-control-lg" />
+                <label class="form-label" for="form1">Discount code</label>
+              </div>
+              <button type="button" class="btn btn-outline-warning btn-lg ms-3">Apply</button>
+            </div>
+          </div>
   <!-- Total -->
 
   <div class="d-flex card rounded-3 mb-4 flex-row-reverse text-end">
@@ -92,7 +101,7 @@
             <h4>Grand Total: €{{ grand_total|floatformat:2 }}</h4>
             {% if free_delivery_delta > 0 %}
                 <p class="mb-1 text-danger">
-                    Free delivery when you spend over €{{ free_deliver_delta }}
+                    Free delivery when you spend over €{{ free_delivery_delta }}
                 </p>
             {% endif %}
       </div>
@@ -100,16 +109,7 @@
 
   <!--end total -->
 
-  <!-- Discount -->
-          <!-- <div class="card mb-4">
-            <div class="card-body p-4 d-flex flex-row">
-              <div class="form-outline flex-fill">
-                <input type="text" id="form1" class="form-control form-control-lg" />
-                <label class="form-label" for="form1">Discound code</label>
-              </div>
-              <button type="button" class="btn btn-outline-warning btn-lg ms-3">Apply</button>
-            </div>
-          </div><-->
+          
   
           <div class="card">
             <div class="card-body">
@@ -121,6 +121,9 @@
         </div><!-- Column 1 -->
       </div> <!-- End Inside Container -->
     </div><!-- End Container -->
+    {% else %} 
+    <p class="text-center">No products here</p>
+    {% endif %}
   </section>
 
 <!--End Cart-->
