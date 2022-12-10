@@ -52,25 +52,34 @@
                   <p class="lead fw-normal mb-2">{{ item.product.name }}</p>
                   
                 </div>
+                <!--Quantity-->
                 <div class="col-md-3 col-lg-3 col-xl-2 d-flex ">
-                                    <button class="btn btn-link px-2"
-                                      onclick="this.parentNode.querySelector('input[type=number]').stepDown(); return false;">
-                                      <i class="fas fa-minus"></i>
-                                    </button>
-                    
-                                    <input id="id_qty_{{ product.id }}" min="1" max="99" name="quantity" value="1" type="number" data-item_id="{{ product.id }}"
-                                      class="form-control form-control-sm text-center increment"  />
-                    
-                                    <button class="btn btn-link px-2"
-                                      onclick="this.parentNode.querySelector('input[type=number]').stepUp(); return false;">
-                                      <i class="fas fa-plus"></i>
-                                    </button>
-                                  </div>
+
+                  <form class="form update-form d-flex" method="POST" action="#">
+                    {% csrf_token %}
+                    <button class="btn btn-link px-1 decrement-qty" data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_.id }}"
+                    onclick="this.parentNode.querySelector('input[type=number]').stepDown(); return false;">
+                    <i class="fas fa-minus"></i>
+                  </button>
+  
+                  <input id="id_qty_{{ item.item_id }}" min="1" max="99" name="quantity" value="{{ item.quantity }}" type="number" data-item_id="{{ product.id }}"
+                    class="form-control form-control-sm text-center qty_input increment"  />
+  
+                  <button class="increment-qty btn btn-link px-1" data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}"
+                    onclick="this.parentNode.querySelector('input[type=number]').stepUp(); return false;">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                  </form>
+                </div>
+                <!--quantity end-->
                 <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                   <h5 class="mb-0">€ {{ item.product.product_price }}</h5>
                 </div>
                 <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                  <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+                  <span>
+                  <a href="{% url 'adjust_cart' item.item_id %}" class="update-link btn btn-dark update-link" title="Refresh"><i class="fas fa-sync-alt"></i></a>
+                  <a href="{% url 'adjust_cart' item.item_id %}" class="remove-item text-danger" id="remove_{{ item.item_id }}"> <i class="fas fa-trash fa-lg"></i></a>
+                </span>
                 </div>
             
               </div>
@@ -129,3 +138,32 @@
 <!--End Cart-->
 
 {% endblock %}
+
+{% block postloadjs %}
+{{  block.super }}
+{% include 'products/includes/quantity_input.html' %}
+{% endblock %}
+
+<script type="text/javascript">
+  //update quantity when clicking 
+  $(`.update-link`).click(function(e) {
+    var form = $(this).prev('update-form');
+    form.submit()
+  })
+
+  $(`.remove-item`).click(function(e) {
+    var csrfToken = "{{ csrf_token }}"
+    var itemId = $(this).attr('id').split('remove')[1];
+    var url = '/cart/remove/${itemId}';
+    var data = {'csrfmiddlewaretoken': csrfToken};
+
+    $.post(url, data)
+    .done(function() {
+      location.reload();
+    });
+
+  })
+
+  //remove item and reload on click 
+
+</script>
