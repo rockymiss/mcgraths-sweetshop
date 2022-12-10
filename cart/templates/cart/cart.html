@@ -1,11 +1,12 @@
-{% extends "base.html" %} {% load static %} {% block title %}
+{% extends "base.html" %}{% load static %} {% block title %}
 <title>McRocks Shopping Cart</title>
 {% endblock %}
 
 {% block page_header %}
-
-<div>
+<div class="spacer py-5 cream-bg"></div>
+<div class="pt-3">
     <div class="row">
+        
         <div class="col">
             HEADER
         </div>
@@ -15,11 +16,20 @@
 
 {% block content%}
 <div class="spacer py-5 cream-bg"></div>
+<div class="spacer py-5 cream-bg"></div>
 <div class="container">
     <div class="row">
         <div class="col">
             {% if cart_items %}
-                <div class="table-responsive rounded"></div>
+                <div class="table-responsive rounded mt-3">
+                    {{ cart_items }}
+                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Keep Shopping</span>
+                    </a>
+                </div>
             {% else %}
             <p class="lease mb-5">The Cart is Empty</p>
             <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">

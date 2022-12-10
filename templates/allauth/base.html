@@ -70,12 +70,18 @@
                         </li>
                         <li class=" nav-item pe-3">
                             <a href="{% url 'view_cart' %}" class="fas fa-shopping-bag">
-                                <span class="num rounded-circle">3</span>
+                                <span class="num rounded-circle"> {% if grand_total %} {{ product_count }} {% else %} 0 {% endif %}</span>
                             </a>
                         </li>
                         <li class=" nav-item">
                             <span class="">items:</span>
-                            <span class="fw-bold">$150.00</span>
+                            <span class="fw-bold">
+                              {% if grand_total %}
+                                €{{ grand_total|floatformat:2 }}
+                              {% else %}
+                                €0.00
+                              {% endif %} 
+                            </span>
                         </li>
                     </ul>
                 </div>
