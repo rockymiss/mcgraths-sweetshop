@@ -3,8 +3,6 @@
 {% endblock %}
 
 {% block page_header %}
-<div class="spacer py-5 cream-bg"></div>
-<div class="pt-3">
     <div class="row">
         
         <div class="col">
@@ -15,39 +13,116 @@
 {% endblock %}
 
 {% block content%}
-<div class="spacer py-5 cream-bg"></div>
-<div class="spacer py-5 cream-bg"></div>
-<div class="container">
-    <div class="row">
-        <div class="col">
-            {% if cart_items %}
-                <div class="table-responsive rounded mt-3">
-                    {{ cart_items }}
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a>
-                </div>
-            {% else %}
-            <p class="lease mb-5">The Cart is Empty</p>
-            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                <span class="icon">
+
+
+<!--Cart -->
+<section class="h-100">
+    <!-- Cart Container -->
+    <div class="container h-100 py-5">
+      <!-- Inside Container-->
+      <div class="row d-flex justify-content-center align-items-center h-100"> 
+        <!-- Column1 -->
+        <div class="col-10">
+  
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3 class="fw-normal mb-0 text-black">Shopping Cart</h3>
+            <div>
+                <p class="mb-0"><a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg"><span class="icon">
                     <i class="fas fa-chevron-left"></i>
                 </span>
-                <span class="text-uppercase">Keep Shopping</span>
-            </a>
+                <span class="text-uppercase">Keep Shopping</span></a></p>
+              </div>
+           
+          </div>
+  <!-- Added Items -->
+          <div class="card rounded-3 mb-4">
+            {% if cart_items %}
+            {% for item in cart_items %}
+            <div class="card-body p-4">
+              <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-md-2 col-lg-2 col-xl-2">
+                        {% if "placeholder" in item.product.product_image.url %}
+                            <img class="img-fluid rounded-3" src="https://res.cloudinary.com/rockymiss/image/upload/v1669840754/mcgraths/Add_a_subheading_be2xr1.png"  alt="Sorry no image available">
+                        {% else %}
+                            <img class="img-fluid rounded-3" src="{{ item.product.product_image.url }}"  alt="{{ product.product_name }}">
+                        {% endif %}
+                  
+                </div>
+                <div class="col-md-3 col-lg-3 col-xl-3">
+                  <p class="lead fw-normal mb-2">{{ item.product.name }}</p>
+                  
+                </div>
+                <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                  <button class="btn btn-link px-2"
+                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                    <i class="fas fa-minus"></i>
+                  </button>
+  
+                  <input id="form1" min="0" name="quantity" value="2" type="number"
+                    class="form-control form-control-sm" />
+  
+                  <button class="btn btn-link px-2"
+                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                  <h5 class="mb-0">€ {{ item.product.product_price }}</h5>
+                </div>
+                <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                  <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <p>No products here</p>
             {% endif %}
 
-        </div>
+          </div>
+  <!-- End Added Items -->
+  <!-- Total -->
+
+  <div class="d-flex card rounded-3 mb-4 flex-row-reverse text-end">
+   
+        
+        <div class="col-5" class="pt-5 ">
+            <h6>Cart Total: €{{ total|floatformat:2 }}</h6>
+            <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
+            <h4>Grand Total: €{{ grand_total|floatformat:2 }}</h4>
+            {% if free_delivery_delta > 0 %}
+                <p class="mb-1 text-danger">
+                    Free delivery when you spend over €{{ free_deliver_delta }}
+                </p>
+            {% endif %}
+      </div>
     </div>
 
-    <div class="row">
-        <div class="col">
-            
-        </div>
-    </div>
+  <!--end total -->
 
-</div>
+  <!-- Discount -->
+          <!-- <div class="card mb-4">
+            <div class="card-body p-4 d-flex flex-row">
+              <div class="form-outline flex-fill">
+                <input type="text" id="form1" class="form-control form-control-lg" />
+                <label class="form-label" for="form1">Discound code</label>
+              </div>
+              <button type="button" class="btn btn-outline-warning btn-lg ms-3">Apply</button>
+            </div>
+          </div><-->
+  
+          <div class="card">
+            <div class="card-body">
+              <button type="button" class="btn btn-warning btn-block btn-lg">Proceed to Pay</button>
+            </div>
+          </div>  
+          <!--End Discount-->
+  
+        </div><!-- Column 1 -->
+      </div> <!-- End Inside Container -->
+    </div><!-- End Container -->
+  </section>
+
+<!--End Cart-->
+
 {% endblock %}

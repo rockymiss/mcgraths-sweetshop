@@ -63,14 +63,12 @@
                     </ul>
                     <ul class="navbar-nav icons ms-auto mb-2 mb-lg-0">
                         <li class=" nav-item pe-3">
-                            <a href="" class="fas fa-heart">
-
-                                <span class="num rounded-circle">1</span>
+                            <a href="" class="fas fa-user">
                             </a>
                         </li>
                         <li class=" nav-item pe-3">
-                            <a href="{% url 'view_cart' %}" class="fas fa-shopping-bag">
-                                <span class="num rounded-circle"> {% if grand_total %} {{ product_count }} {% else %} 0 {% endif %}</span>
+                            <a href="{% url 'view_cart' %}" class="fas fa-shopping-cart">
+                                <span class="num rounded-circle border border-2"> {% if grand_total %} {{ product_count }} {% else %} 0 {% endif %}</span>
                             </a>
                         </li>
                         <li class=" nav-item">
@@ -132,6 +130,7 @@
         </div>
     </div>
     
+    
     </header>
 
 
@@ -143,9 +142,9 @@
 
    <!--Footer Section-->
    
-  
+   <div class="clear"></div>
 
-    <footer class="text-center text-lg-start mt-xl-5 pt-4 border-top p-1">
+    <footer class="text-center text-lg-start mt-auto pt-4 border-top p-1">
       <div class="container my- ">
    
         <!--Grid row-->
