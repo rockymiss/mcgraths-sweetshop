@@ -48,7 +48,7 @@ def adjust_cart(request, item_id):
     Adjusts the quantity from the cart template
     """
 
-    quantity = int(request.POST.get('quantity', 0))
+    quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
 
