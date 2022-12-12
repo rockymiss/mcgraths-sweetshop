@@ -31,11 +31,12 @@
   </head>
 
   <body class>
+    <div class="spacer py-5 cream-bg"></div>
     
     <header>
 
-      <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light cream-bg">
+      <div class="container-fluid fixed-top pb-3">
+        <nav class="navbar navbar-expand-lg navbar-light cream-bg ">
             <div class="container-fluid pe-lg-2 p-0">
                 <a class="navbar-brand fw-bold fs-3" href="{% url 'home' %}">MCROCKS</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -63,19 +64,23 @@
                     </ul>
                     <ul class="navbar-nav icons ms-auto mb-2 mb-lg-0">
                         <li class=" nav-item pe-3">
-                            <a href="" class="fas fa-heart">
-
-                                <span class="num rounded-circle">1</span>
+                            <a href="" class="fas fa-user">
                             </a>
                         </li>
                         <li class=" nav-item pe-3">
-                            <a href="{% url 'view_cart' %}" class="fas fa-shopping-bag">
-                                <span class="num rounded-circle">3</span>
+                            <a href="{% url 'view_cart' %}" class="fas fa-shopping-cart">
+                                <span class="num rounded-circle border border-2"> {% if grand_total %} {{ product_count }} {% else %} 0 {% endif %}</span>
                             </a>
                         </li>
                         <li class=" nav-item">
                             <span class="">items:</span>
-                            <span class="fw-bold">$150.00</span>
+                            <span class="fw-bold">
+                              {% if grand_total %}
+                                €{{ grand_total|floatformat:2 }}
+                              {% else %}
+                                €0.00
+                              {% endif %} 
+                            </span>
                         </li>
                     </ul>
                 </div>
@@ -126,6 +131,7 @@
         </div>
     </div>
     
+    
     </header>
 
 
@@ -137,9 +143,9 @@
 
    <!--Footer Section-->
    
-  
+   <div class="clear"></div>
 
-    <footer class="text-center text-lg-start mt-xl-5 pt-4 border-top p-1">
+    <footer class="text-center text-lg-start mt-auto pt-4 border-top p-1">
       <div class="container my- ">
    
         <!--Grid row-->

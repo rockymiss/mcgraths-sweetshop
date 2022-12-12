@@ -30,6 +30,7 @@ class Products(models.Model):
     image_url = models.URLField(max_length=1050, null=True, blank=True)
     product_price = models.DecimalField(max_digits=8, decimal_places=2)
     description = models.TextField()
+    has_colours = models.BooleanField(default=False, null=True, blank=True)
     status = models.IntegerField(choices=DISCOUNT, default="0")
 
     def __str__(self):
