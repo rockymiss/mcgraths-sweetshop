@@ -93,7 +93,14 @@ To ensure that all elements of the website were working I carried out a detailed
 
 ### Bugs sub heading
 
-Bug info
+Increase and Decrease Product Value
+
+<details open>
+<summary>Increase and Decrease Product Bug</summary>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1670880846/mcgraths/missing-bracket_wcp7od.png"></p>
+
+Despite updating product_detail and quantity_input_script with the bug fix from Scott of Code Institute my products input value was not increasing or decreasing.  When clicking either the plus or minus icon the page would reload and just one item would add to the cart.  As I used bootstrap5 for this project a CDN link for js query fixed the page re-load.  The issue of the value increase or decrease remained and this was the result of a missing curly bracket as shown in the image above.  A simple fix yet a deadly needle in a haystack.  Thanks to tutor support for the help with this one.  
+</details>
 
 <details open>
 <summary>Bug</summary>
