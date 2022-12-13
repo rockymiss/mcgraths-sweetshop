@@ -1,0 +1,51 @@
+<form class="form update-form d-flex" method="POST" action="{% url 'adjust_cart' item.item_id  %}">
+    {% csrf_token %}
+    <div class="form-group">
+        <div class="input-group input-group-{{ item.item_id }}">
+            <div class="input-group-prepend">
+                <button class="decrement-qty btn btn-sm btn-black rounded-0 decrement-qty_{{ item.item_id }} 
+                                {% if item.colour %}decrement-colour_{{ item.item_id }}_{{ item.colour }}{% endif %}" 
+                                data-item_id="{{ item.item_id }}" data-colour="{{ item.colour }}">
+                                    <span class="icon">
+                                        <i class="fas fa-minus fa-sm"></i>
+                                    </span>
+                </button>
+            </div>
+                
+            
+                <input class="form-control form-control-sm qty_input id_qty_{{ item.item_id }} 
+                            {% if item.colour %}colour_{{ item.item_id }}_{{ item.colour }}{% endif %}" type="number"
+                            name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                            data-item_id="{{ item.item_id }}" data-colour="{{ item.colour }}"  id="id_qty_{{ item.item_id }}">
+
+            <div class="input-group-append">
+                <button class="increment-qty btn btn-sm btn-black rounded-0 increment-qty_{{ item.item_id }} 
+                                {% if item.colour %}increment-colour_{{ item.item_id }}_{{ item.colour }}{% endif %}"
+                                data-item_id="{{ item.item_id }}" data-colour="{{ item.colour }}">
+                                    <span class="icon">
+                                        <i class="fas fa-plus fa-sm"></i>
+                                    </span>
+                </button>
+
+                {% if item.product.has_colours %}
+                    <input type="hidden" name="product_colour" value="{{ item.colour }}">
+                {% endif %}
+        
+            </div>
+
+                
+            
+        </div>
+    </div>
+  </form>
+
+  <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+    <span>
+        <a href="{% url 'adjust_cart' item.item_id %}" class="update-link btn btn-dark update-link text-info" title="Refresh"><i class="fas fa-sync-alt"></i></a>
+        <a href="{% url 'remove_cart' item.item_id %}" class="remove-item text-danger" id="remove_{{ item.item_id }}" data-product_colour="{{ item.colour }}"> <i class="fas fa-trash fa-lg"></i></a>
+        <!-- <a class="update-link btn btn-outline-black rounded-0"><small>Update </small></a>
+        <a class="btn btn-danger rounded-0 remove-item text-light float-right" id="remove_{{ item.item_id }}" data-product-colour="{{ item.colour }}"><small>Remove </small><i class="fa fa-trash"></i></a>
+         -->
+
+    </span>
+</div>
