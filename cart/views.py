@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse
+from django.shortcuts import get_object_or_404, HttpResponse
 from products.models import Products
 
 # Create your views here.
@@ -40,6 +41,7 @@ def add_to_cart(request, item_id):
             cart[item_id] = quantity
 
     request.session['cart'] = cart
+    print(cart)
     return redirect(redirect_url)
 
 
@@ -49,15 +51,53 @@ def adjust_cart(request, item_id):
     """
 
     quantity = int(request.POST.get('quantity'))
-    redirect_url = request.POST.get('redirect_url')
+    colour = None
+    if 'product_colour' in request.POST:
+        colour = request.POST['product_colour']
     cart = request.session.get('cart', {})
 
-    if quantity > 0:
-        cart[item_id] = quantity
-        print(quantity)
+    if colour:
+        if quantity > 0:
+            cart[item_id]['items_by_colour'][colour] = quantity
+            print(cart)
+        else:
+            del cart[item_id]['items_by_colour'][colour]
+            if not cart[item_id]['items_by_colour']:
+                cart.pop(item_id)
+                print(cart)
     else:
-        cart.pop(item_id)
-        print(quantity)
+        if quantity > 0:
+            cart[item_id] = quantity
+            print(cart)
+        else:
+            cart.pop(item_id)
+            print(cart)
 
     request.session['cart'] = cart
+    print(cart)
     return redirect(reverse('view_cart'))
+
+
+def remove_cart(request, item_id):
+    """
+    Removes items from the cart
+    """
+    try:
+        colour = None
+        if 'product_colour' in request.POST:
+            colour = request.POST['product_colour']
+        cart = request.session.get('cart', {})
+
+        if colour:
+            if quantity > 0:
+                del cart[item_id]['items_by_colour'][colour]
+                if not cart[item_id]['items_by_colour']:
+                    cart.pop(item_id)
+        else:
+            cart.pop(item_id)
+
+        request.session['cart'] = cart
+        return redirect(reverse('view_cart'))
+  
+    except Exception as e:
+        return HttpResponse(status=500)
