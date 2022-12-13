@@ -38,14 +38,8 @@
         </div>
     </div>
   </form>
+  
+    <a class="update-link btn btn-dark text-info" title="Refresh"><i class="fas fa-sync-alt"></i></a>
+    <a class="remove-item text-danger" title="Delete Items" id="remove_{{ item.item_id }}" data-product_colour="{{ item.colour }}"> <i class="fas fa-trash fa-lg"></i></a>
 
-  <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-    <span>
-        <a href="{% url 'adjust_cart' item.item_id %}" class="update-link btn btn-dark update-link text-info" title="Refresh"><i class="fas fa-sync-alt"></i></a>
-        <a href="{% url 'remove_cart' item.item_id %}" class="remove-item text-danger" id="remove_{{ item.item_id }}" data-product_colour="{{ item.colour }}"> <i class="fas fa-trash fa-lg"></i></a>
-        <!-- <a class="update-link btn btn-outline-black rounded-0"><small>Update </small></a>
-        <a class="btn btn-danger rounded-0 remove-item text-light float-right" id="remove_{{ item.item_id }}" data-product-colour="{{ item.colour }}"><small>Remove </small><i class="fa fa-trash"></i></a>
-         -->
-
-    </span>
-</div>
+    

@@ -131,25 +131,22 @@
 <script type="text/javascript">
   //update quantity when clicking 
   $(`.update-link`).click(function(e) {
-    var form = $(this).prev('update-form');
+    var form = $(this).prev('.update-form');
     form.submit()
   })
 
-  $(`.remove-item`).click(function(e) {
-    var csrfToken = "{{ csrf_token }}"
-    var itemId = $(this).attr('id').split('remove_')[1];
-    var colour = $(this).data('product_colour');
-    var url = '/cart/remove/${itemId}/';
-    var data = {'csrfmiddlewaretoken': csrfToken, 'product_colour': colour};
+  $('.remove-item').click(function (e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var colour = $(this).data('product_colour');
+        var url = `/cart/remove/${itemId}/`;
+        var data = {
+            'csrfmiddlewaretoken': csrfToken, 'product_colour': colour};
 
-    $.post(url, data)
-    .done(function() {
-      location.reload();
+        $.post(url, data)
+            .done(function () {
+                location.reload();
+            });
     });
-
-  })
-
-  //remove item and reload on click 
-
 </script>
 {% endblock %}
