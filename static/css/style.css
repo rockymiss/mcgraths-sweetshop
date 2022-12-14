@@ -75,6 +75,11 @@ body {
     color: #00B1FB;
 }
 
+.menu-headings {
+  font-size: smaller !important;
+  text-align: end;
+}
+
 a.fas {
     position: relative;
     font-size: 20px;

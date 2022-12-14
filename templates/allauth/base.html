@@ -18,24 +18,21 @@
     <!--stylesheet link-->
     <link rel="stylesheet" href="{% static 'css/style.css' %}" /> 
     <!--bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
-                rel="stylesheet" 
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
-                crossorigin="anonymous">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     {% endblock%}
 
     {% block corejs %}
     <!--fontawesome-->
     <script src="https://kit.fontawesome.com/0037301c3f.js" crossorigin="anonymous"></script> 
     <!--bootstrap-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
-    </script>
-
-    <!--jQuery-->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
      {% endblock %}
     
@@ -64,16 +61,16 @@
     {% block page_header %}
     {% endblock %} 
 
-        <nav class="navbar navbar-expand-lg navbar-light cream-bg ">
-            <div class="container-fluid pe-lg-2 p-0">
-                <a class="navbar-brand fw-bold fs-3" href="{% url 'home' %}">MCROCKS</a>
+        <nav class="navbar navbar-expand-lg navbar-light cream-bg d-flex">
+            <div class="container-fluid pe-lg-2 p-0 ">
+                <a class="navbar-brand font-weight-bold fs-3" href="{% url 'home' %}">MCROCKS</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                    <ul class="menu-headings navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link pe-3 me-4 fw-bold active" aria-current="page" href="{% url 'home' %}">HOME</a>
                         </li>
@@ -114,6 +111,8 @@
                 </div>
             </div>
         </nav>
+
+
         <div class="row">
             <div class="col-lg-3 mb-lg-0 mb-2">
               <div class="dropdown">
@@ -131,7 +130,7 @@
                 </div>
               </div>
               <div class="col-lg-9">
-                <div class="d-lg-flex">
+                <div class="d-lg-flex float-right">
                     <div class="d-lg-flex align-items-center border">
                        
                         <div class="d-flex align-items-center w-100 h-100 ps-lg-0 ps-sm-3">
@@ -145,12 +144,12 @@
                         </div>
                     </div>
 
-                    <div class="d-flex align-items-center ms-lg-auto mt-lg-0 mt-3 pe-2">
+                    <!-- <div class="d-flex align-items-center ms-lg-auto mt-lg-0 mt-3 pe-2">
                         <span class=" me-2 fas fa-phone bg-light rounded-circle"></span>
                         <div class="d-flex flex-column ps-2">
                             <p class="fw-bold">+44 93 87654321</p>
                             
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -178,7 +177,7 @@
       <div class="container my- ">
    
         <!--Grid row-->
-        <div class="row m-auto  d-flex justify-content-around">
+        <div class="row m-auto d-flex justify-content-around">
         
 
           <!--Grid column-->
