@@ -4,7 +4,7 @@
   <head>
 
     {% block meta %}
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">\
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Cake making supplies shop with blog">
@@ -88,17 +88,16 @@
                         </li>
                     </ul>
                     <ul class="navbar-nav icons ms-auto mb-2 mb-lg-0">
-                        <li class=" nav-item pe-3">
+                        <li class=" nav-item px0-3">
                             <a href="" class="fas fa-user">
                             </a>
                         </li>
-                        <li class=" nav-item pe-3">
+                        <li class=" nav-item px-3">
                             <a href="{% url 'view_cart' %}" class="fas fa-shopping-cart">
                                 <span class="num rounded-circle border border-2"> {% if grand_total %} {{ product_count }} {% else %} 0 {% endif %}</span>
                             </a>
                         </li>
                         <li class=" nav-item">
-                            <span class="">items:</span>
                             <span class="fw-bold">
                               {% if grand_total %}
                                 €{{ grand_total|floatformat:2 }}
