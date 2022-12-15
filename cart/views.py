@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse
 from django.shortcuts import get_object_or_404, HttpResponse
+from django.contrib import messages
 from products.models import Products
 
 # Create your views here.
@@ -18,6 +19,7 @@ def add_to_cart(request, item_id):
     Also allows the user to tore the contents of the Cart when 
     browsing the website elsewhere
     """
+    product = Products.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     colour = None
@@ -39,9 +41,11 @@ def add_to_cart(request, item_id):
             cart[item_id] += quantity
         else:
             cart[item_id] = quantity
+            print(product)
+            messages.success(request, f'Added {product.name} to your cart ')
+            print(messages)
 
     request.session['cart'] = cart
-    print(cart)
     return redirect(redirect_url)
 
 
@@ -59,22 +63,17 @@ def adjust_cart(request, item_id):
     if colour:
         if quantity > 0:
             cart[item_id]['items_by_colour'][colour] = quantity
-            print(cart)
         else:
             del cart[item_id]['items_by_colour'][colour]
             if not cart[item_id]['items_by_colour']:
                 cart.pop(item_id)
-                print(cart)
     else:
         if quantity > 0:
             cart[item_id] = quantity
-            print(cart)
         else:
             cart.pop(item_id)
-            print(cart)
 
     request.session['cart'] = cart
-    print(cart)
     return redirect(reverse('view_cart'))
 
 

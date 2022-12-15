@@ -1,25 +1,6 @@
 
 /* Main */
 
-
-/* .text-col-brown {
-  color: var(--brown);
-} */
-
-
-
-/*index page */
-
-/* .index-container {
-  position: relative;
-  text-align: center;
-  
-} */
-
-
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
@@ -124,7 +105,7 @@ a.fas {
 /* .col-lg-3 .btn.btn-primary:hover {
     background-color: #aadf5a; */
 
-} */
+/* } */
 
 .col-lg-3 ul {
     width: 100%;
@@ -466,4 +447,21 @@ button.btn.shop-button {
   padding-top: 2px;
   justify-content: flex-start;
   border-bottom-right-radius: 5px
+}
+
+/* messages */
+
+.message-container {
+  position: fixed;
+  top: 72px;
+  right: 15px;
+  z-index: 999999900000;
+}
+
+.custom-toast {
+  overflow: visible;
+}
+
+.toast-capper {
+  height: 2px;
 }

@@ -51,15 +51,9 @@
   <body>
     <div class="spacer py-5 cream-bg"></div>
     
-    <header>
+    <header class="container-fluid fixed-top pb-3">
 
-      <div class="container-fluid fixed-top pb-3">
-
-        {% if messages %}
-    <div class="message-container"></div>
-    {% endif %}
-    {% block page_header %}
-    {% endblock %} 
+        
 
     <!--Toggle Navbar with cart and account-->
     <!-- MDB Bootstrap -->
@@ -178,16 +172,32 @@
                         </div>
                     </div>
                     </div>
-                </div>
+               
             </div>
             
                 
             </div>
         </div>
     </div>
+   
     
     
     </header>
+
+     {% if messages %}
+    <div class="message-container">
+
+      {% for message in messages %}
+
+      {% include 'includes/toasts/toast_success.html' %}
+      
+      {% endfor %}
+    </div>
+      {% endif %}
+    
+  
+
+   
 
 
     
@@ -198,10 +208,10 @@
 
    <!--Footer Section-->
    
-   <div class="clear"></div>
+   <!-- <div class="clear"></div>
 
     <footer class="text-center text-lg-start mt-auto pt-4 border-top p-1">
-      <div class="container my- ">
+      <div class="container my- ">-->
    
         <!--Grid row-->
         <div class="row m-auto d-flex justify-content-around">
@@ -270,15 +280,24 @@
       <!--Grid row-->
       
     </div>
+  </footer>
 
-   
+    
+
+    {% block page_header %}
+    {% endblock %}
+
+
     {% block postloadjs %}
+    <script type="text/javascript">
+      $('.toast').toast('show');
+  </script>
 
     {% endblock %}
 
     
   
-</footer>
+
     
   </body>
 </html>
