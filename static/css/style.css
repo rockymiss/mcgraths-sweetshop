@@ -45,6 +45,18 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: url(https://res.cloudinary.com/rockymiss/image/upload/v1669838316/mcgraths/cupcake-3723832_1920_upijsh_bzs51e.jpg) no-repeat fixed;
+  background-size: cover;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: var(--cream);
+  z-index: -1;
 }
 
 .remove-item
