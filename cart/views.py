@@ -41,9 +41,7 @@ def add_to_cart(request, item_id):
             cart[item_id] += quantity
         else:
             cart[item_id] = quantity
-            print(product)
             messages.success(request, f'Added {product.name} to your cart ')
-            print(messages)
 
     request.session['cart'] = cart
     return redirect(redirect_url)

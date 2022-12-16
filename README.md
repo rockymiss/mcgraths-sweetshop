@@ -26,6 +26,7 @@ McRocks Cake Supplies is designed as an e-commerce website to get users to purch
 |[19](https://github.com/rockymiss/mcrocks-shop/issues/19)|As a User I can register so that my data is saved for future use on the website|Basic Setup|
 |[20](https://github.com/rockymiss/mcrocks-shop/issues/21)|As a User I can see a list of products so that I can view what I can shop for|Basic Setup|
 |[21](https://github.com/rockymiss/mcrocks-shop/issues/21)|As a User I can sort products so that I can easily look for what I want to buy|Basic Setup|
+|[66](https://github.com/users/rockymiss/projects/8/views/1)|As a User I can see a confirmation message so that I can be sure what I want worked|Basic Setup|
 |[22](https://github.com/rockymiss/mcrocks-shop/issues/22)|As a User I can search products so that I can find the product I am looking for by name or description|Basic Setup|
 |[23](https://github.com/rockymiss/mcrocks-shop/issues/23)|As a User I can add and remove items from the shopping trolley so that I can see what I am spending/spend within my budget|Payments|
 |[24](https://github.com/rockymiss/mcrocks-shop/issues/24)|As a User I can put in my card details so that I can buy the items in the shopping trolley|Payments|
