@@ -112,14 +112,79 @@
 <!-- Collapsible wrapper -->
 
 <!-- Right elements -->
-  <div class="d-flex align-items-center">
+
+<div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+  <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+      <li class="list-inline-item dropdown">
+          <a class="text-black nav-lin" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="text-center">
+                  <div><i class="fas fa-user fa-lg dropdown-toggle"></i></div>
+                  <p class="my-0"></p>
+              </div>
+          </a>
+          <div class="dropdown-menu border-0" aria-labelledby="user-options">
+              {% if request.user.is_authenticated %}
+                  {% if request.user.is_superuser %}
+                      <a href="" class="dropdown-item">Store</a>
+                  {% endif %}
+                  <a href="" class="dropdown-item">My Profile</a>
+                  <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+              {% else %}
+                  <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                  <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+              {% endif %}
+          </div>
+      </li>
+      <li class="list-inline-item">
+        <a href="{% url 'view_cart' %}" class="fas fa-shopping-cart">
+          <span class="num rounded-circle border border-2"> {% if grand_total %} {{ product_count }} {% else %} 0 {% endif %}</a> 
+            
+
+                 
+                      {% if grand_total %}
+                          € {{ grand_total|floatformat:2 }}
+                      {% else %}
+                           € 0.00
+                      {% endif %}
+                    </span>
+              </div>
+          </a>
+      </li>
+  </ul>
+</div>
+</div>
+ 
+
+
+
+
 
 <!-- Account and cart -->
-  <div class="dropdown">
-    <ul class="navbar-nav icons ms-auto mb-2 mb-lg-0">
-      <li class=" nav-item px0-3">
-        <a href="" class="fas fa-user"></a>
+
+
+
+
+<!-- <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+  <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+    <li class="list-inlin-item dropdown">
+      <a class="nav-link" href="" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div><i class="fas fa-user"></i></div>
+        <p class="my-0">My Account</p>
+      </div>
+      </a>
+        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+          {% if request.user.is_authenticated %} 
+            {% if request.user.is_superuser %}
+              <a href="" class="dropdown-item">Product Management</a>
+              {% endif %}
+              <a href="{% url 'account_logout' %}" class="dropdown-item"></a>
+            {% else %}
+            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+            {% endif %}
+        </div>
       </li>
+      
       <li class=" nav-item px-3">
         <a href="{% url 'view_cart' %}" class="fas fa-shopping-cart">
           <span class="num rounded-circle border border-2"> {% if grand_total %} {{ product_count }} {% else %} 0 {% endif %}</span>
@@ -134,9 +199,11 @@
           {% endif %} 
         </span>
       </li>
+
+
     </ul>
   </div>
-  </div>
+  </div> -->
 
 </nav>
 <!--End Toggle Navbar -->
