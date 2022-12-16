@@ -50,7 +50,7 @@ def product_list(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "Why didn't you search for anything?")
+                # messages.error(request, "Why didn't you search for anything?")
                 return redirect(reverse('products'))
 
             query = Q(
