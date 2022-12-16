@@ -1,14 +1,27 @@
-{% extends "includes/base.html" %} {% load static %} {% block title %}
+{% extends "includes/base.html" %} 
+{% load static %} 
+{% block title %}
 <title>McRocks</title>
 {% endblock %}
 
 {% block content %}
 
-    <div class="index-container d-flex">
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-7 col-md-6 my-auto">
+          <h1>Shop for Cake Supplies</h1>
+        </div>
+        <div class="my-5 pink-bg">
+          
+            <a class="shop-now p-2 rounded-0 text-uppercase" href="{% url 'products' %}">Start Shopping</a>
+         
+        </div>
+
+      </div>
        
-      <img src="https://res.cloudinary.com/rockymiss/image/upload/v1669838316/mcgraths/cupcake-3723832_1920_upijsh_bzs51e.jpg" alt="Donuts" class="img-fluid">
-      <div>
-        <a class="shop-now p-2 pink-bg rounded text-uppercase fw-bold" href="{% url 'products' %}">Start Shopping</a>
+      <!-- <img src="https://res.cloudinary.com/rockymiss/image/upload/v1669838316/mcgraths/cupcake-3723832_1920_upijsh_bzs51e.jpg" alt="Donuts" class="img-fluid"> -->
+    
+        
     </div>
             
            
