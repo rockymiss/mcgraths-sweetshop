@@ -305,7 +305,9 @@ Links to purchasers who are local cake makers.  This would show loyality to clie
 - [Dango Central](https://djangocentral.com/building-a-blog-application-with-django/)
 - [Dango Mastery YouTube](https://www.youtube.com/watch?v=NhWVl5Z7SHU) for search functionality with Class Based View
 - [bbootstrap](https://bbbootstrap.com/search?query=navbar&page=1) for the website's navbar
--[mdbootstrap](https://mdbootstrap.com/docs/standard/extended/shopping-carts/) for the shopping cart
+- [mdbootstrap](https://mdbootstrap.com/docs/standard/extended/shopping-carts/) for the shopping cart
+- [Ozcart](https://ozcart.com/ecommerce/common-online-store-faqs-for-your-customers/)
+for the Frequently Asked Questions
 
 -----
 
