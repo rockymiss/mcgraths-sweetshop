@@ -6,6 +6,10 @@ from .forms import OrderForm
 
 
 def checkout(request):
+    """
+    Function to display the checkout form
+    """
+
     cart = request.session.get('cart', {})
     if not cart:
         messages.error(request, "There's nothing to see here!")
