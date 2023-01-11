@@ -1,0 +1,144 @@
+{% extends "includes/base.html" %}
+{% load static %} 
+
+{% block title %}
+<title>McRocks Checkout Success</title>
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <!-- <div class="row">
+        
+        <div class="col">
+            HEADER
+        </div>
+    </div>
+</div> -->
+{% endblock %}
+
+{% block content%}
+
+
+<!--Cart -->
+<section class="h-100">
+    
+    <div class="container h-100 py-5">
+
+        <h3 class="fw-normal mb-0 text-black text-center">Thank you! </h3>
+    
+      <div class="row d-flex justify-content-center align-items-center h-100"> 
+    
+        <div class="col-10">
+  
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            
+            <div>
+               <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg"><span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span></a>
+              </div>
+
+              
+           
+          </div>
+          
+  
+
+ 
+          <div class="card rounded-3 mb-4">
+
+            <h4 class="text-center">Your order information is below, an email will be sent to {{ order.email }}/h4>
+            
+            
+
+        </div>
+  <!-- End Added Items -->
+
+  <div class="card mb-4">
+    <div class="col">Fill out the form below</div>
+            <div class="card-body p-4 d-flex flex-col">
+              
+
+                <div class="col">
+              <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                {% csrf_token %}
+                
+                <fieldset class="rounded px-3 mb-5">
+                    <legend class="fieldset-label small text-black px-2 w-auto">Your Details</legend>
+                    {{ order_form.full_name | as_crispy_field }}
+                    {{ order_form.email | as_crispy_field }}
+                </fieldset>
+                <fieldset class="rounded px-3 mb-5">
+                    <legend class="fieldset-label small text-black px-2 w-auto">Delivery Details</legend>
+                    {{ order_form.phone_number | as_crispy_field }}
+                    {{ order_form.address1 | as_crispy_field }}
+                    {{ order_form.address2 | as_crispy_field }}
+                    {{ order_form.town_or_city | as_crispy_field }}
+                    {{ order_form.county | as_crispy_field }}
+                    {{ order_form.postcode | as_crispy_field }}
+                    {{ order_form.country | as_crispy_field }}
+
+                    <div class="form-check form-check-inline float-right mr-0">
+                        {% if user.is_authenticated %}
+                            <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
+                            <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+                        {% else %}
+                            <label class="form-check-label" for="id-save-info">
+                                <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
+                                <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                            </label>
+                        {% endif %}
+                    </div>
+                </fieldset>
+
+                <!--stripe -->
+                <fieldset class="px-3">
+                    <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                    <!-- stripe element -->
+                    <div class="mb-3" id="card-element"></div>
+                    <!-- form errors -->
+                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                    <input type="hidden" value="{{ client_secret }}" name="client_secret">
+                   
+                </fieldset>
+
+                <div class="submit-button text-right mt-5 mb-2">                    
+                  <a href="{% url 'view_cart' %}" class="btn btn-outline-black rounded-0">
+                    <span class="icon">
+                      <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="font-weight-bold">Adjust Cart</span>
+                  </a>
+                  <button id="submit-button" class="btn btn-black rounded-0">
+                    <span class="font-weight-bold">Complete Order</span>
+                    <span class="icon">
+                      <i class="fas fa-lock"></i>
+                    </span>
+                  </button>
+                  <p class="small text-danger my-0">
+                    <span class="icon">
+                      <i class="fas fa-exclamation-circle"></i>
+                    </span>
+                    <span>Your card will be charged <strong>€{{ grand_total|floatformat:2 }}</strong></span>
+                  </p>
+                </div>
+
+
+
+              </form>
+            </div>
+
+
+            </div>
+          </div>
+  
+  </section>
+
+<!--End Cart-->
+
+{% endblock %}
+
