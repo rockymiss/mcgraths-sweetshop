@@ -85,20 +85,14 @@ def checkout(request):
             messages.error(request, "There's nothing to see here!")
             return redirect(reverse('products'))
 
-        current_cart = cart_contents(request)
-        total = current_cart['grand_total']
-        stripe_total = round(total * 100)
-        stripe.api_key = stripe_secret_key
-        intent = stripe.PaymentIntent.create(
-                amount=stripe_total,
-                currency=settings.STRIPE_CURRENCY,
-            )
-        print(intent)
-        print("This is the public key")
-        print(stripe_public_key)
-        print("This is the secret key")
-        print(stripe_secret_key)
-        order_form = OrderForm()
+    current_cart = cart_contents(request)
+    total = current_cart['grand_total']
+    stripe_total = round(total * 100)
+    stripe.api_key = stripe_secret_key
+    intent = stripe.PaymentIntent.create(
+            amount=stripe_total,
+            currency=settings.STRIPE_CURRENCY,
+        )
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
