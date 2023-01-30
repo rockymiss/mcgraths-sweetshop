@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect, reverse
-from django.shortcuts import get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse)
 from django.contrib import messages
 from django.conf import settings
 
@@ -16,9 +16,8 @@ import json
 
 def checkout(request):
     """
-    Function to display the checkout form
+    Function to handle the checkout page/form
     """
-
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -36,18 +35,16 @@ def checkout(request):
             'address2': request.POST['address2'],
             'county': request.POST['county'],
         }
-
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            # order = order_form.save(commit=False)
-            # pid = request.POST.get('client_secret').split('_secret')[0]
-            # order.stripe_pid = pid
-            # order.original_cart = json.dumps(cart)
-            order = order_form.save()
-
+            order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_cart = json.dumps(cart)
+            order.save()
             for item_id, item_data in cart.items():
                 try:
-                    product = Products.objects.get(id=item_id)
+                    product = Product.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
@@ -68,31 +65,35 @@ def checkout(request):
 
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the items in your cart wasn't found in \
+                        "One of the items in your bag wasn't found in \
                         our database. Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_cart'))
-            request.session['save_info'] = 'save-info' in request.POST
 
-            return redirect(reverse('checkout_success',
-                                    args=[order.order_number]))
+            request.session['save_info'] = 'save-info' in request.POST
+            return redirect(
+                reverse('checkout_success', args=[order.order_number]))
         else:
-            messages.error(request, "There was somthing wrong with your form!")
+            messages.error(request, 'There was an error with your form. \
+                Please double check your information.')
     else:
         cart = request.session.get('cart', {})
         if not cart:
-            messages.error(request, "There's nothing to see here!")
+            messages.error(
+                request, "There's nothing in your bag at the moment")
             return redirect(reverse('products'))
 
-    current_cart = cart_contents(request)
-    total = current_cart['grand_total']
-    stripe_total = round(total * 100)
-    stripe.api_key = stripe_secret_key
-    intent = stripe.PaymentIntent.create(
+        current_cart = cart_contents(request)
+        total = current_cart['grand_total']
+        stripe_total = round(total * 100)
+        stripe.api_key = stripe_secret_key
+        intent = stripe.PaymentIntent.create(
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
+
+        order_form = OrderForm()
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
@@ -101,8 +102,8 @@ def checkout(request):
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
-        'stripe_public_key': 'stripe_public_key',
-        'client_secret': 'intent.client_secret',
+        'stripe_public_key': stripe_public_key,
+        'client_secret': intent.client_secret,
     }
 
     return render(request, template, context)
@@ -110,7 +111,7 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """
-    Gives the user a success view
+    Handle successful checkouts
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
