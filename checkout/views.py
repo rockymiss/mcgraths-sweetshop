@@ -37,14 +37,14 @@ def checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            order = order_form.save(commit=False)
-            pid = request.POST.get('client_secret').split('_secret')[0]
-            order.stripe_pid = pid
-            order.original_cart = json.dumps(cart)
-            order.save()
+            # order = order_form.save(commit=False)
+            # pid = request.POST.get('client_secret').split('_secret')[0]
+            # order.stripe_pid = pid
+            # order.original_cart = json.dumps(cart)
+            order_form.save()
             for item_id, item_data in cart.items():
                 try:
-                    product = Product.objects.get(id=item_id)
+                    product = Products.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
@@ -63,7 +63,7 @@ def checkout(request):
                             )
                             order_line_item.save()
 
-                except Product.DoesNotExist:
+                except Products.DoesNotExist:
                     messages.error(request, (
                         "One of the items in your bag wasn't found in \
                         our database. Please call us for assistance!")
