@@ -1,5 +1,7 @@
-{% extends "includes/base.html" %}{% load static %} 
+{% extends "includes/base.html" %}
+{% load static %} 
 {% load bag_tools %}
+
 {% block title %}
 <title>McRocks Checkout</title>
 {% endblock %}
@@ -9,19 +11,18 @@
 {% endblock %}
 
 {% block page_header %}
-    <!-- <div class="row">
+    <div class="row">
         
         <div class="col">
             HEADER
         </div>
     </div>
-</div> -->
+</div>
 {% endblock %}
 
+<!--Cart Checkout-->
 {% block content%}
 
-
-<!--Cart -->
 <section class="h-100">
     
     <div class="container h-100 py-5">
@@ -95,6 +96,7 @@
         </div>
   <!-- End Added Items -->
 
+  <!--Cart Checkout Form -->
   <div class="card mb-4">
     <div class="col">Fill out the form below</div>
             <div class="card-body p-4 d-flex flex-col">
@@ -139,6 +141,7 @@
                     <div class="mb-3" id="card-element"></div>
                     <!-- form errors -->
                     <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                    
                     <!--Pass the client secret to the view-->
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
                    
@@ -192,18 +195,6 @@
     </div>
 
   <!--end total -->
-    
-  </section>
-
-<!--End Cart-->
-
-{% endblock %}
-
-{% block content1 %}
-
-  <div class="overlay"></div>
-  <div class="container">...
-  </div>
   <div id="loading-overlay">
     <h1 class="text-light logo-font loading-spinner">
       <span class="icon">
@@ -211,11 +202,16 @@
       </span>
     </h1>
   </div>
+    
+  </section>
+
+<!--End Cart-->
+  
 {% endblock %}
 
 {% block postloadjs %}
     {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+    <script src="{% static 'checkout/js/stripe_elements.js' %}" defer></script>
 {% endblock %}
