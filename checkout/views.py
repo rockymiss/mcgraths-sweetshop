@@ -25,8 +25,9 @@ def cache_checkout_data(request):
             'save_info': request.POST.get('save_info'),
             'username': request.user,
         })
-        return HTTPResponse(status=200)
+        return HttpResponse(status=200)
     except Exception as e:
+        print(e)
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now.  Please try again later.')
         return HttpResponse(content=e, status=400)
