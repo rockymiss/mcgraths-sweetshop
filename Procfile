@@ -1,1 +1,1 @@
-web gunicorn mcgraths_shop.wsgi
+web: gunicorn mcgraths_shop.wsgi:application
