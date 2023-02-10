@@ -86,13 +86,13 @@ class StripeWH_Handler:
                 )
                 for item_id, item_data in json.loads(cart).items():
                     product = Product.objects.get(id=item_id)
-                    # if isinstance(item_data, int):
-                    #     order_line_item = OrderLineItem(
-                    #         order=order,
-                    #         product=product,
-                    #         quantity=item_data,
-                    #     )
-                    #     order_line_item.save()
+                    if isinstance(item_data, int):
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            product=product,
+                            quantity=item_data,
+                        )
+                        order_line_item.save()
             except Exception as e:
                 if order:
                     order.delete()
