@@ -17,6 +17,7 @@ def product_list(request):
     """
 
     products = Products.objects.all()
+    product_drop = Products.objects.all()
     query = None
     categories = None
     offers = None
@@ -65,6 +66,7 @@ def product_list(request):
         'search_term': query,
         'current_categories': categories,
         'offers': offers,
+        'product_drop': product_drop,
 
     }
 
