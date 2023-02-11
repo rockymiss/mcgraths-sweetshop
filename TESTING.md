@@ -99,11 +99,13 @@ Increase and Decrease Product Value
 <summary>Increase and Decrease Product Bug</summary>
 <p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1670880846/mcgraths/missing-bracket_wcp7od.png"></p>
 
-Despite updating product_detail and quantity_input_script with the bug fix from Scott of Code Institute my products input value was not increasing or decreasing.  When clicking either the plus or minus icon the page would reload and just one item would add to the cart.  As I used bootstrap5 for this project a CDN link for js query fixed the page re-load.  The issue of the value increase or decrease remained and this was the result of a missing curly bracket as shown in the image above.  A simple fix yet a deadly needle in a haystack.  Thanks to tutor support for the help with this one.  
+Despite updating product_detail and quantity_input_script with the bug fix from Scott of Code Institute my products input value was not increasing or decreasing.  When clicking either the plus or minus icon the page would reload and just one item would add to the cart. The issue of the value increase or decrease remained and this was the result of a missing curly bracket as shown in the image above.  A simple fix yet a deadly needle in a haystack.  Thanks to tutor support for the help with this one.  
 </details>
 
 <details open>
-<summary>Bug</summary>
-<p align="center"><img src="#"></p>
+<summary>Category List</summary>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1676152671/mcgraths/category_list_wrong_lkw07u.png"></p>
+
+I wanted to create a for loop so that when new categories were added by admin the dropdown list on the navbar for categories would automatically update. To loop I used the variable "products" from the product_list function in my products view.  Each time I clicked on a category it would display the products from that category, which is what I wanted it to do but when I clicked on the dropdown list again all other categories except the one I just clicked disappeared.  To fix this I created a new variable in the product_list function called product_drop which kept the full list of categories at all times.
 
 </details>
