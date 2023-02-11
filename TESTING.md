@@ -108,4 +108,5 @@ Despite updating product_detail and quantity_input_script with the bug fix from 
 
 I wanted to create a for loop so that when new categories were added by admin the dropdown list on the navbar for categories would automatically update. To loop I used the variable "products" from the product_list function in my products view.  Each time I clicked on a category it would display the products from that category, which is what I wanted it to do but when I clicked on the dropdown list again all other categories except the one I just clicked disappeared.  To fix this I created a new variable in the product_list function called product_drop which kept the full list of categories at all times.
 
+I created an issue in github projects and used a development branch called [all-categories-bug](https://github.com/rockymiss/mcrocks-shop/issues/61 )to deal with this issue.  
 </details>
