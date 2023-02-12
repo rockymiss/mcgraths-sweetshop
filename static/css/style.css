@@ -31,6 +31,10 @@
   background-color: var(--lightPink);
 }
 
+.bg-none {
+  background-color: transparent !important;
+}
+
 
 * {
     padding: 0;
@@ -162,6 +166,10 @@ footer {
         border: none;
     }
 
+}
+/* Index */
+.index-container {
+  background-color: transparent !important;
 }
 
 /* Product Detail */
