@@ -9,10 +9,10 @@
   <!--Main display for list of products -->
 
   <div class="overlay"></div>
-  <div class="container-fluid pt-5  justify-content-center">
+  <div class="container-fluid pt-5  justify-content-center cream-bg">
 
-    <div class="row cream-bg">
-    <div class="dropdown cream-bg text-center">
+    <div class="row">
+    <div class="dropdown text-center">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
         Sort by
       </button>
@@ -25,11 +25,11 @@
       </ul>
     </div>
 
-    <div class="col-12 col-md-6 order-md-first cream-bg m-auto">
-      <p class="text.muted mt-3 text-center text-md-left cream-bg">
+    <div class="col-12 col-md-6 order-md-first m-auto">
+      <p class="text.muted mt-3 text-center text-md-left">
         
         {% if search_term or current_categories or current_sorting != 'None_None' %}
-          <span class="small text-center cream-bg"><a href="{% url 'products' %}">Go back to all Products</a> | </span>
+          <span class="small text-center"><a href="{% url 'products' %}">Go back to all Products</a> | </span>
         {% endif %}
        {{ products|length }} Products{% if search_term %} found {% endif %}
         
@@ -38,31 +38,31 @@
     </div>
    
         <div class="col-xl-12 col-l-6 mt-3 ">
-            <div class="row justify-content-around cream-bg ">
+            <div class="row justify-content-around ">
                 {% for product in products %}
           <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <div class="card m-3 cream-bg border-0" style="width: auto;">
+            <div class="card m-3  border-0" style="width: auto;">
                 {% if "placeholder" in product.product_image.url %}
                 <img class="img-fluid" src="https://res.cloudinary.com/rockymiss/image/upload/v1670527269/mcgraths/no-image-available1_r6peww.jpg"  alt="Sorry no image available">
                 {% else %}
                 <img class="img-fluid" src="{{ product.product_image.url }}"  alt="{{ product.product_name }}">
                 {% endif %}
-                <div class="card-body cream-bg">
+                <div class="card-body">
                   <a href="{% url 'product_detail' product.id %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">View Item</a>
-                  <h5 class="card-title cream-bg">{{ product.product_name }}</h5>
-                  <p class="card-text cream-bg">{{ product.product_price }}</p>
-                  <p class="card-text cream-bg">{{ product.description }}</p>
+                  <h5 class="card-title">{{ product.product_name }}</h5>
+                  <p class="card-text">{{ product.product_price }}</p>
+                  <p class="card-text">{{ product.description }}</p>
                   {% if product.category %}
-                  <p class="card-text small mt-1 cream-bg">
-                  <a class="text-muted cream-bg" href="{% url 'products' %}?category={{ product.category.name }}">
+                  <p class="card-text small mt-1">
+                  <a class="text-muted " href="{% url 'products' %}?category={{ product.category.name }}">
                     {{ product.category.cat_friendly_name }}</p></a>
                   {% endif %}
 
                  
                   {% if product.status == 1 %}
-                  <p class="cream-bg">This Product is on offer</p>
+                  <p class="">This Product is on offer</p>
                   {% else %}
-                  <p class="cream-bg">This Product is NOT on offer</p>
+                  <p class="">This Product is NOT on offer</p>
                   {% endif %}     
                 </div>
                 </div>

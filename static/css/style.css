@@ -51,7 +51,7 @@
 }
 
 body {
-  min-height: 100vh; 
+  /* min-height: 100vh;  */
   display: flex;
   flex-direction: column;
   background: url(https://res.cloudinary.com/rockymiss/image/upload/v1669838316/mcgraths/cupcake-3723832_1920_upijsh_bzs51e.jpg) no-repeat fixed;
@@ -148,7 +148,7 @@ p {
   height: auto;
 }
 
-.overlay {
+.overlay-shop {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -161,7 +161,7 @@ p {
   background-color: var(--lightPink);
 }
 
-.shop-container-col:hover .overlay {
+.shop-container-col:hover .overlay-shop {
   opacity: 1;
   z-index: 1000;
 }
@@ -180,15 +180,6 @@ p {
 
 /* Shop now image end */
 
-
-
-footer {
-  position:fixed;
-  bottom: 0;
-  width:100%;
-  height: 210px;
-}
-
 .clear {
   clear: both;
   height: 210px;
@@ -201,9 +192,16 @@ footer {
     }
 
 }
+
 /* Index */
 .index-container {
   background-color: transparent !important;
+  height:450px;
+  
+}
+
+.wrapper-content {
+  flex-grow: 1;
 }
 
 /* Product Detail */
@@ -460,4 +458,15 @@ button.btn.shop-button {
 
 .toast-capper {
   height: 2px;
+}
+
+footer {
+  height: 318px;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
