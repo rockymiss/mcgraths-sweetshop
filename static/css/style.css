@@ -6,6 +6,7 @@
 :root {
   --blue: #00B1FB; 
   --pink: #FFBEBD;
+  --tpink: #FFBEBDAD;
   --lightPink: #FFE9EA;
   --cream: #FBF4E4;
   --brown: #551E00;
@@ -31,6 +32,10 @@
   background-color: var(--lightPink);
 }
 
+.tpink-bg {
+  background-color: var(--tpink) !important;
+}
+
 .bg-none {
   background-color: transparent !important;
 }
@@ -42,15 +47,16 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     color: var(--brown) !important;
-    background-color: var(--cream) !important;
+    
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
   background: url(https://res.cloudinary.com/rockymiss/image/upload/v1669838316/mcgraths/cupcake-3723832_1920_upijsh_bzs51e.jpg) no-repeat fixed;
   background-size: cover;
+  background-color: var(--cream);
 }
 
 .overlay {
@@ -137,15 +143,15 @@ p {
 /* PRoducts */
 
 .shop-now {
-  position: absolute;
+  
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-decoration: none;
   color: var(--brown);
-  background-color: #FFBEBD !important;
-  border-width: 1em;
-  border: solid;
+  background-color: var(--tpink) !important;
+  /* border-width: 1em;
+  border: solid; */
 }
 
 footer {

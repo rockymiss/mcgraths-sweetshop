@@ -14,12 +14,11 @@
 
 {% block content %}
 
-    <div class="container h-100 bg-none ">
-      <div class="row bg-none h-100">
-        <div class="col-12 col-md-6 my-auto bg-none">
-          <h1 class="display-4 bg-none">Shop for Cake Supplies</h1>
-        </div>
-        <div class="my-5">
+    <!-- <div class="container  h-100">
+      <div class="row h-100 align">
+        <div class="col my-auto">
+          <h1 >Shop for Cake Supplies</h1>
+       
           <h5>
             <a class="shop-now p-2 rounded-0 text-uppercase" href="{% url 'products' %}">Start Shopping</a>
           </h5>
@@ -27,12 +26,18 @@
 
       </div>
        
-      <!-- <img src="https://res.cloudinary.com/rockymiss/image/upload/v1669838316/mcgraths/cupcake-3723832_1920_upijsh_bzs51e.jpg" alt="Donuts" class="img-fluid"> -->
+    <img src="https://res.cloudinary.com/rockymiss/image/upload/v1669838316/mcgraths/cupcake-3723832_1920_upijsh_bzs51e.jpg" alt="Donuts" class="img-fluid"> -->
     
-        
-    </div>
-            
-           
-       
-    </div>
+  <div class="container d-flex flex-column align-items-center vh-100 w-100">
+      
+      <div class="row h-50 align-items-center text-center">
+        <div class="col ">
+          <img src="https://res.cloudinary.com/rockymiss/image/upload/v1676235787/mcgraths/Shop_Cake_Supplies_juasne.png" class="img-fluid" alt="Responsive image">
+          <h5 class="m-4">
+            <a class="shop-now p-2 rounded-0 text-uppercase" href="{% url 'products' %}">Start Shopping</a>
+          </h5>
+        </div>
+      </div>
+  </div>  
+
 {% endblock %}
