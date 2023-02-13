@@ -1,3 +1,12 @@
+:root {
+    --blue: #00B1FB; 
+    --pink: #FFBEBD;
+    --tpink: #FFBEBDAD;
+    --lightPink: #FFE9EA;
+    --cream: #FBF4E4;
+    --brown: #551E00;
+  }
+
 .StripeElement,
 .stripe-style-input {
     box-sizing: border-box;
@@ -53,4 +62,16 @@
     justify-content: center;
     margin: 0;
     height: 100%;
+}
+
+select,
+select option {
+    color: var(--brown);
+
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+    
 }
