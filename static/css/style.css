@@ -6,6 +6,7 @@
 :root {
   --blue: #00B1FB; 
   --pink: #FFBEBD;
+  --tpink: #FFBEBDAD;
   --lightPink: #FFE9EA;
   --cream: #FBF4E4;
   --brown: #551E00;
@@ -31,6 +32,14 @@
   background-color: var(--lightPink);
 }
 
+.tpink-bg {
+  background-color: var(--tpink) !important;
+}
+
+.bg-none {
+  background-color: transparent !important;
+}
+
 
 * {
     padding: 0;
@@ -38,15 +47,16 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     color: var(--brown) !important;
-    background-color: var(--cream) !important;
+    
 }
 
 body {
-  min-height: 100vh;
+  /* min-height: 100vh;  */
   display: flex;
   flex-direction: column;
   background: url(https://res.cloudinary.com/rockymiss/image/upload/v1669838316/mcgraths/cupcake-3723832_1920_upijsh_bzs51e.jpg) no-repeat fixed;
   background-size: cover;
+  background-color: var(--cream);
 }
 
 .overlay {
@@ -130,26 +140,45 @@ p {
     margin: 0%;
 }
 
-/* PRoducts */
+/* Shop now image overlay from W3Schools*/
 
-.shop-now {
+.shop-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay-shop {
   position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-decoration: none;
-  color: var(--brown);
-  background-color: #FFBEBD !important;
-  border-width: 1em;
-  border: solid;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: var(--lightPink);
 }
 
-footer {
-  position:fixed;
-  bottom: 0;
-  width:100%;
-  height: 210px;
+.shop-container-col:hover .overlay-shop {
+  opacity: 1;
+  z-index: 1000;
 }
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Shop now image end */
 
 .clear {
   clear: both;
@@ -164,7 +193,22 @@ footer {
 
 }
 
+/* Index */
+.index-container {
+  background-color: transparent !important;
+  height:450px;
+  
+}
+
+.wrapper-content {
+  flex-grow: 1;
+}
+
 /* Product Detail */
+
+.products-container {
+  min-height: 550px;
+}
 
 .breadcrumb-item+.breadcrumb-item::before {
   content: ">"
@@ -418,4 +462,15 @@ button.btn.shop-button {
 
 .toast-capper {
   height: 2px;
+}
+
+footer {
+  height: 318px;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

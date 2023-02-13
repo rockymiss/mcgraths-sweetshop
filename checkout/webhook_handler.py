@@ -72,7 +72,7 @@ class StripeWH_Handler:
             try:
                 order = Order.objects.create(
                     full_name=shipping_details.name,
-                    user_profile=profile,
+                    # user_profile=profile,
                     email=billing_details.email,
                     phone_number=shipping_details.phone,
                     country=shipping_details.address.country,
@@ -93,6 +93,15 @@ class StripeWH_Handler:
                             quantity=item_data,
                         )
                         order_line_item.save()
+                    else:
+                        for colour, quantity in item_data['items_by_colour'].items():
+                            order_line_item = OrderLineItem(
+                                order=order,
+                                product=product,
+                                quantity=quantity,
+                                product_colour=colour,
+                            )
+                            order_line_item.save()
             except Exception as e:
                 if order:
                     order.delete()
@@ -104,7 +113,7 @@ class StripeWH_Handler:
             | SUCCESS: Created order in webhook',
             status=200)
 
-    def handle_payment_intent_failed(self, event):
+    def handle_payment_intent_payment_failed(self, event):
         """
         Handle the payment_intent.failed webhook from Stripe
         """

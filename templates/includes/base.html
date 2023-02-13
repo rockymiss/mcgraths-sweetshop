@@ -51,9 +51,9 @@
   </head>
 
   <body>
-    <div class="spacer py-5 cream-bg"></div>
+    <div class="spacer py-4 m-0"></div>
 
-      <header class="container-fluid fixed-top pb-3">
+      <header class="container-fluid fixed-top pb-3 lightpink-bg">
 
         {% if messages %}
         <div class="message-container">
@@ -227,10 +227,10 @@
   <div class="row">
       <div class="col">
           <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Categories</button>
+              <button class="btn dropdown-toggle lightpink-bg" type="button" data-toggle="dropdown" aria-expanded="false">Categories</button>
                   <div class="dropdown-menu">
                       <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
-                          {% for product in products %}
+                          {% for product in product_drop %}
                               <a class="dropdown-item" href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.cat_friendly_name }}</a>
                           {% endfor %}
                   </div>
@@ -244,7 +244,7 @@
                       <form method="GET" action="{% url 'products' %}" class="d-flex">
                           <input class="ps-md-0 ps-3" type="text" name="q" placeholder=" What do you need?">
                               <div class="d-flex align-items-center justify-content-center"> 
-                                  <button class="btn btn-secondary" type="submit" title="Search"><i class="fas fa-search"></i></button>
+                                  <button class="btn button lightpink-bg" type="submit" title="Search"><i class="fas fa-search"></i></button>
                       </form>
                   </div>
               </div>
@@ -262,7 +262,7 @@
     {% block content%}
     {% endblock %}
 
-    <div class="clear"></div>
+    
 
     {% include 'includes/footer.html' %}
 
