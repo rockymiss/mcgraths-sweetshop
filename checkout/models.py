@@ -7,6 +7,7 @@ from django.conf import settings
 from django_countries.fields import CountryField
 
 from products.models import Products
+from profiles.models import UserProfile
 
 # Create your models here.
 
@@ -18,10 +19,14 @@ class Order(models.Model):
     with minor changes
     """
     order_number = models.CharField(max_length=32, null=False, editable=False)
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
+                                     null=True, blank=True,
+                                     related_name='orders')
     full_name = models.CharField(max_length=55, null=False, blank=False)
     email = models.EmailField(max_length=255, null=False, blank=False)
     phone_number = models.CharField(max_length=22, null=False, blank=False)
-    country = CountryField(max_length=100, blank_label='Country *', null=False, blank=False)
+    country = CountryField(max_length=100, blank_label='Country *',
+                           null=False, blank=False)
     postcode = models.CharField(max_length=20, null=True, blank=True)
     town_or_city = models.CharField(max_length=40, null=False, blank=False)
     address1 = models.CharField(max_length=80, null=False, blank=False)
@@ -35,7 +40,8 @@ class Order(models.Model):
     grand_total = models.DecimalField(
         max_digits=10, decimal_places=2, null=False, default=0)
     original_cart = models.TextField(null=False, blank=False, default='')
-    stripe_pid = models.CharField(max_length=254, null=False, blank=False, default="")
+    stripe_pid = models.CharField(max_length=254, null=False,
+                                  blank=False, default="")
 
     def _generate_order_number(self):
         """
@@ -61,8 +67,8 @@ class Order(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        A method which overrides the original save method to set the order number
-        if it hasn't been set previously.
+        A method which overrides the original save method to set the 
+        order number if it hasn't been set previously.
         """
         if not self.order_number:
             self.order_number = self._generate_order_number()
@@ -74,7 +80,7 @@ class Order(models.Model):
 
 class OrderLineItem(models.Model):
     """
-    Class so that users can add products to their order which will 
+    Class so that users can add products to their order which will
     also update delivery costs etc. as each items is added
     """
     order = models.ForeignKey(
