@@ -206,6 +206,10 @@ p {
 
 /* Product Detail */
 
+.products-container {
+  min-height: 550px;
+}
+
 .breadcrumb-item+.breadcrumb-item::before {
   content: ">"
 }
