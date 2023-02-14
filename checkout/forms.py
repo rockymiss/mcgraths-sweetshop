@@ -1,5 +1,6 @@
 from django import forms
 from .models import Order
+from crispy_forms.helper import FormHelper
 
 
 class OrderForm(forms.ModelForm):
@@ -18,6 +19,9 @@ class OrderForm(forms.ModelForm):
         Add placeholders and classes, remove auto-generated
         labels and set autofocus on first field
         """
+
+        self.helper = FormHelper()
+        self.helper.form_show_labels = False
         super().__init__(*args, **kwargs)
         placeholders = {
             'full_name': 'Full Name',
@@ -28,16 +32,16 @@ class OrderForm(forms.ModelForm):
             'address1': 'Address 1',
             'address2': 'Address 2',
             'county': 'County, State or Locality',
-            'country': 'Country',
         }
 
         self.fields['full_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if self.fields[field].required:
-                if self.fields[field].required:
-                    placeholder = f'{placeholders[field]} *'
-                else:
-                    placeholder = placeholders[field]
-                self.fields[field].widget.attrs['placeholder'] = placeholder
+                if field != 'country':
+                    if self.fields[field].required:
+                        placeholder = f'{placeholders[field]} *'
+                    else:
+                        placeholder = placeholders[field]
+                    self.fields[field].widget.attrs['placeholder'] = placeholder
                 self.fields[field].widget.attrs['class'] = 'stripe-style-input'
                 self.fields[field].label = False
