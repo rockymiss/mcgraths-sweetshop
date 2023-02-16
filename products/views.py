@@ -3,8 +3,11 @@ from django.views.generic import DetailView
 from django.contrib import messages
 from django.db.models import Q
 from django.views import generic, View
-from .models import Products, Category
+
 from django.db.models.functions import Lower
+
+from .models import Products, Category
+from .forms import ProductForm
 
 
 def product_list(request):
@@ -93,3 +96,16 @@ class ProductDetail(View):
             "products/product_detail.html",
             context
             )
+
+
+def add_product(request):
+    """
+    Add a product to the shop
+    """
+    form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
