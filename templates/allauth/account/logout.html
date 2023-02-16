@@ -4,7 +4,10 @@
 
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
-{% block content %}
+{% block innercontent %}
+
+<div class="spacer py-5 m-0"></div>
+
 <h1>{% trans "Sign Out" %}</h1>
 
 <p>{% trans 'Are you sure you want to sign out?' %}</p>
@@ -14,7 +17,11 @@
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
   {% endif %}
+
+  <a class="btn button" href="{% url 'home' %}">Home</a>
+  <p>
   <button type="submit">{% trans 'Sign Out' %}</button>
+</p>
 </form>
 
 
