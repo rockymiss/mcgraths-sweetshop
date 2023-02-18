@@ -13,12 +13,8 @@ class ProductForm(forms.ModelForm):
         model = Products
         fields = '__all__'
 
-    product_image = forms.ImageField(label='Image', required=False,
-stock
-                             widget=CustomClearableFileInput)
-
-                                     widget=CustomClearableFileInput)
- main
+    product_image = forms.ImageField(
+        label='Image', required=False, stockwidget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
