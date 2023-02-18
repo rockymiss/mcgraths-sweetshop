@@ -1,28 +1,35 @@
 {% extends "base.html" %}
 {% load static %} 
 
+{% block page-header %}
+  <div class="container header-container">
+    <div class="row">
+      <div class="col"></div>
+    </div>
+  </div>
+  {% endblock %}
+
 {% block title %}
-<title>McRocks Checkout</title>
+<title>Edit Product</title>
 {% endblock %}
 
 
 
 {% block content %}
-<div class="spacer py-5 m-0"></div>
 
-<section class="h-100">
-    
-    <div class="container h-100 py-2">
-
-        <div class="row">
-          <div class="col-12 col-md-6">
+  <div class="overlay"></div>
+    <div class="container-fluid pt-5  justify-content-center">
+      
+      <div class="row">
+          <div class="col-12  col-md-6"> 
             <h2 class="logo-font mb-4">Shop Management</h2>
             <h5 class="text-muted">Edit a Product</h5>
           </div>
-        </div>     
-
-        <div class="row">
-          <div class="col-12 col-md-6">
+      </div>
+        
+      <div class="row">
+          <div class="col-12  col-md-6"> 
+            
             <form method="POST" action="{% url 'edit_product' product.id  %}" class="form mb-2" enctype="multipart/form-data">
               {% csrf_token %}
               {{ form | crispy }}
@@ -32,15 +39,12 @@
               </div>
 
             </form>
-
+            
 
           </div>
+      </div>
+    </div>
 
-        </div>
-           
-    </div>  
-  
-</section>
   
 {% endblock %}
 
