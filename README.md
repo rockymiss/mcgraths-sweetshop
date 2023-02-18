@@ -47,8 +47,8 @@ McRocks Cake Supplies is designed as an e-commerce website to get users to purch
 |[40](https://github.com/rockymiss/mcrocks-shop/issues/40)|As a Super User I can add and remove testimonials left by users so that I can have control over the feedback displayed on the website|New Models|
 |[41](https://github.com/rockymiss/mcrocks-shop/issues/41)|As a Super User I can display testimonials left by users so that visitors to the website can see positive feedback from customers|New Models|
 |[42](https://github.com/rockymiss/mcrocks-shop/issues/42)|As a Super User I can complete a form so that I can add and remove stock easily|Store Management|
-|[43](https:https://github.com/rockymiss/mcrocks-shop/issues/43)|As a Super User I can edit or update stock so that I can control changes easily made to stock i.e. price|Store Management|
-|[44](https://github.com/rockymiss/mcrocks-shop/issues/44)|As a Super User I can delete stock easily so that I can remove stock that is no longer available|Store Management|
+|[43](https://github.com/rockymiss/mcrocks-shop/issues/43)|As a Super User I can edit or update stock so that I can control changes easily made to stock i.e. price|Store Management|
+|[43](https://github.com/rockymiss/mcrocks-shop/issues/43)|As a Super User I can delete stock easily so that I can remove stock that is no longer available|Store Management|
 |[45](https://github.com/rockymiss/mcrocks-shop/issues/45)|As a User I can sign up to the shop's newsletter so that I can see up to date offers or anything else the shop has to say|New Models|
 |[47](https://github.com/rockymiss/mcrocks-shop/issues/47)|As a User I can unsubscribe to the newsletter so that I can no longer receive it|New Models|
 
