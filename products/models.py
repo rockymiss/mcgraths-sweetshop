@@ -31,7 +31,7 @@ class Products(models.Model):
     has_colours = models.BooleanField(default=False, null=True, blank=True)
     product_price = models.DecimalField(max_digits=8, decimal_places=2)
     status = models.IntegerField(choices=DISCOUNT, default="0")
-    product_image = CloudinaryField('image', default='placeholder')
+    product_image = models.ImageField('image', default='placeholder', null=True, blank=True)
     image_url = models.URLField(max_length=1050, null=True, blank=True)
 
     def __str__(self):
