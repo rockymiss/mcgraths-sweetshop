@@ -14,7 +14,11 @@ class ProductForm(forms.ModelForm):
         fields = '__all__'
 
     product_image = forms.ImageField(label='Image', required=False,
+stock
                              widget=CustomClearableFileInput)
+
+                                     widget=CustomClearableFileInput)
+ main
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
