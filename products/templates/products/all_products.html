@@ -1,4 +1,5 @@
-{% extends "base.html" %} {% load static %} {% block title %}
+{% extends "base.html" %} 
+{% load static %} {% block title %}
 <title>All Products</title>
 {% endblock %}
 
@@ -8,8 +9,8 @@
 
   <!--Main display for list of products -->
 
-  <div class="overlay-products"></div>
-  <div class="container-fluid pt-5  justify-content-center cream-bg  products-container">
+  <div class="overlay"></div>
+  <div class="container-fluid pt-5  justify-content-center">
 
     <div class="row">
     <div class="dropdown text-center">
@@ -63,7 +64,16 @@
                   <p class="">This Product is on offer</p>
                   {% else %}
                   <p class="">This Product is NOT on offer</p>
-                  {% endif %}     
+                  {% endif %}
+                  
+                  {% if request.user.is_superuser %}
+                  <small class="ml-3">
+                    <a href="{% url 'edit_product' product.id %}">Edit</a>
+                    <a class="text-danger" href="{% url 'delete_product' product.id }">Delete</a>
+                  </small>
+
+                  {% endif %}
+                    
                 </div>
                 </div>
               </div>
@@ -72,6 +82,7 @@
           </div>
         </div>
       </div>
+    </div>
 {% endblock %}
 {% block postloadjs %}
 {{ block.super }}

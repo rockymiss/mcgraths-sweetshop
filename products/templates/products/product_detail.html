@@ -17,9 +17,8 @@
 
   <!--Main display for product detail-->
   
-  <div class="overlay-products"></div>
-   
-          <div class="container-fluid p-5">
+  <div class="overlay"></div>
+    <div class="container-fluid pt-5  justify-content-center">
               <div class="row">
                   <div class="col-lg-4 order-lg-2 order-1">
                     {% if "placeholder" in product.product_image.url %}
@@ -113,7 +112,16 @@
                                               
                                             </div>
                                         </div>
+                                        {% if request.user.is_superuser %}
+                                        <small class="ml-3">
+                                          <a href="{% url 'edit_product' product.id %}">Edit</a>
+                                          <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                        </small>
+                      
+                                        {% endif %}
+                                    
                                     </div>
+                                    
             
                                     <div class="col-12">
                                         <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5" aria-label="products">
@@ -135,6 +143,7 @@
                 </div>
             </div>
         </div>
+    </div>
 
                  
          

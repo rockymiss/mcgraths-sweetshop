@@ -13,7 +13,7 @@
 
     {% block corecss %}
     <!--stylesheet link-->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" /> 
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" /> 
     <!--bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -137,7 +137,7 @@
           <div class="dropdown-menu border-0" aria-labelledby="user-options">
               {% if request.user.is_authenticated %}
                   {% if request.user.is_superuser %}
-                      <a href="" class="dropdown-item">Store</a>
+                      <a href="{% url 'add_product' %}" class="dropdown-item">Store</a>
                   {% endif %}
                   <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                   <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
