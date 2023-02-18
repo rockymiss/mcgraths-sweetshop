@@ -14,10 +14,10 @@ class ProductAdmin(admin.ModelAdmin):
     search_fields = ['name', 'description']
     list_display = ('name',
                     'category',
-                    'description',
                     'product_price',
-                    'product_image',
+                    'description',
                     'image_url',
+                    'product_image',
                     'status')
     
     ordering = ('category',)
