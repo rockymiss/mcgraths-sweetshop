@@ -1,5 +1,5 @@
 from django.shortcuts import render, reverse, redirect, get_object_or_404
-from django.views.generic import DetailView
+from django.views.generic import DetailView, TemplateView
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
@@ -175,3 +175,12 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+# Management Views
+
+class ManagementCheck(TemplateView):
+    """
+    Creates view for Management Page
+    """
+    template_name = "products/management.html"

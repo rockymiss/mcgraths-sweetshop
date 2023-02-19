@@ -102,6 +102,8 @@
     </button>
 
   <!-- Collapsible wrapper -->
+
+  
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <!-- Navbar brand -->
     <a class="navbar-brand mt-2 mt-lg-0" href="{% url 'home' %}"><strong>MCROCKS</strong></a>
@@ -113,9 +115,18 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'products' %}?status=1">Offers</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Showcase</a>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Showcase
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{% url 'cakes' %}">View Cakes</a>
+            <a class="dropdown-item" href="{% url 'create_cake' %}">Post a Cake</a>
+            
         </li>
+        
+        
         <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>
         </li>
@@ -138,7 +149,7 @@
           <div class="dropdown-menu border-0" aria-labelledby="user-options">
               {% if request.user.is_authenticated %}
                   {% if request.user.is_superuser %}
-                      <a href="{% url 'add_product' %}" class="dropdown-item">Store</a>
+                      <a href="{% url 'management' %}" class="dropdown-item">Management</a>
                   {% endif %}
                   <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                   <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>

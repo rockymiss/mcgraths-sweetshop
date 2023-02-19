@@ -1,0 +1,43 @@
+{% extends "base.html" %} 
+{% load static %} {% block title %}
+<title>Cake Showcase</title>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <!--Main display for list of products -->
+
+  <div class="overlay"></div>
+<div class="container-fluid pt-5  justify-content-center">
+        <div class="row justify-content-around ">
+
+            <h1>POST YOUR CAKES HERE</h1>
+            {% for cake in cakelist %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card m-3  border-0" style="width: auto;">
+                        <img class="img-fluid" src="{{ cake.cake_image.url }}"  alt="{{ cake.title }}">
+                            <div class="card-body">
+                                <a href="{% url 'cake_detail' cake.slug %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">View Item</a>
+                                <h5 class="card-title">{{ cake.title }}</h5>
+                                <p class="card-text">{{ cake.date_created }}</p>
+                                {% if cake.status == 1 %}
+                                  <p class="">Good to Go</p>
+                                {% else %}
+                                    <p class="">Draft</p>
+                                {% endif %}
+                                {% if request.user.is_user %}
+                                    <small class="ml-3">
+                                        <a href="{% url 'edit_cake' cake.id %}">Edit</a>
+                                        <a class="text-danger" href="{% url 'delete_cake' cake.id }">Delete</a>
+                                    </small>
+                              {% endif %}        
+                            </div>
+                    </div>
+              </div>
+              {% endfor %}
+        </div>
+</div>
+       
+{% endblock %}
