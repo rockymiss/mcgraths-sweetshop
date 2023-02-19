@@ -155,3 +155,80 @@ class Favourites(View):
             post.favourite.add(request.user)
 
         return HttpResponseRedirect(reverse('cake_detail', args=[slug]))
+
+# Management
+
+
+class ReviewCakePost(LoginRequiredMixin, ListView):
+    """
+    Checks to see if user is superuser, gets a list of
+    Cake posts made by a user and allows Admin
+    to approve or Delete Posts
+    """
+
+    def test_func(self):
+        """
+        Checks if superuser
+        """
+        return self.request.user.is_superuser
+
+    template_name = 'cake_review.html'
+    model = CakePost
+    queryset = CakePost.objects.filter(
+        cake_approve=False).order_by('-date_created')
+    context_object_name = 'to_approve'
+
+    def get_context_data(self, **kwargs):
+        """
+        Gets the posts to approve
+        """
+        context = super().get_context_data(**kwargs)
+        context[
+                'cake_review'] = CakePost.objects.filter(
+                    cake_approve=False).order_by('-date_created')
+        return context
+
+
+class ApproveCake(LoginRequiredMixin, View):
+    """
+    Admin who is logged in can approve cake posts 
+    made by users
+    """
+
+    def test_func(self):
+        """
+        Checks if user is superuser 
+        """
+        return self.request.user.is_superuser
+
+    def get(self, request, pk, *args, **kwargs):
+        """
+        gets the object instance's post and assigns primary key
+        """
+        cakepost = get_object_or_404(CakePost, pk=pk)
+        context = {
+            'cakepost': cakepost,
+        }
+
+        return render(
+            request,
+            'cake_approve.html',
+            context
+        )
+
+    def post(self, request, pk, *args, **kwargs):
+        """
+        gets the content the user made and checks
+        if the content has been approved.  Admin can
+        then approve
+        """
+
+        cakepost = get_object_or_404(CakePost, pk=pk)
+        if request.method == "POST":
+            cakepost.cake_approve = True
+            cakepost.save()
+        messages.success(
+            self.request,
+            'The Cake Post has been posted')
+        return redirect('cake_review')
+

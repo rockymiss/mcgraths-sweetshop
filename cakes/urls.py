@@ -13,4 +13,8 @@ urlpatterns = [
     path('favourite/<slug:slug>/',
          views.Favourites.as_view(), name="favourite"),
     path('create_cake/', views.CreateCakeView.as_view(), name='create_cake'),
+    path('cake_review/', views.ReviewCakePost.as_view(), name='cake_review'),
+    path('cake_approve/<int:pk>/',
+         views.ApproveCake.as_view(), name="cake_approve"),
+    
 ]

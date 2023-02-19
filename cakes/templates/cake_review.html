@@ -1,0 +1,39 @@
+{% extends "base.html" %} 
+{% load static %} {% block title %}
+<title>Review Cake Posts</title>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <!--Main display for list of products -->
+
+  <div class="overlay"></div>
+<div class="container-fluid pt-5  justify-content-center">
+        <div class="row justify-content-around ">
+
+            <h1>Review Cake Posts</h1>
+            {% for cake in cake_review %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card m-3  border-0" style="width: auto;">
+                        <img class="img-fluid" src="{{ cake.cake_image.url }}"  alt="{{ cake.title }}">
+                            <div class="card-body">
+                                <!-- <a href="{% url 'cake_detail' cake.slug %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Approve</a> -->
+                                <h5 class="card-title">{{ cake.title }}</h5>
+                                <p class="card-text">{{ cake.date_created }}</p>
+                                
+                               
+                                <p>
+                                    <a href="{% url 'cake_approve' cake.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Approve</a>
+                                    <a href="#" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Delete</a>
+                                  </p>
+                            
+                            </div>
+                    </div>
+              </div>
+              {% endfor %}
+        </div>
+</div>
+       
+{% endblock %}
