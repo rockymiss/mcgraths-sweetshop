@@ -2,13 +2,14 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views.generic import TemplateView, ListView
 from django.views.generic import CreateView, UpdateView
 from django.views import generic, View
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import CakePost, CakeComment
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from django.utils.text import slugify
-from .forms import CreateComment
+from .forms import CreateComment, CreateCake
 
 # Create your views here.
 
@@ -97,7 +98,44 @@ class CakeDetail(View):
                 "comment_form": CreateComment()
             },
         )
-        
+
+
+class CreateCakeView(LoginRequiredMixin, CreateView):
+    """
+    Creates cake view so that users can create a new
+    blog on the front end
+    """
+
+    template_name = 'create_cake.html'
+    form_class = CreateCake
+
+    def get_success_url(self):
+        """
+        sets the reverse url when
+        user creates a new cake post
+        """
+        return reverse('cakes')
+
+    def test_func(self):
+        """
+        Checks if user is logged in
+        """
+        return self.request.user.is_authenticated
+
+    def form_valid(self, form):
+        """
+        Validates the form and adds the new cake post to the
+        cakes.html page
+        """
+
+        form = form.save(commit=False)
+        form.slug = slugify(form.title)
+        messages.success(
+            self.request,
+            'You have created a new Cake Post.  It will be sent\
+                admin for approval.')
+        return super().form_valid(form)
+
 
 class Favourites(View):
     """

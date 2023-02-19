@@ -2,20 +2,20 @@ from django import forms
 from .models import CakePost, CakeComment
 
 
-# class CreateCake(forms.ModelForm):
-#     """
-#     A Form to allow a user to create a cake
-#     post
-#     """
-#     class Meta:
-#         model = CakePost
+class CreateCake(forms.ModelForm):
+    """
+    A Form to allow a user to create a cake
+    post
+    """
+    class Meta:
+        model = CakePost
 
-#         fields = ('full_name',
-#                   'title',
-#                   'cake_image',
-#                   'description',
-#                   'status',)
-#         prepopulated_fields = {'slug': ('title',)}
+        fields = ('full_name',
+                  'title',
+                  'cake_image',
+                  'description',
+                  'status',)
+        prepopulated_fields = {'slug': ('title',)}
 
 
 class CreateComment(forms.ModelForm):
