@@ -13,5 +13,4 @@ urlpatterns = [
     path('favourite/<slug:slug>/',
          views.Favourites.as_view(), name="favourite"),
     path('create_cake/', views.CreateCakeView.as_view(), name='create_cake'),
-    
 ]
