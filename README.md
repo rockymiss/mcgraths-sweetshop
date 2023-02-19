@@ -33,12 +33,11 @@ McRocks Cake Supplies is designed as an e-commerce website to get users to purch
 |[25](https://github.com/rockymiss/mcrocks-shop/issues/25)|As a User I can have my payment detailed processed so that I can buy the products I want|Payments|
 |[26](https://github.com/rockymiss/mcrocks-shop/issues/26)|As a User I can receive confirmation of payment being processed so that I can see that I have bought the items I wanted|Payments|
 |[27](https://github.com/rockymiss/mcrocks-shop/issues/27)|As a User I can receive and email in my inbox so that I can get permanent confirmation that my order has been processed|Payments|
-|[29](https://github.com/rockymiss/mcrocks-shop/issues/29)|As a User I can post a picture of my cake designs so that I can let others see what I made|Cake Display|
-|[30](https://github.com/rockymiss/mcrocks-shop/issues/30)|As a User I can delete my posted cake image so that I can have control over my posted content|Cake Display|
-|[31](https://github.com/rockymiss/mcrocks-shop/issues/31)|As a User I can edit the cake image I posted so that I can have control over what I post|Cake Display|
-|[32](https://github.com/rockymiss/mcrocks-shop/issues/32)|As a User I can see a list of others cakes designs so that I can view others cake designs|Cake Display|
-|[33](https://github.com/rockymiss/mcrocks-shop/issues/33)|As a Super User I can approve cake posts from users so that I can monitor what is posted on the website|Cake Display|
-|[34](https://github.com/rockymiss/mcrocks-shop/issues/34)|As a Super User I can delete cake design images so that I can have control over what is posted on the webistes|Cake Display|
+|[29](https://github.com/rockymiss/mcrocks-shop/pull/82)|As a User I can post a picture of my cake designs so that I can let others see what I made|Cake Display|
+
+|[32](https://github.com/rockymiss/mcrocks-shop/pull/82)|As a User I can see a list of others cakes designs so that I can view others cake designs|Cake Display|
+|[33](https://github.com/rockymiss/mcrocks-shop/pull/82)|As a Super User I can approve cake posts from users so that I can monitor what is posted on the website|Cake Display|
+|[34](https://github.com/rockymiss/mcrocks-shop/pull/82)|As a Super User I can delete cake design images so that I can have control over what is posted on the webistes|Cake Display|
 |[35](https://github.com/rockymiss/mcrocks-shop/issues/35)|As a User I can complete a form so that I can contact the shop owner|New Models|
 |[36](https://github.com/rockymiss/mcrocks-shop/issues/36)|As a User I can see a confirmation that my contact message has been sent so that I can be sure that the message went to the shop owner|New Models|
 |[37](https://github.com/rockymiss/mcrocks-shop/issues/37)|As a Super User I can see messages sent to me from customers so that I can communicate with customers|Contact|
