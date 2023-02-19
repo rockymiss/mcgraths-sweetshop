@@ -39,4 +39,4 @@ class CommentAdmin(admin.ModelAdmin):
         """
         Creates an action which allows admin to approve a comment
         """
-        queryset.update(approve=True)
+        queryset.update(comment_approve=True)

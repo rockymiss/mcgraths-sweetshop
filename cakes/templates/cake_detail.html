@@ -14,6 +14,130 @@
         <div class="row justify-content-around ">
 
             <h1>Detail of Cake here</h1>
+
+           
+                    <div class="col-md-6 masthead-text">
+                        <!--Author and title-->
+                        <h1 class="post-title">{{ post.title }}</h1>
+                        
+                        <p class="post-subtitle">{{ post.full_name }} | {{ post.date_created }}</p>
+                    </div>
+                    <div class="d-md-block col-md-6 masthead-image">
+                        <!--hides if no image selected and displays if there is-->
+                       
+                            <img class="card-img-top img-fluid" src=" {{ post.cake_image.url }} " alt="{{ post.blog_title}}" width="100"> 
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col card mb-4  mt-3 left  top">
+                    <div class="card-body">
+                        
+                        <p class="card-text ">
+                            {{ post.description | safe }}
+                        </p>
+                        <!--hides if no image selected and displays if there is-->
+                        
+                        <div class="row">
+        
+                            <div class="col-1">
+                                <!-- Code to like a post -->
+                                
+                                    {% if user.is_authenticated %}
+                                    <form class="d-inline" action="{% url 'favourite' post.slug %}" method="POST">
+                                        {% csrf_token %}
+                                        {% if favourite %}
+        
+                                        <button type="submit" name="cakepost_id" value="{{post.slug}}" class="btn-like border-0">
+                                            <i class="fa-solid fa-star"></i>
+                                        </button>
+        
+                                        {% else %}
+        
+                                        <button type="submit" name="cakepost_id" value="{{post.slug}}" class="btn-like">
+                                            
+                                            <i class="fa-regular fa-star"></i>
+                                        </button>
+        
+                                        {% endif %}
+                                    </form>
+                                    {% else %}
+        
+                                    <span class="text-secondary"><i class="fa-regular fa-star"></i></span>
+                                    {% endif %}
+                                    <span class="text-secondary">{{ post.number_of_favourties }}</span>
+        
+        
+                               
+                                <strong class="text-secondary"> {{ post.number_of_favourites }} </strong>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 card mb-4  mt-3 ">
+                    <h3>Comments:</h3>
+                    <div class="card-body">
+                        <!--iterate through comments to display them -->
+                        {% for comment in comments %}
+                        <div class="comments" style="padding: 10px;">
+                            
+                            <p class=" text-muted font-weight-normal mb-0 fw-bold">
+                            <small>{{ comment.comment_created }}</small>
+                            <p class="fw-bold">{{ comment.name }}  wrote:</p>
+                            
+                            <!-- The body of the comment goes before the | -->
+                            {{ comment.comment_body | linebreaks }}
+                            <hr>
+                        </div>
+                        <!-- Our for loop ends here -->
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-md-4 card mb-4  mt-3 ">
+                    <div class="card-body">
+                        {% if commented %}
+                        <div class="alert alert-success" role="alert">
+                            Your comment is awaiting approval
+                        </div>
+                        {% else %}
+        
+                        {% if user.is_authenticated %}
+        
+                        <h3>Leave a Comment:</h3>
+                        <p>Posting as: {{ user.username }}</p>
+                        <form method="POST" style="margin-top: 1.3em;">
+                            {{ comment_form | crispy }}
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-signup btn-lg page-link grey-bg rounded p-1 fw-bold border-1 text-reset">Submit</button>
+                        </form>
+                      
+                            <p>You must be logged in to leave comments </p>
+                            <a href="{% url 'account_login' %}"><button class="p-1 rounded border border-2 border-dark" type="submit">Login</button></a>
+                        {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
             <!-- {% for cake in cakes %} -->
                 <!-- <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card m-3  border-0" style="width: auto;">
