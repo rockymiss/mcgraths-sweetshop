@@ -1,0 +1,44 @@
+{% extends "base.html" %} 
+{% load static %} {% block title %}
+<title>Review Contact Messages</title>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <!--Main display for list of products -->
+
+  <div class="overlay"></div>
+<div class="container-fluid pt-5  justify-content-center">
+        <div class="row justify-content-around ">
+
+            <h1>Review Contact Messages</h1>
+            {% if review_message %}
+            {% for message in review_message %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card m-3  border-0" style="width: auto;">
+                        <h5 class="card-title">{{ message.full_name }}</h5>
+                            <div class="card-body">
+                                
+                                <h5 class="card-title">{{ message.email }}</h5>
+                                <p class="card-text">{{ message.message }}</p>
+                                <p class="card-text">{{ message.date_created }}</p>
+                                
+                               
+                                <p>
+                                    
+                                    <a href="{% url 'delete_message' message.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Delete</a>
+                                  </p>
+                            
+                            </div>
+                    </div>
+              </div>
+              {% endfor %}
+              {% else %}
+                <h2> Nothing to see here</h2>
+        </div>
+        {% endif %}
+</div>
+       
+{% endblock %}
