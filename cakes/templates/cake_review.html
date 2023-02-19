@@ -14,6 +14,7 @@
         <div class="row justify-content-around ">
 
             <h1>Review Cake Posts</h1>
+            {% if cake %}
             {% for cake in cake_review %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card m-3  border-0" style="width: auto;">
@@ -26,14 +27,17 @@
                                
                                 <p>
                                     <a href="{% url 'cake_approve' cake.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Approve</a>
-                                    <a href="#" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Delete</a>
+                                    <a href="{% url 'cake_delete' cake.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Delete</a>
                                   </p>
                             
                             </div>
                     </div>
               </div>
               {% endfor %}
+              {% else %}
+                <h2> Nothing to see here</h2>
         </div>
+        {% endif %}
 </div>
        
 {% endblock %}

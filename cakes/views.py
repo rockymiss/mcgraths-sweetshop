@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views.generic import TemplateView, ListView
-from django.views.generic import CreateView, UpdateView
+from django.views.generic import CreateView, UpdateView, DeleteView
 from django.views import generic, View
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import CakePost, CakeComment
@@ -232,3 +232,43 @@ class ApproveCake(LoginRequiredMixin, View):
             'The Cake Post has been posted')
         return redirect('cake_review')
 
+
+class DeleteCake(LoginRequiredMixin, DeleteView):
+    """
+    Checks to see if user is admin and allows admin
+    to delete a cake post made by the user
+    """
+    def test_func(self):
+        """
+        Checks if superuser
+        """
+        return self.request.user.is_superuser
+
+    def get(self, request, pk, *args, **kwargs):
+        """
+        gets the object instance's comment and assigns primary key
+        """
+        cakepost = get_object_or_404(CakePost, pk=pk)
+        context = {
+            'cakepost': cakepost,
+        }
+
+        return render(
+            request,
+            'cake_delete.html',
+            context
+        )
+
+    def post(self, request, pk, *args, **kwargs):
+        """
+        gets the content the user made and checks
+        if the content has been approved.  Admin can
+        then delete the cake post
+        """
+
+        cakepost = get_object_or_404(CakePost, pk=pk)
+        cakepost.delete()
+        messages.success(
+            self.request,
+            'The post has been deleted')
+        return redirect('cake_review')
