@@ -13,6 +13,7 @@ def cart_contents(request):
     cart_items = []
     total = 0
     product_count = 0
+    discount = Decimal('0.00')
     cart = request.session.get('cart', {})
 
     for item_id, item_data in cart.items():
@@ -36,6 +37,13 @@ def cart_contents(request):
                     'product': product,
                     'colour': colour,
                 })
+    
+    # Check if discount code is applied 
+
+    if 'discount_code' in request.session:
+        discount_percent = Decimal(request.session['discount_percentage'])
+        discount = (total * discount_percent) / 100
+        total -= discount
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
@@ -48,12 +56,13 @@ def cart_contents(request):
 
     context = {
         'cart_items': cart_items,
-        'total': total,
+        'total': float(total),
         'product_count': product_count,
-        'delivery': delivery,
-        'free_delivery_delta': free_delivery_delta,
+        'delivery': float(delivery),
+        'free_delivery_delta': float(free_delivery_delta),
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
-        'grand_total': grand_total
+        'grand_total': float(grand_total),
+        'discount': float(discount),
     }
 
     return context
