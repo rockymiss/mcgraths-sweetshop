@@ -135,14 +135,19 @@ def apply_discount(request):
             messages.error(request, 'Invalid discount code')
             return redirect('view_cart')
         else:
+            # Check if the discount code entered by the user matches the discount code in the Discount object
+            if discount_code != discount.discount_code:
+                messages.error(request, 'Invalid discount code')
+                return redirect('view_cart')
+
             # Save the discount code to the session
             request.session['discount_code'] = discount.discount_code
-            request.session['discount_percentage'] = discount.discount_percentage
+            request.session['discount_percentage'] = float(discount.discount_percentage)
             messages.success(request, 'Discount code applied')
         
             data = {
                 'discount_code': discount.discount_code,
-                'discount_percentage': discount.discount_percentage,
+                'discount_percentage': float(discount.discount_percentage,)
             }
 
             return HttpResponse(json.dumps(data, cls=CustomJSONEncoder), content_type='application/json')

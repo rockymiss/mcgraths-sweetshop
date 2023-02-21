@@ -38,15 +38,11 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
-    """
-    Function to handle the checkout page/form
-    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
     if request.method == 'POST':
         cart = request.session.get('cart', {})
-
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -76,8 +72,7 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for colour, quantity in item_data[
-                                'items_by_colour'].items():
+                        for colour, quantity in item_data['items_by_colour'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
@@ -85,7 +80,6 @@ def checkout(request):
                                 product_colour=colour,
                             )
                             order_line_item.save()
-
                 except Products.DoesNotExist:
                     messages.error(request, (
                         "One of the items in your bag wasn't found in \
@@ -94,9 +88,34 @@ def checkout(request):
                     order.delete()
                     return redirect(reverse('view_cart'))
 
+            # Check if a discount code has been submitted
+            discount_applied = False
+            if request.POST.get('discount_code'):
+                discount_form = DiscountForm(request.POST)
+                if discount_form.is_valid():
+                    discount_code = discount_form.cleaned_data['discount_code']
+                    try:
+                        discount = Discount.objects.get(discount_code=discount_code)
+                    except Discount.DoesNotExist:
+                        discount = None
+                    if discount:
+                        discount_applied = True
+                        order.discount_code = discount
+                        order.save()
+            
+            # Apply the discount if applicable
+            if discount_applied:
+                total = order.get_discount_total()
+            else:
+                total = order.grand_total 
+            order.save()
+
+            # Clear the cart
+            request.session['cart'] = {}
+
+            # Redirect to the checkout success page
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(
-                reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
