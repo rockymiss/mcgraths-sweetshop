@@ -1,5 +1,5 @@
 from django import forms
-from .models import Order
+from .models import Order, Discount
 from crispy_forms.helper import FormHelper
 
 
@@ -44,3 +44,13 @@ class OrderForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
+
+
+class DiscountForm(forms.ModelForm):
+    """
+    A form to allow the user to enter a discount code
+    """
+
+    class Meta:
+        model = Discount
+        fields = ['discount_code']

@@ -12,6 +12,18 @@ from user_profiles.models import UserProfile
 # Create your models here.
 
 
+class Discount(models.Model):
+    """
+    A Model to allow the user to enter a discount code
+    """
+    discount_code = models.CharField(max_length=20, unique=True)
+    discount_percentage = models.DecimalField(
+        max_digits=5, decimal_places=2, null=False, default=0)
+
+    def __str__(self):
+        return self.discount_code
+
+
 class Order(models.Model):
     """
     Class so that the user can order items and input their information
@@ -42,6 +54,8 @@ class Order(models.Model):
     original_cart = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False,
                                   blank=False, default="")
+    discount_code = models.ForeignKey(Discount, on_delete=models.SET_NULL,
+                                      null=True, blank=True, default=None)
 
     def _generate_order_number(self):
         """
@@ -62,13 +76,24 @@ class Order(models.Model):
                 self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         else:
             self.delivery_cost = 0
+
+        # Apply discount if applicable
+        if self.discount_code:
+            discount_percent = self.discount_code.discount_percentage
+            discount_amount = (self.order_total * discount_percent / 100)
+            self.discount_amount = discount_amount
+            self.order_total -= discount_amount
+            print(f"Discount applied: {self.discount_amount}")
+        else:
+            self.discount_amount = 0
+
         self.grand_total = self.order_total + self.delivery_cost
         self.save()
 
     def save(self, *args, **kwargs):
         """
-        A method which overrides the original save method to set the order number
-        if it hasn't been set previously.
+        A method which overrides the original save method to set the order 
+        number if it hasn't been set previously.
         """
         if not self.order_number:
             self.order_number = self._generate_order_number()
@@ -104,3 +129,4 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         return f'{self.product.name} on order {self.order.order_number}'
+
