@@ -40,7 +40,7 @@ def cart_contents(request):
     
     # Check if discount code is applied 
 
-    if 'discount_code' in request.session:
+    if 'user_discount_code' in request.session:
         discount_percent = Decimal(request.session['discount_percentage'])
         discount = (total * discount_percent) / 100
         total -= discount

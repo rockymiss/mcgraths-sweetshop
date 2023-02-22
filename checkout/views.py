@@ -31,7 +31,7 @@ def cache_checkout_data(request):
         })
         return HttpResponse(status=200)
     except Exception as e:
-       
+
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now.  Please try again later.')
         return HttpResponse(content=e, status=400)
@@ -90,19 +90,19 @@ def checkout(request):
 
             # Check if a discount code has been submitted
             discount_applied = False
-            if request.POST.get('discount_code'):
+            if request.POST.get('user_discount_code'):
                 discount_form = DiscountForm(request.POST)
                 if discount_form.is_valid():
-                    discount_code = discount_form.cleaned_data['discount_code']
+                    discount_code = discount_form.cleaned_data['user_discount_code']
                     try:
-                        discount = Discount.objects.get(discount_code=discount_code)
+                        discount = Discount.objects.get(discount_code=user_discount_code)
                     except Discount.DoesNotExist:
                         discount = None
                     if discount:
                         discount_applied = True
                         order.discount_code = discount
                         order.save()
-            
+
             # Apply the discount if applicable
             if discount_applied:
                 total = order.get_discount_total()
@@ -202,6 +202,12 @@ def checkout_success(request, order_number):
 
     if 'cart' in request.session:
         del request.session['cart']
+
+    if 'user_discount_code' in request.session:
+        del request.session['user_discount_code']
+
+    if 'discount_percentage' in request.session:
+        del request.session['discount_percentage']
 
     template = 'checkout/checkout_success.html'
     context = {

@@ -107,16 +107,19 @@ def remove_cart(request, item_id):
                 del cart[item_id]['items_by_colour'][colour]
                 if not cart[item_id]['items_by_colour']:
                     cart.pop(item_id)
-                messages.success(request, f'You removed {cart[item_id]["items_by_colour"][colour]} {product.name} with the colour {colour.upper()} from your cart')
+                messages.success(request,
+                                 f'You removed {cart[item_id]["items_by_colour"][colour]}{product.name} with the colour {colour.upper()} from your cart')
         else:
             cart.pop(item_id)
-            messages.success(request, f'You removed {product.name} from your cart')
+            messages.success(request,
+                             f'You removed {product.name} from your cart')
 
         request.session['cart'] = cart
         return redirect(reverse('view_cart'))
   
     except Exception as e:
-        messages.error(request, f'There was an error removing item: {e} from the cart')
+        messages.error(request,
+                       f'There was an error removing item: {e} from the cart')
         return HttpResponse(status=500)
 
 
@@ -124,30 +127,32 @@ def apply_discount(request):
     """
     Applies discount
     """
+    print("before if statement")
     if request.method == 'POST':
         # Get the discount code from the form
-        discount_code = request.POST.get('discount_code')
+        user_discount_code = request.POST.get('user_discount_code')
+
+        print("User Discount code:", user_discount_code)
 
         # Check if the discount code is valid
         try:
-            discount = Discount.objects.get(discount_code=discount_code)
+            user_discount_code = Discount.objects.get(discount_code=user_discount_code)
         except Discount.DoesNotExist:
             messages.error(request, 'Invalid discount code')
             return redirect('view_cart')
         else:
-            # Check if the discount code entered by the user matches the discount code in the Discount object
-            if discount_code != discount.discount_code:
-                messages.error(request, 'Invalid discount code')
-                return redirect('view_cart')
-
             # Save the discount code to the session
-            request.session['discount_code'] = discount.discount_code
-            request.session['discount_percentage'] = float(discount.discount_percentage)
+            request.session['user_discount_code'] = user_discount_code.discount_code
+            request.session['discount_percentage'] = float(
+                            user_discount_code.discount_percentage)
             messages.success(request, 'Discount code applied')
-        
+            return redirect('view_cart')
+
+            print(f"Discount code entered: {discount_code}")
             data = {
                 'discount_code': discount.discount_code,
                 'discount_percentage': float(discount.discount_percentage,)
             }
 
-            return HttpResponse(json.dumps(data, cls=CustomJSONEncoder), content_type='application/json')
+            return HttpResponse(json.dumps(data, cls=CustomJSONEncoder),
+                                content_type='application/json')
