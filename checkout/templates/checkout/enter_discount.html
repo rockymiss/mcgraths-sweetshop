@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% load static %} {% block title %}
+<title>Discounts</title>
+{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid pt-5  justify-content-center">
+        <div class="row justify-content-around ">
+      <!--Form to send a message -->
+        <h1>Add a New Discount</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input type="submit" value="Send" class="grey-bg rounded p-1 fw-bold border-1">
+        </form>
+</div>
+  </div>  
+{% endblock %}
+
+
+
+

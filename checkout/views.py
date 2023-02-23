@@ -1,12 +1,14 @@
 from django.shortcuts import (
     render, redirect, reverse, get_object_or_404, HttpResponse)
 from django.views.decorators.http import require_POST
+from django.views.generic import ListView
+# from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.conf import settings
 
 from .forms import OrderForm
 from products.models import Products
-from .models import Order, OrderLineItem
+from .models import Order, OrderLineItem, Discount
 
 from user_profiles.forms import UserProfileForm
 from user_profiles.models import UserProfile
@@ -215,3 +217,15 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
+
+
+class DiscountPage(ListView):
+    """
+    A simple view to see all discounts
+    created by Admin
+    """
+    template_name = "checkout/view_discounts.html"
+    model = Discount
+    queryset = Discount.objects.all
+    context_object_name = 'review_discounts'
+
