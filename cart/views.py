@@ -39,21 +39,34 @@ def add_to_cart(request, item_id):
         if item_id in list(cart.keys()):
             if colour in cart[item_id]['items_by_colour'].keys():
                 cart[item_id]['items_by_colour'][colour] += quantity
-                messages.success(request, f'You added {cart[item_id]["items_by_colour"][colour]} {product.name} with the colour {colour.upper()} to your cart')
+                messages.success(
+                    request,
+                    f'You added'
+                    f'{cart[item_id]["items_by_colour"][colour]}{product.name}'
+                    f'with the colour {colour.upper()} to your cart')
             else:
                 cart[item_id]['items_by_colour'][colour] = quantity
-                messages.success(request, f'You added {product.name} with the colour {colour.upper()} to your cart ')
+                messages.success(
+                    request, 
+                    f'You added {product.name} with the colour'
+                    f'{colour.upper()} to your cart')
         else:
             cart[item_id] = {'items_by_colour': {colour: quantity}}
-            messages.success(request, f'You added {product.name} {colour.upper()} to your cart ')
+            messages.success(
+                request,
+                f'You added {product.name} {colour.upper()}'
+                f' to your cart ')
     else:
         if item_id in list(cart.keys()):
             cart[item_id] += quantity
-            messages.success(request, f'Updated {cart[item_id]} {product.name} in your cart ')
+            messages.success(
+                request, 
+                f'Updated {cart[item_id]} {product.name}'
+                f'in your cart ')
 
         else:
             cart[item_id] = quantity
-            messages.success(request, f'You Added {product.name} to your cart ')
+            messages.success(request, f'You Added {product.name} to your cart')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
@@ -73,19 +86,28 @@ def adjust_cart(request, item_id):
     if colour:
         if quantity > 0:
             cart[item_id]['items_by_colour'][colour] = quantity
-            messages.success(request, f'There are now {cart[item_id]["items_by_colour"][colour]} {product.name} with the colour {colour.upper()} in your cart')
+            messages.success(
+                request,
+                f'There are now'
+                f'{cart[item_id]["items_by_colour"][colour]}{product.name}'
+                f'with the colour {colour.upper()} in your cart')
         else:
             del cart[item_id]['items_by_colour'][colour]
             if not cart[item_id]['items_by_colour']:
                 cart.pop(item_id)
-                messages.success(request, f'You removed {product.name} with the colour {colour.upper()} to your cart ')
+                messages.success(request, 
+                                 f'You removed {product.name} with the colour'
+                                 f'{colour.upper()} to your cart ')
     else:
         if quantity > 0:
             cart[item_id] = quantity
-            messages.success(request, f'There are now {cart[item_id]} {product.name} in your cart ')
+            messages.success(request,
+                             f'There are now {cart[item_id]} {product.name}'
+                             f'in your cart ')
         else:
             cart.pop(item_id)
-            messages.success(request, f'You removed {product.name} from your cart ')
+            messages.success(request,
+                             f'You removed {product.name} from your cart')
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
@@ -108,7 +130,10 @@ def remove_cart(request, item_id):
                 if not cart[item_id]['items_by_colour']:
                     cart.pop(item_id)
                 messages.success(request,
-                                 f'You removed {cart[item_id]["items_by_colour"][colour]}{product.name} with the colour {colour.upper()} from your cart')
+                                 f'You removed'
+                                 f'{cart[item_id]["items_by_colour"][colour]}'
+                                 f'{product.name} with the colour'
+                                 f'{colour.upper()} from your cart')
         else:
             cart.pop(item_id)
             messages.success(request,
@@ -116,7 +141,7 @@ def remove_cart(request, item_id):
 
         request.session['cart'] = cart
         return redirect(reverse('view_cart'))
-  
+
     except Exception as e:
         messages.error(request,
                        f'There was an error removing item: {e} from the cart')
@@ -136,13 +161,15 @@ def apply_discount(request):
 
         # Check if the discount code is valid
         try:
-            user_discount_code = Discount.objects.get(discount_code=user_discount_code)
+            user_discount_code = Discount.objects.get(
+                discount_code=user_discount_code)
         except Discount.DoesNotExist:
             messages.error(request, 'Invalid discount code')
             return redirect('view_cart')
         else:
             # Save the discount code to the session
-            request.session['user_discount_code'] = user_discount_code.discount_code
+            request.session[
+                'user_discount_code'] = user_discount_code.discount_code
             request.session['discount_percentage'] = float(
                             user_discount_code.discount_percentage)
             messages.success(request, 'Discount code applied')
