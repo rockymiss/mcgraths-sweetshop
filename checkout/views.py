@@ -1,12 +1,17 @@
 from django.shortcuts import (
     render, redirect, reverse, get_object_or_404, HttpResponse)
+from django.urls import reverse_lazy
 from django.views.decorators.http import require_POST
+from django.views import generic, View
+from django.views.generic import ListView, CreateView, DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin
+# from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.conf import settings
 
-from .forms import OrderForm
+from .forms import OrderForm, DiscountForm, AdminDiscount
 from products.models import Products
-from .models import Order, OrderLineItem
+from .models import Order, OrderLineItem, Discount
 
 from user_profiles.forms import UserProfileForm
 from user_profiles.models import UserProfile
@@ -215,3 +220,77 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
+
+
+class DiscountPage(generic.ListView):
+    """
+    A simple view to see all discounts
+    created by Admin
+    """
+    template_name = "checkout/view_discounts.html"
+    model = Discount
+    queryset = Discount.objects.all
+    context_object_name = 'review_discounts'
+
+
+class CreateDiscountView(LoginRequiredMixin, CreateView):
+    """
+    Allows a user or admin to create
+    a testionial on the front end
+    """
+    template_name = 'checkout/create_discount.html'
+    form_class = AdminDiscount
+
+    def test_func(self):
+        """
+        Checks if user
+        """
+        return self.request.user.is_authenticated
+
+    def get_success_url(self):
+        """
+        sets the reverse url when user
+        or admin creates a new Discount
+        """
+        return reverse('discount_page')
+
+    def form_valid(self, form):
+        """
+        Validates the form and adds the new discount to the
+        view_discounts page
+        """
+        form = form.save(commit=False)
+        messages.success(
+            self.request,
+            'You have added a new Discount Code!')
+        return super().form_valid(form)
+
+
+class DeleteDiscount(LoginRequiredMixin, DeleteView):
+    """
+    Checks to see if user is admin and allows admin
+    to delete a discount code
+    """
+
+    model = Discount
+    success_url = reverse_lazy('discount_page')
+
+    def test_func(self):
+        """
+        Checks if superuser
+        """
+        return self.request.user.is_superuser
+
+    def get(self, request, pk, *args, **kwargs):
+        """
+        gets the object instance's comment and assigns primary key
+        """
+        delete_discount = get_object_or_404(Discount, pk=pk)
+        context = {
+            'delete_discount': delete_discount,
+        }
+
+        return render(
+         request,
+         'checkout/delete_discount.html',
+         context)
