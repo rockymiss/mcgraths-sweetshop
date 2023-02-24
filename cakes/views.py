@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views.generic import TemplateView, ListView
-from django.views.generic import CreateView, UpdateView, DeleteView
+from django.views.generic import CreateView, UpdateView, DeleteView, ListView
 from django.views import generic, View
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import CakePost, CakeComment
@@ -272,3 +272,34 @@ class DeleteCake(LoginRequiredMixin, DeleteView):
             self.request,
             'The post has been deleted')
         return redirect('cake_review')
+
+
+class ReviewComments(LoginRequiredMixin, ListView):
+    """
+    Checks to see if user is superuser, gets a list of
+    Comments made on a blog by user which allows Admin
+    to approve Comments
+    """
+
+    def test_func(self):
+        """
+        Checks if superuser
+        """
+        return self.request.user.is_superuser
+
+    template_name = 'review_comments.html'
+    model = CakeComment
+    queryset = CakeComment.objects.filter(
+        comment_approve=False).order_by('comment_created')
+    context_object_name = 'to_approve'
+
+    def get_context_data(self, **kwargs):
+        """
+        Gets the comments to approve
+        """
+        context = super().get_context_data(**kwargs)
+        context[
+                'comments'] = CakeComment.objects.filter(
+                    comment_approve=False).order_by('-comment_created')
+        return context
+
