@@ -303,3 +303,88 @@ class ReviewComments(LoginRequiredMixin, ListView):
                     comment_approve=False).order_by('-comment_created')
         return context
 
+
+class DeleteComment(LoginRequiredMixin, DeleteView):
+    """
+    Checks to see if user is admin and allows admin
+    to delete a comment made by the user
+    """
+    def test_func(self):
+        """
+        Checks if superuser
+        """
+        return self.request.user.is_superuser
+
+    def get(self, request, pk, *args, **kwargs):
+        """
+        gets the object instance's comment and assigns primary key
+        """
+        comment = get_object_or_404(CakeComment, pk=pk)
+        context = {
+            'comment': comment,
+        }
+
+        return render(
+            request,
+            'delete_comment.html',
+            context
+        )
+
+    def post(self, request, pk, *args, **kwargs):
+        """
+        gets the comment the user made and checks
+        if the comment has been approved.  Admin can
+        then delete the comment
+        """
+
+        comment = get_object_or_404(CakeComment, pk=pk)
+        comment.delete()
+        messages.success(
+            self.request,
+            'The comment has been deleted')
+        return redirect('review_comments')
+
+
+class ApproveComment(LoginRequiredMixin, View):
+    """
+    Admin who is logged in can approve comments
+    that a user has created.
+    """
+
+    def test_func(self):
+        """
+        Checks if user is a superuser
+        """
+        return self.request.user.is_superuser
+
+    def get(self, request, pk, *args, **kwargs):
+        """
+        gets the object instance's comment and assigns primary key
+        """
+        comment = get_object_or_404(CakeComment, pk=pk)
+        context = {
+            'comment': comment,
+        }
+
+        return render(
+            request,
+            'approve_comment.html',
+            context
+        )
+
+    def post(self, request, pk, *args, **kwargs):
+        """
+        gets the comment the user made and checks
+        if the comment has been approved.  Admin can
+        then approve the comment
+        """
+
+        comment = get_object_or_404(CakeComment, pk=pk)
+        if request.method == "POST":
+            comment.comment_approve = True
+            comment.save()
+        messages.success(
+            self.request,
+            'The comment has been posted to Cake Post')
+        return redirect('review_comments')
+

@@ -12,8 +12,8 @@
 <p> Post:{{ comment.post.title | linebreaks }}
 <p>{{ comment.comment_body | linebreaks }}</p>
 
-                <a href="#" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Approve Comment</a>
-                <a href="#" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Delete Comment</a>
+                <a href="{% url 'approve_comment' comment.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Approve Comment</a>
+                <a href="{% url 'delete_comment' comment.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Delete Comment</a>
               </p>
        
          
