@@ -16,5 +16,12 @@ urlpatterns = [
      path('cake_approve/<int:pk>/',
           views.ApproveCake.as_view(), name="cake_approve"),
      path('cake_delete/<int:pk>/',
-          views.DeleteCake.as_view(), name="cake_delete")
+          views.DeleteCake.as_view(), name="cake_delete"),
+     path('review_comments/',
+          views.ReviewComments.as_view(), name="review_comments"),
+     path('approve_comment/<int:pk>/',
+          views.ApproveComment.as_view(), name="approve_comment"),
+     path('delete_comment/<int:pk>/',
+          views.DeleteComment.as_view(), name="delete_comment"),
+
 ]
