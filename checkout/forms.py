@@ -54,3 +54,12 @@ class DiscountForm(forms.ModelForm):
     class Meta:
         model = Discount
         fields = ['discount_code']
+
+
+class AdminDiscount(forms.ModelForm):
+    """
+    A form to allow admin to create a new discount code and percentage
+    """
+    class Meta:
+        model = Discount
+        fields = ('discount_code', 'discount_percentage',)

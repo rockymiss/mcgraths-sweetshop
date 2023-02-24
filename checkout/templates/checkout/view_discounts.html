@@ -17,7 +17,7 @@
            
                 <div>
                   <h1>Add a New Discount Code</h1>
-                  <p><a href="#" name='delete_discount' class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Add</a></p>
+                  <p><a href="{% url 'create_discount' %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Add</a></p>
                   <hr>
                   
                   {% if review_discounts %}
@@ -28,9 +28,9 @@
                   <P>Percentage: {{ discount.discount_percentage }}</P>
 
                   <span>
-                    <a href="#" name='delete_discount' class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Delete</a>
+                    <a href="{% url 'delete_discount' discount.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Delete</a>
                   
-                    <a href="#" name='delete_discount' class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Edit</a>
+                    <a href="#" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Edit</a>
                   </span>
               {% endfor %}
               {% else %}
