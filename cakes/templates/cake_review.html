@@ -14,6 +14,10 @@
         <div class="row justify-content-around ">
 
             <h1>Review Cake Posts</h1>
+
+            <a href="{% url 'management' %}" class="btn btn-outline-black rounded-0 btn-lg">
+              <i class="fas fa-chevron-left"> </i>
+              <span class="text-uppercase">Back to Store Management</span></a>
             {% if cake %}
             {% for cake in cake_review %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">

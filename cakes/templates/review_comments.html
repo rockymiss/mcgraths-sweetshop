@@ -6,6 +6,9 @@
 <div class="overlay"></div>
 <div class="container-fluid pt-5  justify-content-center">
   <h1 class="fs-5 fw-bold"> Review Comments</h1>
+  <a href="{% url 'management' %}" class="btn btn-outline-black rounded-0 btn-lg">
+    <i class="fas fa-chevron-left"> </i>
+    <span class="text-uppercase">Back to Store Management</span></a>
     {% for comment in comments %}
 
 <h4>Message from: {{ comment.name }}</h4>

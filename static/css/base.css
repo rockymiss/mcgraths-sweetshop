@@ -51,7 +51,7 @@
 }
 
 body {
-  /* min-height: 100vh;  */
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
   background: url(https://res.cloudinary.com/rockymiss/image/upload/v1669838316/mcgraths/cupcake-3723832_1920_upijsh_bzs51e.jpg) no-repeat fixed;
@@ -354,8 +354,7 @@ button.btn.shop-button {
 }
 
 footer {
-  height: 318px;
-  width: 100%;
+  margin-top: auto;
 }
 
 /* .wrapper {

@@ -9,14 +9,17 @@
 
   <!--Main display for list of products -->
 
-  <div class="overlay"></div>
+<div class="overlay"></div>
 <div class="container-fluid pt-5  justify-content-center">
-        <div class="row justify-content-around ">
+
 
             
            
-                <div>
+                
                   <h1>Add a New Discount Code</h1>
+                  <a href="{% url 'management' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                    <i class="fas fa-chevron-left"> </i>
+                    <span class="text-uppercase">Back to Store Management</span></a>
                   <p><a href="{% url 'create_discount' %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Add</a></p>
                   <hr>
                   
@@ -37,7 +40,7 @@
                 <h2> You don't have any discounts created</h2>
                 <p>Click Add above to add a new discount code</p>
         </div>
-      </div>
+      
         {% endif %}
        
        </div>
