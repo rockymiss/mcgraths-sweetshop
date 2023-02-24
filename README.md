@@ -38,6 +38,7 @@ McRocks Cake Supplies is designed as an e-commerce website to get users to purch
 |[31](https://github.com/rockymiss/mcrocks-shop/issues/31)|As a User I can edit the cake image I posted so that I can have control over what I post|Cake Display|
 |[32](https://github.com/rockymiss/mcrocks-shop/issues/32)|As a User I can see a list of others cakes designs so that I can view others cake designs|Cake Display|
 |[33](https://github.com/rockymiss/mcrocks-shop/issues/33)|As a Super User I can approve cake posts from users so that I can monitor what is posted on the website|Cake Display|
+|[89](https://github.com/rockymiss/mcrocks-shop/issues/89)|As a Super User I can approve comments from users made on cake posts so that I can have control over content|Cake Display|
 |[34](https://github.com/rockymiss/mcrocks-shop/issues/34)|As a Super User I can delete cake design images so that I can have control over what is posted on the webistes|Cake Display|
 |[35](https://github.com/rockymiss/mcrocks-shop/issues/35)|As a User I can complete a form so that I can contact the shop owner|New Models|
 |[36](https://github.com/rockymiss/mcrocks-shop/issues/36)|As a User I can see a confirmation that my contact message has been sent so that I can be sure that the message went to the shop owner|New Models|
