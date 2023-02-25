@@ -54,6 +54,7 @@ body {
   min-height: 100vh; 
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background: url(https://res.cloudinary.com/rockymiss/image/upload/v1669838316/mcgraths/cupcake-3723832_1920_upijsh_bzs51e.jpg) no-repeat fixed;
   background-size: cover;
   background-color: var(--cream);
@@ -62,7 +63,7 @@ body {
 .overlay {
   height: 100%;
   width: 100%;
-  top: 0;
+  top: 2em;
   left: 0;
   position: fixed;
   background: var(--cream) !important;
@@ -391,4 +392,39 @@ footer {
   border-color: red;
   border-radius: 0;
 
+}
+
+/*Shop Managment*/
+  /*List Group*/
+.list-group-item .btn-elegant i {
+  margin-right: 10px;
+}
+
+/* .list-group {
+  width: 70%;
+} */
+
+/* Headings */
+
+
+.shop-headings {
+  font-size: 1.5em;
+}
+
+
+@media (min-width: 768px) {
+  .shop-headings {
+    font-size: 2rem;
+  }
+}
+
+.go-small {
+  font-size: 0.8rem;
+}
+
+
+@media (min-width: 768px) {
+  .go-small {
+    font-size: 1rem;
+  }
 }
