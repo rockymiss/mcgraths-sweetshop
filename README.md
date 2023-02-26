@@ -267,6 +267,14 @@ Cake Supplies, Post a picture of your cake, error pages
 
 Links to purchasers who are local cake makers.  This would show loyality to clients with a view to keeping them as clients.  
 
+## Facebook
+
+McRocks Cake Supplies has a facebook page for marketing to post content, update customers and get them engaged.  The most recent posts are offering a 10% discount on the website and showing off a product that is on sale on the website. 
+
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1677375284/mcgraths/facebook_cover_jk2vni.png"></p>
+
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1677375285/mcgraths/posts_and_info_jbrlmr.png"></p>
+
 -----
 
 ## Future Implementation
