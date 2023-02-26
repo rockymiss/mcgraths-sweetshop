@@ -428,3 +428,13 @@ footer {
     font-size: 1rem;
   }
 }
+
+/*icon padding on nav*/
+
+.icon-pad {
+  padding: 10px !important;
+}
+
+.icon-pad:hover {
+  text-decoration: none !important;
+}
