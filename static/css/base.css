@@ -438,3 +438,24 @@ footer {
 .icon-pad:hover {
   text-decoration: none !important;
 }
+
+/*buttons and links*/
+
+.buttons-all {
+  background-color: var(--tpink) !important;
+  padding: 1em 1.5em;
+  text-decoration: none !important;
+  color: var(--brown) !important;
+}
+
+
+
+
+
+
+/*border on products*/
+
+.my-border {
+  border: solid;
+  border-color: var(--lightPink);
+}
