@@ -82,14 +82,14 @@
     {% endblock %}
 
 
-    <nav class="navbar navbar-expand">
+    <nav class="navbar navbar-expand navbar-dark navbar-search">
       <div class="d-flex flex-grow-1">
           
         <a class="navbar-brand" href="{% url 'home' %}"><strong>MCROCKS</strong></a>
 
           <div class="w-100 text-right">
-              <button class="navbar-toggler" type="button" data-toggle="collapse">
-                  <span class="navbar-toggler-icon"></span>
+              <button class="navbar-toggler " type="button" data-toggle="collapse">
+                  <span class="navbar-toggler-icon navbar-dark brown-bg"></span>
               </button>
           </div>
       </div>
@@ -150,87 +150,67 @@
 
 <!--Search and Categories-->
 
-<nav class="navbar navbar-expand-lg navbar-light">
-  <!-- Container wrapper -->
-  <div class="container-fluid">
-  <!-- Toggle button -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
+<nav class="navbar navbar-expand-lg navbar-dark navbar-survival101">
+  <div class="container">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
 
-  <!-- Collapsible wrapper -->
-
-  
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
- 
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Categories
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            All Products
           </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
-                {% for product in product_drop %}
-                    <a class="dropdown-item" href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.cat_friendly_name }}</a>
-                {% endfor %}
-        </div>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="{% url 'products' %}?category=sprinkle-decorations">Sprinkles</a>
+            <a class="dropdown-item" href="{% url 'products' %}?category=cake-boards">Cake Boards</a>
+            <a class="dropdown-item" href="{% url 'products' %}?category=cake-toppers">Toppers</a>
+            <a class="dropdown-item" href="{% url 'products' %}?category=Bakeware">Bakeware</a>
+            <a class="dropdown-item" href="{% url 'products' %}?category=Ocassions">Ocassions</a>
+            <a class="dropdown-item" href="{% url 'products' %}?category=Tools">Tools</a>
+            <a class="dropdown-item" href="{% url 'products' %}?category=Boxes">Boxes</a>
+            <a class="dropdown-item" href="{% url 'products' %}?category=Icing">Icing</a>
+            <a class="dropdown-item" href="{% url 'products' %}?category=food-colouring">Colourings</a>
             
+          </div>
         </li>
-
+        
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="{% url 'products' %}">Shop</a>
+          <a class="nav-link" href="{% url 'products' %}">Shop</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'products' %}?status=1">Offers</a>
         </li>
-
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Showcase
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="{% url 'cakes' %}">View Cakes</a>
             <a class="dropdown-item" href="{% url 'create_cake' %}">Post a Cake</a>
-            
+  
+          </div>
         </li>
-        
-        
         <li class="nav-item">
           <a class="nav-link" href="{% url 'contact' %}">Contact</a>
         </li>
-      </ul>
-<!-- Left links -->
-  </div>
-  
-  <div class="row">
-      
-              <!--Search-->
-      <div class="col">
-          <div class="d-lg-flex float-right">
-              <div class="d-lg-flex align-items-center border">
-                  <div class="d-flex align-items-center w-100 h-100 ps-lg-0 ps-sm-3">
-                      <form method="GET" action="{% url 'products' %}" class="d-flex">
-                          <input class="ps-md-0 ps-3 cream-bg" type="text" name="q" placeholder=" What do you need?">
-                              <div class="d-flex align-items-center justify-content-center"> 
-                                  <button class="btn button lightpink-bg" type="submit" title="Search"><i class="fas fa-search"></i></button>
-                      </form>
-                  </div>
-              </div>
-          </div>
-      </div>
-                  
-  </div>
-  </div>
-</nav>
 
+        
+      </ul>
+      <form class="form-inline" method="GET" action="{% url 'products' %}">
+        <div class="input-group search-box">
+          <input type="text" class="form-control cream-bg" name="q" placeholder="What are you looking for?" aria-label="Search for...">
+          <span class="input-group-btn">
+            <button class="btn btn-secondary tpink-bg" title="Search" type="submit"><i class="fas fa-search"></i></button>
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+    
+</nav>
 
 
 
