@@ -15,20 +15,21 @@
     <div class="spacer py-3 m-0"></div>
 
     <div class="row">
-      <div class="col">
-    <div class="dropdown text-center">
-      <button class="btn dropdown-toggle lightpink-bg" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-        Sort by
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="{% url 'products' %}?sort=product_price&direction=desc">Price (high to low)</a></li>
-        <li><a class="dropdown-item" href="{% url 'products' %}?sort=product_price&direction=asc">Price(low to high</a></li>
-        <li><a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc">Category</a></li>
-        <li><a class="dropdown-item" href="{% url 'products' %}?sort=name&direction=asc">Name (A-Z)</a></li>
-        <li><a class="dropdown-item" href="{% url 'products' %}?sort=name&direction=desc">Name (Z-A)</a></li>
-      </ul>
-    </div>  
-    </div>
+      <div class="col text-right">
+      <div class="dropdown">
+        <button type="button" class="btn btn-primary buttons-all dropdown-toggle" data-toggle="dropdown">
+         Sort by...
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{% url 'products' %}?sort=product_price&direction=desc">Price (high to low)</a>
+          <a class="dropdown-item" href="{% url 'products' %}?sort=product_price&direction=asc">Price(low to high</a>
+          <a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc">Category</a>
+          <a class="dropdown-item" href="{% url 'products' %}?sort=name&direction=asc">Name (A-Z)</a>
+          <a class="dropdown-item" href="{% url 'products' %}?sort=name&direction=desc">Name (Z-A)</a>
+         
+        </div>
+      </div>
+      </div>
 
     <div class="col-12 col-md-6 order-md-first m-auto">
       <p class="text.muted mt-3 text-center text-md-left">
@@ -40,6 +41,7 @@
         
       </p>
 
+    </div>
     </div>
    
         <div class="col-xl-12 col-l-6 mt-3 ">
