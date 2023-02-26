@@ -465,3 +465,35 @@ button.btn.btn-primary.buttons-all.dropdown-toggle {
   border: solid;
   border-color: var(--lightPink);
 }
+
+/*Mail Chimp*/
+
+#mc_embed_signup .helper_text {
+	background-color: transparent !important;
+}
+
+#mc_embed_signup form {
+	margin: 0px !important;
+}
+
+#mc-embedded-subscribe {
+	margin: 0px !important;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+	background-color: transparent !important;
+}
+
+#mc_embed_signup .foot {
+	grid-template-columns: max-content !important;
+}
+
+#mce-responses {
+  display: none !important;
+}
+
+/*contact info list */
+
+.contact-list {
+  font-size: smaller !important;
+}
