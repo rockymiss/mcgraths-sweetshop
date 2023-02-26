@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% load static %} {% block title %}
+<title>Not for your Eyes!</title>
+{% endblock %}{% block content %}
+
+<section id='error' class="index-content background">
+    <!--spacer to push page below navbar-->
+    <div class="spacer py-5"></div>
+
+<div class="row justify-content-center align-items-center">
+  <div class="col">
+    <div class="row align-items-center">
+      <div class="col">
+        <h1 class="error-heading text-center p-bold">This page is for admin only.</h1>
+        <h2 class="text-center p-bold"> Click on our logo in the navbar to find your way home.</h2>
+      </div>
+    
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
