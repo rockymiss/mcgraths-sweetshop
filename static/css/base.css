@@ -447,6 +447,7 @@ footer {
   text-decoration: none !important;
   color: var(--brown) !important;
   border: none !important;
+  font-size: smaller;
 }
 
 button.btn.btn-primary.buttons-all.dropdown-toggle {
