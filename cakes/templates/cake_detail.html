@@ -11,9 +11,9 @@
 
   <div class="overlay"></div>
 <div class="container-fluid pt-5  justify-content-center">
+    <div class="spacer py-5 m-0"></div>
         <div class="row justify-content-around ">
 
-            <h1>Detail of Cake here</h1>
 
            
                     <div class="col-md-6 masthead-text">
@@ -33,16 +33,16 @@
         </div>
         
         <div class="container">
-            <div class="row">
-                <div class="col card mb-4  mt-3 left  top">
-                    <div class="card-body">
+            <div class="row cream-bg">
+                <div class="col card mb-4  mt-3 left cream-bg">
+                    <div class="card-body cream-bg">
                         
                         <p class="card-text ">
                             {{ post.description | safe }}
                         </p>
                         <!--hides if no image selected and displays if there is-->
                         
-                        <div class="row">
+                        <div class="row cream-bg">
         
                             <div class="col-1">
                                 <!-- Code to like a post -->
@@ -80,13 +80,13 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
+            <div class="row cream-bg">
+                <div class="col cream-bg">
                     <hr>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-8 card mb-4  mt-3 ">
+                <div class="col-md-8 card mb-4  mt-3 cream-bg ">
                     <h3>Comments:</h3>
                     <div class="card-body">
                         <!--iterate through comments to display them -->
@@ -105,7 +105,7 @@
                         {% endfor %}
                     </div>
                 </div>
-                <div class="col-md-4 card mb-4  mt-3 ">
+                <div class="col-md-4 card mb-4  mt-3 cream-bg">
                     <div class="card-body">
                         {% if commented %}
                         <div class="alert alert-success" role="alert">
