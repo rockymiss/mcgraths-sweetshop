@@ -14,8 +14,13 @@ class CreateCake(forms.ModelForm):
                   'title',
                   'cake_image',
                   'description',
-                  'status',)
+                  'cake_approve',)
         prepopulated_fields = {'slug': ('title',)}
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['cake_approve'].initial = False
+        self.fields['cake_approve'].widget = forms.HiddenInput()
 
 
 class CreateComment(forms.ModelForm):
