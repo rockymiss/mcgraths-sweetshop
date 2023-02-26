@@ -10,6 +10,7 @@
 
   <div class="overlay"></div>
 <div class="container-fluid pt-5  justify-content-center">
+  <div class="spacer py-5 m-0"></div>
      
 
             <h1>Review Contact Messages</h1>
@@ -19,19 +20,19 @@
               <span class="text-uppercase">Back to Store Management</span></a>
             {% if review_message %}
             {% for message in review_message %}
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card m-3  border-0" style="width: auto;">
-                        <h5 class="card-title">{{ message.full_name }}</h5>
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 p-3">
+                    <div class="card m-3 p-2 border-1 cream-bg" style="width: auto;">
+                        <h5 class="card-title">From: {{ message.full_name }}</h5>
                             <div class="card-body">
                                 
-                                <h5 class="card-title">{{ message.email }}</h5>
-                                <p class="card-text">{{ message.message }}</p>
-                                <p class="card-text">{{ message.date_created }}</p>
+                                <p class="card-title"><strong>Email {{ message.email }}</strong></p>
+                                <p class="card-text">Message: {{ message.message }}</p>
+                                <p class="card-text text-muted">Date: {{ message.date_created }}</p>
                                 
                                
                                 <p>
                                     
-                                    <a href="{% url 'delete_message' message.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Delete</a>
+                                    <a href="{% url 'delete_message' message.pk %}" class="btn btn-primary buttons-all rounded p-2">Delete</a>
                                   </p>
                             
                             </div>

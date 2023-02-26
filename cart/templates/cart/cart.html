@@ -23,7 +23,7 @@
 <div class="overlay"></div>
 <div class="spacer py-5 m-0"></div>
 
-<div class="container-fluid pt-5 text-center">
+<div class="container-fluid pt-5 text-center w-75 ">
     <!--Heading-->  
     <div class="row d-flex text-center"> 
         <div class="col-12">
@@ -41,7 +41,7 @@
           {% if cart_items %}
           
           {% for item in cart_items %}
-          <div class="card-body p-4">
+          <div class="card-body p-4 cream-bg">
             <div class="row d-flex justify-content-between align-items-center">
               <div class="col-md-2 col-lg-2 col-xl-2">
                       {% if "placeholder" in item.product.product_image.url %}
@@ -56,17 +56,18 @@
                 <p class="my-0"><strong>Colour: </strong>{% if item.product.has_colours %}{{ item.colour|upper}}{% else %}N/A{% endif %}</p>
                 
               </div>
-            
+          
+         
+              <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1 cream-bg">
+                <h5 class="mb-0">€ {{ item.product.product_price | calc_subtotal:item.quantity  }}</h5>
+              </div>
 
+              
               <!--Form for quantity-->
-              <div class="col-md-3 col-lg-3 col-xl-2 d-flex ">
+              <div class="col-md-3 col-lg-3 col-xl-2 d-flex cream-bg pt-3 ">
                 {% include "cart/quantity-form.html" %}
               </div>
               <!--form quantity end-->
-         
-              <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                <h5 class="mb-0">€ {{ item.product.product_price | calc_subtotal:item.quantity  }}</h5>
-              </div>
               
           
             </div>
@@ -76,14 +77,23 @@
 
         </div>
 
-        {% include "cart/discount_form.html" %}
+        <div class="d-flex card rounded-3 mb-4 flex-row-reverse text-end cream-bg p-3">
+   
+          
+          <div class="col-5-lg col-xs-3" class="pt-5 ">
+            {% include "cart/discount_form.html" %}
+              
+        </div>
+      </div>
+
+
           
   <!-- Total -->
 
-    <div class="d-flex card rounded-3 mb-4 flex-row-reverse text-end">
+    <div class="d-flex card rounded-3 mb-4 flex-row-reverse text-end cream-bg p-1">
    
         
-        <div class="col-5" class="pt-5 ">
+        <div class="col-5-lg col-2-xs" class="pt-5 ">
             <h6>Cart Total: €{{ total|floatformat:2 }}</h6>
             {% if discount %}
             <h6>Discount Applied: €{{ discount|floatformat:2 }}</h6>
@@ -100,38 +110,31 @@
 
   <!--end total -->
   
-    <div class="card">
-      <div class="card-body">
+    <div class="card cream-bg">
+      <div class="card-body text-right">
         {% include "cart/checkout-buttons.html" %}
       </div>
+      
+      {% else %} 
+      <p class="text-center cream-bg m-0">No products here</p>
+      <a href="{% url 'products' %}" class="btn btn-outline-black  btn-lg cream-bg">
+        <span class="text-uppercase">Keep Shopping</span><i class="fas fa-chevron-left"></i></a>
+      {% endif %}
       
     </div>  
   <!--End Discount-->
 
+ 
+
 
 
 </div><!-- End Container -->
-{% else %} 
-<p class="text-center">No products here</p>
-{% endif %}
 
 
 
 
 
 
-
-      </div>
-    </div>
-
-    <!--End Cart Items -->
-
-
-</div>
-        
-
-
-<!--End Cart-->
 
 {% endblock %}
 

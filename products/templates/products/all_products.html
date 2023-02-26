@@ -10,21 +10,26 @@
   <!--Main display for list of products -->
 
   <div class="overlay"></div>
+  
   <div class="container-fluid pt-5  justify-content-center">
+    <div class="spacer py-4 m-0"></div>
 
     <div class="row">
-    <div class="dropdown text-center">
-      <button class="btn dropdown-toggle lightpink-bg" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-        Sort by
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="{% url 'products' %}?sort=product_price&direction=desc">Price (high to low)</a></li>
-        <li><a class="dropdown-item" href="{% url 'products' %}?sort=product_price&direction=asc">Price(low to high</a></li>
-        <li><a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc">Category</a></li>
-        <li><a class="dropdown-item" href="{% url 'products' %}?sort=name&direction=asc">Name (A-Z)</a></li>
-        <li><a class="dropdown-item" href="{% url 'products' %}?sort=name&direction=desc">Name (Z-A)</a></li>
-      </ul>
-    </div>
+      <div class="col text-right">
+      <div class="dropdown">
+        <button type="button" class="btn btn-primary buttons-all dropdown-toggle" data-toggle="dropdown">
+         Sort by...
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{% url 'products' %}?sort=product_price&direction=desc">Price (high to low)</a>
+          <a class="dropdown-item" href="{% url 'products' %}?sort=product_price&direction=asc">Price(low to high</a>
+          <a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc">Category</a>
+          <a class="dropdown-item" href="{% url 'products' %}?sort=name&direction=asc">Name (A-Z)</a>
+          <a class="dropdown-item" href="{% url 'products' %}?sort=name&direction=desc">Name (Z-A)</a>
+         
+        </div>
+      </div>
+      </div>
 
     <div class="col-12 col-md-6 order-md-first m-auto">
       <p class="text.muted mt-3 text-center text-md-left">
@@ -37,46 +42,48 @@
       </p>
 
     </div>
+    </div>
    
-        <div class="col-xl-12 col-l-6 mt-3 ">
+        <div class="col-xl-12 mt-1 ">
             <div class="row justify-content-around ">
                 {% for product in products %}
-          <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <div class="card m-3  border-0" style="width: auto;">
+          <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 m-1 my-border">
+           
+            <div class="card m-3  border-0  h-95 pb-3 cream-bg" style="width: auto;">
+              
                 {% if "placeholder" in product.product_image.url %}
                 <img class="img-fluid" src="https://res.cloudinary.com/rockymiss/image/upload/v1670527269/mcgraths/no-image-available1_r6peww.jpg"  alt="Sorry no image available">
                 {% else %}
                 <img class="img-fluid" src="{{ product.product_image.url }}"  alt="{{ product.product_name }}">
                 {% endif %}
-                <div class="card-body">
-                  <a href="{% url 'product_detail' product.id %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">View Item</a>
-                  <h5 class="card-title">{{ product.name }}</h5>
+
+                <div class="col-12 p-3">
+                  <a href="{% url 'product_detail' product.id %}" class="buttons-all pink-bg border-dark rounded text-dark p-2">View Item</a>
+                           {% if request.user.is_superuser %}
+                             <small class="ml-3">
+                               <a href="{% url 'edit_product' product.id %}">Edit</a>
+                               <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                             </small>
+                           {% endif %}
+                </div>
+                <div class="card-body cream-bg mt-auto h-100">
+                  
+                     
+                      
+                  <h5 class="card-title pt-3">{{ product.name }}</h5>
+                  <a class="text-muted " href="{% url 'products' %}?category={{ product.category.name }}">
+                    {{ product.category.cat_friendly_name }}</p></a>
                   <p class="card-text">{{ product.product_price }}</p>
                   <p class="card-text">{{ product.description }}</p>
                   {% if product.category %}
-                  <p class="card-text small mt-1">
-                  <a class="text-muted " href="{% url 'products' %}?category={{ product.category.name }}">
-                    {{ product.category.cat_friendly_name }}</p></a>
-                  {% endif %}
-
-                 
-                  {% if product.status == 1 %}
-                  <p class="">This Product is on offer</p>
-                  {% else %}
-                  <p class="">This Product is NOT on offer</p>
-                  {% endif %}
+                  <p class="card-text small">
                   
-                  {% if request.user.is_superuser %}
-                  <small class="ml-3">
-                    <a href="{% url 'edit_product' product.id %}">Edit</a>
-                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                  </small>
-
                   {% endif %}
-                    
-                </div>
-                </div>
+              
+
               </div>
+              </div>
+            </div>
               {% endfor %}
             </div>
           </div>

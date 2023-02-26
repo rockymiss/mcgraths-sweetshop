@@ -18,7 +18,8 @@
   <!--Main display for product detail-->
   
   <div class="overlay"></div>
-    <div class="container-fluid pt-5  justify-content-center">
+  <div class="spacer py-5 m-0"></div>
+    <div class="container-fluid pt-5  justify-content-cente pb-4">
               <div class="row">
                   <div class="col-lg-4 order-lg-2 order-1">
                     {% if "placeholder" in product.product_image.url %}
@@ -31,7 +32,7 @@
                     <div class="product_description">
                         
                         <div class="product_name">
-                            <p>{{ product.name }}</p>
+                            <h3>{{ product.name }}</h3>
                             <p>{{ product.description }}</p>
                             {% if product.status == 1 %}
                                 <p><small><small>This Product is on offer</small></small></p>
@@ -87,7 +88,7 @@
                                         <div class="form-group w-50">
                                             <div class="input-group input-group-{{ product.id }}">
                                               <div class="input-group-prepend">
-                                                <button class="decrement-qty btn btn-black rounded-0 decrement-qty_{{ product.id }}"  
+                                                <button class="decrement-qty btn btn-black rounded-0 decrement-qty_{{ product.id }} w-30px"  
                                                     data-item_id="{{ product.id }}">
                                                         <span class="icon">
                                                              <i class="fas fa-minus"></i>
@@ -130,7 +131,7 @@
                                             </span>
                                             <span class="text-uppercase">Keep Shopping</span>
                                         </a>
-                                        <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to cart"
+                                        <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5 buttons-all" value="Add to cart"
                                             aria-label="add product to cart">
                                     </div>
                                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
