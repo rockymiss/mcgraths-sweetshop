@@ -10,38 +10,64 @@
   <!--Main display for list of products -->
 
 <div class="overlay"></div>
-<div class="container-fluid pt-5  justify-content-center">
+<div class="container-fluid pt-5 justify-content-center">
 
 
+        <div class="row text-center">
+          <div class="col-12"> 
+            <a href="{% url 'management' %}" class="btn btn-outline-black rounded-0 btn-lg">
+              <i class="fas fa-chevron-left"> </i>
+              <span class="text-uppercase">Back to Store Management</span></a>
+
+          </div>
+        </div>
             
-           
+
+        <div class="row">
+          <div class="col">
+            <h2 class="logo-font mb-4 shop-headings">Add a New Discount</h2>
+
+            <p><a href="{% url 'create_discount' %}" class="btn btn-primary buttons-all rounded p-2">Add</a></p>
+
+
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row pb-3">
+          <div class="col-6">
+            <h2 class="logo-font mb-4 shop-headings">Review Discounts</h2>
+          </div>
+
+        <div class="row">
+          <div class="col">
+
+            {% if review_discounts %}
+            {% for discount in review_discounts %}
+            <div class="card" style="width: 16rem;">
+              <div class="card-body">
+                <h5 class="card-title">Discount:</h5>
                 
-                  <h1>Add a New Discount Code</h1>
-                  <a href="{% url 'management' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                    <i class="fas fa-chevron-left"> </i>
-                    <span class="text-uppercase">Back to Store Management</span></a>
-                  <p><a href="{% url 'create_discount' %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Add</a></p>
-                  <hr>
-                  
-                  {% if review_discounts %}
-                  <h1>Discounts Created</h1>
-                  {% for discount in review_discounts %}
-
-                  <p>Discount Code: {{ discount.discount_code }}</p>
-                  <P>Percentage: {{ discount.discount_percentage }}</P>
-
-                 
-                    <a href="{% url 'delete_discount' discount.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Delete</a>
-                  
-                   
-              {% endfor %}
-              {% else %}
+                <p class="card-text"><strong>Discount Code: </strong> {{ discount.discount_code }}</p>
+                <p class="card-text"><strong>Percentage</strong>{{ discount.discount_percentage }}</p>
+                <a href="{% url 'delete_discount' discount.pk %}" class="btn btn-primary buttons-all rounded p-2">Delete</a>
+                
+              </div>
+            </div>
+          </div>
+           {% endfor %}
+            
+           {% else %}
 
                 <h2> You don't have any discounts created</h2>
                 <p>Click Add above to add a new discount code</p>
+
+                {% endif %}
         </div>
-      
-        {% endif %}
-       
-       </div>
+        
+        
+</div>
+
+         
 {% endblock %}
