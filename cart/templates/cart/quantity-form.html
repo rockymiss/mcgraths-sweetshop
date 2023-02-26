@@ -1,6 +1,6 @@
 <form class="form update-form d-flex" method="POST" action="{% url 'adjust_cart' item.item_id  %}">
     {% csrf_token %}
-    <div class="form-group">
+    <div class="form-group mt-2">
         <div class="input-group input-group-{{ item.item_id }}">
             <div class="input-group-prepend">
                 <button class="decrement-qty btn btn-sm btn-black rounded-0 decrement-qty_{{ item.item_id }} 
@@ -36,10 +36,11 @@
                 
             
         </div>
+        <a class="update-link btn text-info" title="Refresh"><i class="fas fa-sync-alt"></i></a>
+    <a href="{% url 'remove_cart' item.product.id %}" class="update-link btn text-info" title="Delete Items" id="remove_{{ item.item_id }}" data-product_colour="{{ item.colour }}"> <i class="fas fa-trash fa-lg"></i></a>
     </div>
   </form>
   
-    <a class="update-link btn btn-dark text-info" title="Refresh"><i class="fas fa-sync-alt"></i></a>
-    <a href="{% url 'remove_cart' item.product.id %}" class=" text-danger" title="Delete Items" id="remove_{{ item.item_id }}" data-product_colour="{{ item.colour }}"> <i class="fas fa-trash fa-lg"></i></a>
+    
 
     

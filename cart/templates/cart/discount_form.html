@@ -1,6 +1,7 @@
-<form method="post" action="{% url 'apply_discount' %}">
-  {% csrf_token %}
-  <label for="user_discount_code">Discount code:</label>
-  <input type="text" name="user_discount_code">
-  <button type="submit">Apply</button>
-</form>
+   
+      <form method="post" action="{% url 'apply_discount' %}">
+        {% csrf_token %}
+        <label for="user_discount_code">Discount code:</label>
+        <input type="text" name="user_discount_code" class="p-1">
+
+    <button type="submit" class="btn btn-warning btn-lg buttons-all">Apply</button>

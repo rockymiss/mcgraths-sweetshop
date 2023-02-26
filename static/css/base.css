@@ -497,3 +497,18 @@ button.btn.btn-primary.buttons-all.dropdown-toggle {
 .contact-list {
   font-size: smaller !important;
 }
+
+/*mailchimp*/
+
+div#mc_embed_signup_scroll {
+  border-left: solid 1px;
+  border-color: var(--brown);
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+/*product detail*/
+
+input.form-control.qty_input.id_qty_12 {
+padding-right: 0;
+}
