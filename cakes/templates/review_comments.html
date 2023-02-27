@@ -2,25 +2,46 @@
 <title>Review Comments</title>
 {% endblock %}
 
+
+
 {% block content %}
-<div class="overlay"></div>
+
+
+  <!--Main display for list of products -->
+
+  <div class="overlay"></div>
 <div class="container-fluid pt-5  justify-content-center">
-  <h1 class="fs-5 fw-bold"> Review Comments</h1>
-  <a href="{% url 'management' %}" class="btn btn-outline-black rounded-0 btn-lg">
-    <i class="fas fa-chevron-left"> </i>
-    <span class="text-uppercase">Back to Store Management</span></a>
-    {% for comment in comments %}
+  <div class="spacer py-5 m-0"></div>
+     
 
-<h4>Message from: {{ comment.name }}</h4>
-<p> Post:{{ comment.post.title | linebreaks }}
-<p>{{ comment.comment_body | linebreaks }}</p>
+            <h1>Review Comments</h1>
 
-                <a href="{% url 'approve_comment' comment.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Approve Comment</a>
-                <a href="{% url 'delete_comment' comment.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Delete Comment</a>
-              </p>
-       
-         
-    {% endfor %}
+            <a href="{% url 'management' %}" class="btn btn-outline-black rounded-0 btn-lg">
+              <i class="fas fa-chevron-left"> </i>
+              <span class="text-uppercase">Back to Store Management</span></a>
+            {% if comments %}
+            {% for comment in comments %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 p-3">
+                    <div class="card m-3 p-2 border-1 cream-bg" style="width: auto;">
+                        <h5 class="card-title">From: {{ comment.name }}</h5>
+                            <div class="card-body">
+                                
+                                
+                                <p class="card-text">Comment: {{ comment.post.title | linebreaks }}</p>               
+                                <p>
+                                    
+                                  <a href="{% url 'approve_comment' comment.pk %}" class="btn btn-primary buttons-all p-2">Approve Comment</a>
+                                  <a href="{% url 'delete_comment' comment.pk %}" class="btn btn-primary buttons-all p-2">Delete Comment</a>
+                                  </p>
+                            
+                            </div>
+                    </div>
+              </div>
+              {% endfor %}
+              {% else %}
+                <h2> Nothing to see here</h2>
+        
+        {% endif %}
 </div>
-    
+       
 {% endblock %}
