@@ -184,9 +184,31 @@ From the Cart the user can see a list of products they added.  They can also cho
 <summary>Cart</summary> 
 <p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1677480498/mcgraths/features/products_qsteat.png"></p>
 
-<p align="center">Discount<img src="https://res.cloudinary.com/rockymiss/image/upload/v1677481145/mcgraths/features/discount_gz8oyt.png"></p>
+<details open>
+<summary>Discount</summary> 
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1677481145/mcgraths/features/discount_gz8oyt.png"></p>
 </details>
 
+#### Checkout
+
+Checkout also gives the users an opportunity to add or remove from their cart before proceeding to pay.  Totals can be seen clearly and a message alerting users that if they spend more then delivery is free!  Checkout is done using Stripe.  Once the user fills out the form and enters their payment details they can complete their order.  A spinner will appear on the screen to let the users know that something has happened. Once completed a message will appear to the user to confirm their order details.  On smaller screens users will get a message to say that an email has been sent to them. 
+
+<details open>
+<summary>Checkout</summary> 
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1677483011/mcgraths/features/checkout_zhnmgh.png"></p>
+
+<details open>
+<summary>Order Information</summary> 
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1677483080/mcgraths/features/Order-info_lnh0cu.png"></p>
+</details>
+
+<details open>
+<summary>Checkout Success!</summary> 
+<p align="center"><img src="<details open>
+<summary>Order Information</summary> 
+<p align="center">Discount<img src="https://res.cloudinary.com/rockymiss/image/upload/v1677483080/mcgraths/features/Order-info_lnh0cu.png"></p>
+</details>"></p>
+</details>
 -----
 
 ## SEO & Marketing
