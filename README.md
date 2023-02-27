@@ -489,6 +489,6 @@ Deployment is done after Creating the Django Project in your virtual environment
 -----
 ## Acknowledegments/Conclusion
 
+This was tough, a labour of love and hate.  Deaths, illnesses and a new job brought many challenges.  This one came down to the last few minutes so I better get going and submit.  Thanks everyone, Spencer. Kasia, everyone in the Cohort, Matt, Dave, Daisy, Bim, Naomi.  You have all helped so much.  Big shout out to the family too, couldn't have done it without them!
 
-
-Rachel Rock 2022
+Rachel Rock February 2023
