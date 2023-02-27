@@ -300,6 +300,7 @@ McRocks Cake Supplies has a facebook page for marketing to post content, update 
 - [Heroku](https://id.heroku.com/login) to deploy the website.
 - [Heroku PostgreSQL](https://id.heroku.com/login) to database during development and deployment
 - [Balsamiq](https://balsamiq.com/) to create wireframes.
+- [CodePen](https://codepen.io/muluneh/details/xLarRR) footer code from Muluneh Awoke
 
 -----
 
