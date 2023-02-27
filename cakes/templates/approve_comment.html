@@ -5,17 +5,18 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="container-fluid pt-5  justify-content-center">
+    <div class="spacer py-5 m-0"></div>
 
         <!--Form to approve comments -->
 
         <form method="post" class="text-center mb-2">
             {% csrf_token %}
             <p> Are you sure that you would like to <strong>approve</strong> this comment? </p>
-            <input class="rounded p-1 fw-bold border-1" type="submit" value="Yes">
+            <input class="rounded p-1 fw-bold border-1 buttons-all" type="submit" value="Yes">
         </form>    
 
         <form class="text-center" method="GET" action="{% url 'review_comments' %}">
-            <input class="rounded p-1 fw-bold border-1" type="submit" value="Go Back">
+            <input class="rounded p-1 fw-bold border-1 buttons-all" type="submit" value="Go Back">
           </form>
 
 </div>
