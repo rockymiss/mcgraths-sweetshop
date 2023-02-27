@@ -104,7 +104,7 @@
                       <p class="my-0"></p>
                   </div>
               </a>
-              <div class="dropdown-menu border-0" aria-labelledby="user-options">
+              <div class="dropdown-menu border-0 cream-bg" aria-labelledby="user-options">
                   {% if request.user.is_authenticated %}
                       {% if request.user.is_superuser %}
                           <a href="{% url 'management' %}" class="dropdown-item">Management</a>
@@ -163,7 +163,7 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             All Products
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <div class="dropdown-menu cream-bg" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="{% url 'products' %}?category=sprinkle-decorations">Sprinkles</a>
             <a class="dropdown-item" href="{% url 'products' %}?category=cake-boards">Cake Boards</a>
             <a class="dropdown-item" href="{% url 'products' %}?category=cake-toppers">Toppers</a>
@@ -187,7 +187,7 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Showcase
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <div class="dropdown-menu cream-bg" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="{% url 'cakes' %}">View Cakes</a>
             <a class="dropdown-item" href="{% url 'create_cake' %}">Post a Cake</a>
   
