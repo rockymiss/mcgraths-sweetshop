@@ -6,8 +6,6 @@
 
 Html validation was done with [https://validator.w3.org/](https://validator.w3.org/). All pages were tested by manually inputting the code into the validator.
 
-
-
 #### **Home Page**
 
 ![Home Page](#)
@@ -23,7 +21,6 @@ Html validation was done with [https://validator.w3.org/](https://validator.w3.o
 #### **Error Pages**
 ![403 Error Page](#)
 ![404 Error Page](#)
-
 
 ### CSS Validation
 
@@ -79,14 +76,6 @@ In webhook_handler_py at line 140 there was a line too long error.  I couldn't c
 
 ### Home App
 
-1. urls.py
-1. views.py
-
-### Home App
-
-1. apps.py
-1. forms.py
-1. models.py
 1. urls.py
 1. views.py
 
