@@ -10,15 +10,19 @@ Html validation was done with [https://validator.w3.org/](https://validator.w3.o
 
 ![Home Page](https://res.cloudinary.com/rockymiss/image/upload/v1677467234/mcgraths/errors/index_vsvsxk.png)
 
-This error is relation to a dropdown menu using bootstrap 4.  The error could not be avoided and does not affect the functionality of the website. 
+This error is relation to a dropdown menu using bootstrap 4.  The error could not be avoided and does not affect the functionality of the website. These ID duplicates appeared on each validation page as it was in the navbar.
 
-#### **About Page**
+#### **Products**
 
-![About Page](#)
+![P Tags - Products](https://res.cloudinary.com/rockymiss/image/upload/v1677467234/mcgraths/errors/index_vsvsxk.png)
+
+Open and closed p tags appeared as validation errors on any page with products due to the form completion when filling out the add product form.  This does not affect functionality of the website.
 
 #### **#Pages**
 
-![Page](#)
+![Form Errors](https://res.cloudinary.com/rockymiss/image/upload/v1677471750/mcgraths/errors/form-errors_uagun8.png)
+
+Unfortunately I had a few form errors saying the form tag was opened but not closed.  This was in relation to the cart.html.  Due to time constraints I couldn't look into this further.  While I don't believe it affects the functionality of the site I would like to investigate this further.  
 
 #### **Error Pages**
 ![403 Error Page](#)
@@ -108,10 +112,14 @@ Errors in the settings.py file were in relation to line too long.  Again I didn'
 1. urls.py
 1. views.py
 
-#### Gitpod Workspace
 
-![Workspace](#)
+### JavaScript Validation
 
+Javascript validation was done with [JShint](https://jshint.com/). All pages were tested by manually inputting the code into the validator.
+
+#### **Errors**
+
+![Stripe](https://res.cloudinary.com/rockymiss/image/upload/v1677472969/mcgraths/errors/js-stripe-elements_ohuzgh.png)
 
 ## Lighthouse Testing
 
