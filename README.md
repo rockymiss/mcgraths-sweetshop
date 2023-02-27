@@ -6,7 +6,7 @@ For my **Portfolio  Project** on the **Code Institute's Diploma in Software Deve
 
 McRocks is a cake supply shop that sells cakes supplies for professional and amateur cake makers.  It’s main objective is to provide a variety of cake supplies for making occasion cakes such as birthday and wedding cakes.  The website will also provide a space for customers to display their cake designs.
 
-Link to the deployed app is [here](https://mcgrathsshop.herokuapp.com/).
+Link to the deployed app is [McRocks Cake Supplies](https://mcgrathsshop.herokuapp.com/).
 
 -----
 
