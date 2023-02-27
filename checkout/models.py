@@ -27,7 +27,7 @@ class Discount(models.Model):
 class Order(models.Model):
     """
     Class so that the user can order items and input their information
-    for delivery  *Followed the boutique ado walkthrough for this model class 
+    for delivery  *Followed the boutique ado walkthrough for this model class
     with minor changes
     """
     order_number = models.CharField(max_length=32, null=False, editable=False)
@@ -92,7 +92,7 @@ class Order(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        A method which overrides the original save method to set the order 
+        A method which overrides the original save method to set the order
         number if it hasn't been set previously.
         """
         if not self.order_number:
@@ -105,7 +105,7 @@ class Order(models.Model):
 
 class OrderLineItem(models.Model):
     """
-    Class so that users can add products to their order which will 
+    Class so that users can add products to their order which will
     also update delivery costs etc. as each items is added
     """
     order = models.ForeignKey(
@@ -129,4 +129,3 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         return f'{self.product.name} on order {self.order.order_number}'
-

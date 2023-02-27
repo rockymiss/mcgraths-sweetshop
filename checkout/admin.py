@@ -16,8 +16,8 @@ class OrderAdmin(admin.ModelAdmin):
     """
     A class to add read-only fields that will be calculated by
     the model methods, specifies the order of the fields in admin
-    and a list display option to restrict the columns that 
-    show in the order list.  Items will be ordered by date. 
+    and a list display option to restrict the columns that
+    show in the order list.  Items will be ordered by date.
     """
     inlines = (OrderLineItemAdminInline,)
 

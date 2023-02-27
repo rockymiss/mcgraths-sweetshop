@@ -191,13 +191,13 @@ class ReviewCakePost(LoginRequiredMixin, ListView):
 
 class ApproveCake(LoginRequiredMixin, View):
     """
-    Admin who is logged in can approve cake posts 
+    Admin who is logged in can approve cake posts
     made by users
     """
 
     def test_func(self):
         """
-        Checks if user is superuser 
+        Checks if user is superuser
         """
         return self.request.user.is_superuser
 
@@ -387,4 +387,3 @@ class ApproveComment(LoginRequiredMixin, View):
             self.request,
             'The comment has been posted to Cake Post')
         return redirect('review_comments')
-

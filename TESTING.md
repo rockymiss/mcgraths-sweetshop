@@ -34,19 +34,88 @@ The stylesheet was validated using [https://jigsaw.w3.org/css-validator/](https:
 
 ### Python Validation
 
-Python code was validated using [http://pep8online.com/](http://pep8online.com/).  I also used the GitPod workspace to check for errors as I coded.  I found this useful as there were less errors once I ran the code through the validator.
+Python code was validated using [CI Python Linter](https://pep8ci.herokuapp.com/).  I also used the GitPod workspace to check for errors as I coded.  I found this useful as there were less errors once I ran the code through the validator.
 
+The following files were put through the Python Linter.  Most errors were in relation to white space, blank lines and line too long.  Any errors are noted below.
 
-### blogcc files
+### Cakes App
 
-#### admin.py
+1. admin.py
+1. apps.py
+1. forms.py
+1. models.py
+1. urls.py
+1. views.py
 
-![pep8 admin.py](#)
+### Cart App
 
-#### other.py
+1. apps.py
+1. contexts.py
+1. forms.py
+1. models.py
+1. urls.py
+1. views.py
 
-![pep8 other.py](#)
+### Checkout App
 
+1. apps.py
+1. forms.py
+1. models.py
+1. signals.py
+1. urls.py
+1. views.py
+1. webhook_handler.py (one error see below)
+1. webhooks.py
+
+In webhook_handler_py at line 140 there was a line too long error.  I couldn't change it without creating a new temporary variable and I didn't feel it was needed as the error did not affect functionality.
+
+### Contact App
+
+1. apps.py
+1. forms.py
+1. models.py
+1. urls.py
+1. views.py
+
+### Home App
+
+1. urls.py
+1. views.py
+
+### Home App
+
+1. apps.py
+1. forms.py
+1. models.py
+1. urls.py
+1. views.py
+
+### McGraths Shop
+
+1. settings.py (see below)
+1. urls.py
+1. wsgi.py
+
+Errors in the settings.py file were in relation to line too long.  Again I didn't feel it necessary to change this as functionality was not affected.
+
+### Products App
+
+1. admin.py
+1. apps.py
+1. forms.py
+1. models.py
+1. urls.py
+1. views.py
+1, widgets.py
+
+### User_Profiles
+
+1. admin.py
+1. apps.py
+1. forms.py
+1. models.py
+1. urls.py
+1. views.py
 
 #### Gitpod Workspace
 

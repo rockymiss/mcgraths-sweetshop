@@ -55,7 +55,6 @@ def product_list(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                # messages.error(request, "Why didn't you search for anything?")
                 return redirect(reverse('products'))
 
             query = Q(
@@ -79,7 +78,7 @@ def product_list(request):
 
 class ProductDetail(View):
     """
-    Displays the product on it's own that the user selects 
+    Displays the product on it's own that the user selects
     from the Product list.
     """
 
@@ -97,6 +96,7 @@ class ProductDetail(View):
             "products/product_detail.html",
             context
             )
+
 
 @login_required
 def add_product(request):
@@ -160,6 +160,7 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+
 
 @login_required
 def delete_product(request, product_id):

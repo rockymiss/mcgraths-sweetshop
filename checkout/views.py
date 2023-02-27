@@ -77,7 +77,8 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for colour, quantity in item_data['items_by_colour'].items():
+                        for colour, quantity in (item_data['items_by_colour']
+                                                 .items()):
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
@@ -98,9 +99,11 @@ def checkout(request):
             if request.POST.get('user_discount_code'):
                 discount_form = DiscountForm(request.POST)
                 if discount_form.is_valid():
-                    discount_code = discount_form.cleaned_data['user_discount_code']
+                    discount_code = discount_form.cleaned_data[
+                            'user_discount_code']
                     try:
-                        discount = Discount.objects.get(discount_code=user_discount_code)
+                        discount = Discount.objects.get(
+                            discount_code=user_discount_code)
                     except Discount.DoesNotExist:
                         discount = None
                     if discount:
@@ -112,7 +115,7 @@ def checkout(request):
             if discount_applied:
                 total = order.get_discount_total()
             else:
-                total = order.grand_total 
+                total = order.grand_total
             order.save()
 
             # Clear the cart
@@ -120,7 +123,8 @@ def checkout(request):
 
             # Redirect to the checkout success page
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success',
+                            args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')

@@ -37,8 +37,8 @@ def cart_contents(request):
                     'product': product,
                     'colour': colour,
                 })
-    
-    # Check if discount code is applied 
+
+    # Check if discount code is applied
 
     if 'user_discount_code' in request.session:
         discount_percent = Decimal(request.session['discount_percentage'])
