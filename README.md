@@ -297,6 +297,8 @@ McRocks Cake Supplies also has an Instagram page for marketing to post content, 
 
 ## Future Implementation
 
+I would like to add more functionality for the users in terms of their posting cake images.  A feature where they can select products that they used to bake their goods and tag them in their cake posts.  I would also like to give users the opportunity to provide feedback on different products they have bought.  Unfortunately I didn't get time to implement the user Testimonials so I would also like to add this in any future implementation.  While a lot of functionality was provided to the Management side of things I would like to expand on that.  Stock takes would be ideal and alerts when stocks run out.  
+
 -----
 
 ## Technologies Used
@@ -319,6 +321,8 @@ McRocks Cake Supplies also has an Instagram page for marketing to post content, 
 - [Heroku PostgreSQL](https://id.heroku.com/login) to database during development and deployment
 - [Balsamiq](https://balsamiq.com/) to create wireframes.
 - [CodePen](https://codepen.io/muluneh/details/xLarRR) footer code from Muluneh Awoke
+- [Pixabay](https://pixabay.com/photos/happy-birthday-cake-candle-72160/) for some product images.
+- [Renshaw Baking](https://www.renshawbaking.com/gb/products/pink-ready-to-roll-icing/) for some product images.
 
 -----
 
