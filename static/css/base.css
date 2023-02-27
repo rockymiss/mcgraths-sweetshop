@@ -581,3 +581,9 @@ button.navbar-toggler {
 
 
 
+
+/* Mailchimp */
+
+#mce-responses {
+  display: none;
+}

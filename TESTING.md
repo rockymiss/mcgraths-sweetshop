@@ -6,9 +6,11 @@
 
 Html validation was done with [https://validator.w3.org/](https://validator.w3.org/). All pages were tested by manually inputting the code into the validator.
 
-#### **Home Page**
+#### **Errors**
 
-![Home Page](#)
+![Home Page](https://res.cloudinary.com/rockymiss/image/upload/v1677467234/mcgraths/errors/index_vsvsxk.png)
+
+This error is relation to a dropdown menu using bootstrap 4.  The error could not be avoided and does not affect the functionality of the website. 
 
 #### **About Page**
 
