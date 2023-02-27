@@ -111,7 +111,7 @@ I used this simple flow chart to give me a basic flow of the website.
 
 ## Database Schema
 
-<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1668103542/mcgraths/mcrock_database-schema_w33wqq.png"></p>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1677474775/mcgraths/errors/database-schema-mcrocks_oixj6n.png"></p>
 
 ## Site Structure 
 
