@@ -120,11 +120,11 @@
                         <form method="POST" style="margin-top: 1.3em;">
                             {{ comment_form | crispy }}
                             {% csrf_token %}
-                            <button type="submit" class="btn btn-signup btn-lg page-link grey-bg rounded p-1 fw-bold border-1 text-reset">Submit</button>
+                            <button type="submit" class="btn btn-primary buttons-all p-2 text-reset">Submit</button>
                         </form>
                       
                             <p>You must be logged in to leave comments </p>
-                            <a href="{% url 'account_login' %}"><button class="p-1 rounded border border-2 border-dark" type="submit">Login</button></a>
+                            <a href="{% url 'account_login' %}"><button class="btn btn-primary buttons-all p-2" type="submit">Login</button></a>
                         {% endif %}
                         {% endif %}
                     </div>
@@ -132,35 +132,6 @@
             </div>
         </div>
 
-
-
-
-
-
-
-            <!-- {% for cake in cakes %} -->
-                <!-- <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card m-3  border-0" style="width: auto;">
-                        <img class="img-fluid" src="{{ cake.image.url }}"  alt="{{ cake.title }}">
-                            <div class="card-body">
-                                <a href="#" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">View Item</a>
-                                <h5 class="card-title">{{ cake.title }}</h5>
-                                <p class="card-text">{{ cake.date_created }}</p>
-                                {% if cake.status == 1 %}
-                                  <p class="">Good to Go</p>
-                                {% else %}
-                                    <p class="">Draft</p>
-                                {% endif %}
-                                {% if request.user.is_user %}
-                                    <small class="ml-3">
-                                        <a href="{% url 'edit_cake' cake.id %}">Edit</a>
-                                        <a class="text-danger" href="{% url 'delete_cake' cake.id }">Delete</a>
-                                    </small>
-                              {% endif %}        
-                            </div>
-                    </div>
-              </div> -->
-              <!-- {% endfor %} -->
         </div>
 </div>
        
