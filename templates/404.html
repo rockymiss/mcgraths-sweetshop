@@ -2,21 +2,22 @@
 <title>Page Not Found</title>
 {% endblock %}{% block content %}
 
-<section id='error' class="index-content background">
-      
-      <div class="spacer py-5"></div>
+<div class="overlay"></div>
+<div class="spacer py-5 m-0"></div>
+<div class="container-fluid pt-5 text-center w-75">
 
-  <div class="row justify-content-center align-items-center">
-    <div class="col">
-      <div class="row align-items-center">
+      <div class="row justify-content-center align-items-center">
         <div class="col">
-          <h1 class="error-heading text-center p-bold">Oops you've lost your way.</h1>
-          <h2 class="text-center p-bold"> Click on our logo in the navbar to find your way home.</h2>
+          <div class="row align-items-center">
+            <div class="col">
+              <h1 class="error-heading text-center p-bold">Oops you've lost your way!</h1>
+              <h2 class="text-center p-bold"> Click on our logo in the navbar to find your way home.</h2>
+            </div>
+          
+            </div>
+          </div>
         </div>
-      
-        </div>
-      </div>
-    </div>
-</section>
+</div>
+
 
 {% endblock %}
