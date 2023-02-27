@@ -8,21 +8,23 @@ Html validation was done with [https://validator.w3.org/](https://validator.w3.o
 
 #### **Errors**
 
-![Home Page](https://res.cloudinary.com/rockymiss/image/upload/v1677467234/mcgraths/errors/index_vsvsxk.png)
+##### Home Page
 
 This error is relation to a dropdown menu using bootstrap 4.  The error could not be avoided and does not affect the functionality of the website. These ID duplicates appeared on each validation page as it was in the navbar.
 
-#### **Products**
+<details open>
+<summary>Home Page</summary>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1677467234/mcgraths/errors/index_vsvsxk.png"></p>
 
-![P Tags - Products](https://res.cloudinary.com/rockymiss/image/upload/v1677467234/mcgraths/errors/index_vsvsxk.png)
+##### Products
 
 Open and closed p tags appeared as validation errors on any page with products due to the form completion when filling out the add product form.  This does not affect functionality of the website.
 
-#### **#Pages**
+<details open>
+<summary>Home Page</summary>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1677467234/mcgraths/errors/index_vsvsxk.png"></p>
 
-![Form Errors](https://res.cloudinary.com/rockymiss/image/upload/v1677471750/mcgraths/errors/form-errors_uagun8.png)
-
-Unfortunately I had a few form errors saying the form tag was opened but not closed.  This was in relation to the cart.html.  Due to time constraints I couldn't look into this further.  While I don't believe it affects the functionality of the site I would like to investigate this further.  
+#### **#Pages** 
 
 #### **Error Pages**
 ![403 Error Page](#)
@@ -32,7 +34,9 @@ Unfortunately I had a few form errors saying the form tag was opened but not clo
 
 The stylesheet was validated using [https://jigsaw.w3.org/css-validator/](https://jigsaw.w3.org/css-validator/)
 
-![Stylesheet validation](#)
+<details open>
+<summary>No Errors</summary>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1677473539/mcgraths/errors/css-no-error_qgl4a4.png"></p>
 
 
 ### Python Validation
@@ -119,7 +123,11 @@ Javascript validation was done with [JShint](https://jshint.com/). All pages wer
 
 #### **Errors**
 
-![Stripe](https://res.cloudinary.com/rockymiss/image/upload/v1677472969/mcgraths/errors/js-stripe-elements_ohuzgh.png)
+The only error was an unused variable in relation to Stripe.  The variable was not unused, just in another location where JS could be loaded.
+
+<details open>
+<summary>Stripe</summary>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1677472969/mcgraths/errors/js-stripe-elements_ohuzgh.png"></p>
 
 ## Lighthouse Testing
 
@@ -174,7 +182,7 @@ Despite updating product_detail and quantity_input_script with the bug fix from 
 <summary>Category List</summary>
 <p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1676152671/mcgraths/category_list_wrong_lkw07u.png"></p>
 
-I wanted to create a for loop so that when new categories were added by admin the dropdown list on the navbar for categories would automatically update. To loop I used the variable "products" from the product_list function in my products view.  Each time I clicked on a category it would display the products from that category, which is what I wanted it to do but when I clicked on the dropdown list again all other categories except the one I just clicked disappeared.  To fix this I created a new variable in the product_list function called product_drop which kept the full list of categories at all times.
+I wanted to create a for loop so that when new categories were added by admin the dropdown list on the navbar for categories would automatically update. To loop I used the variable "products" from the product_list function in my products view.  Each time I clicked on a category it would display the products from that category, which is what I wanted it to do but when I clicked on the dropdown list again all other categories except the one I just clicked disappeared.  To fix this I created a new variable in the product_list function called product_drop which kept the full list of categories at all times.  Unfortunately on further testing I noticed categories being duplicated.  For now I have created the list based on categories already in.  
 
 I created an issue in github projects and used a development branch called [all-categories-bug](https://github.com/rockymiss/mcrocks-shop/issues/61 )to deal with this issue.  
 </details>
