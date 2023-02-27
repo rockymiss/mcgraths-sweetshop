@@ -164,7 +164,7 @@ This page is the landing page and is the first page that users will see when the
 
 #### Products
 
-Products can be displayed all at once in a ListView or individually in a detailed view.  There are different categories to choose from which can be found on the navigation bar.  If I user selects a category they will see the number of products in the shop as well as and option to return to the previous page.  A user can also sort the images in various different ways using a drop down button on the right hand side of the all products page.  To view an item a user can click view item which will bring them to a detailed view of the image where they can also add to their cart.   If a superuser is logged in they will see Edit and Delete buttons.  These will not be visible to a non-super user. 
+Products can be displayed all at once in a ListView or individually in a detailed view.  There are different categories to choose from which can be found on the navigation bar.  If a user selects a category they will see the number of products in the shop as well as and option to return to the previous page.  A user can also sort the images in various different ways using a drop down button on the right hand side of the all products page.  To view an item, a user can click view item which will bring them to a detailed view of the image where they can also add to their cart.   If a superuser is logged in they will see Edit and Delete buttons.  These will not be visible to a non-super user.
 
 <details open>
 <summary>Products</summary> 
@@ -191,23 +191,43 @@ From the Cart the user can see a list of products they added.  They can also cho
 
 #### Checkout
 
-Checkout also gives the users an opportunity to add or remove from their cart before proceeding to pay.  Totals can be seen clearly and a message alerting users that if they spend more then delivery is free!  Checkout is done using Stripe.  Once the user fills out the form and enters their payment details they can complete their order.  A spinner will appear on the screen to let the users know that something has happened. Once completed a message will appear to the user to confirm their order details.  On smaller screens users will get a message to say that an email has been sent to them. 
+Checkout also gives the users an opportunity to add or remove from their cart before proceeding to pay.  Totals can be seen clearly and a message alerting users that if they spend more then delivery is free!  Checkout is done using Stripe.  Once the user fills out the form and enters their payment details they can complete their order.  A spinner will appear on the screen to let the users know that something has happened. Once completed a message will appear to the user to confirm their order details.  On smaller screens users will get a message to say that an email has been sent to them.
 
 <details open>
-<summary>Checkout</summary> 
+<summary>Checkout</summary>
 <p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1677483011/mcgraths/features/checkout_zhnmgh.png"></p>
+</details>
 
 <details open>
-<summary>Order Information</summary> 
+<summary>Order Information</summary>
 <p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1677483080/mcgraths/features/Order-info_lnh0cu.png"></p>
 </details>
 
 <details open>
-<summary>Checkout Success!</summary> 
-<p align="center"><img src="<details open>
-<summary>Order Information</summary> 
-<p align="center">Discount<img src="https://res.cloudinary.com/rockymiss/image/upload/v1677483080/mcgraths/features/Order-info_lnh0cu.png"></p>
-</details>"></p>
+<summary>Checkout Success!</summary>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1677483294/mcgraths/features/Success_eknnyq.png"></p>
+</details>
+
+#### Footer
+
+The footer includes Assistance where users can contact us, read our privacy policy, shipping policy, returns and exchanges policy and link to social media accounts.  The footer also invites a user to sign up the monthly newsletter where they will receive codes for discounts at the checkout. Fictional for now of course! 
+
+<details open>
+<summary>Checkout</summary>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1677491110/mcgraths/features/footer_ohgol3.png"></p>
+</details>
+
+#### Cake Showcase
+
+Other features include an opportunity for our customers to post a picture of their cakes or bakes that they make.  Other users can like their cake posts and comment on them.
+
+#### Shop Management
+
+Store Management is available when a superuser is signed in.  In Shop Management admin can, add products, approve showcase posts, review comments left by other users, read messages from customers and add or delete discounts.   The page for store management is clearly laid out in a list and easy to use. 
+
+<details open>
+<summary>Shop Management</summary>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1677491462/mcgraths/features/manage_y49ohj.png"></p>
 </details>
 -----
 
