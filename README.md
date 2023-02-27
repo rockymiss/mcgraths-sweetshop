@@ -119,16 +119,15 @@ The website consists of ? pages
 
 ### Colours
 
-Colour info here
+Colours were choosen because they reflect the warmth and fun that baking cakes can be!
 
 ![Colour Palette](https://res.cloudinary.com/rockymiss/image/upload/v1668103000/mcgraths/mcrocks-palette_rmuxd0.png)
 
-![Gradient](#)
 
 
 ### Typography
 
-Clean font - Albert Sans - content text weight 400 headings weight 700 bold
+Poppins was used to give an overall clean look to the site.  It's also easy to read. 
 
 
 ## Features
@@ -137,43 +136,55 @@ Clean font - Albert Sans - content text weight 400 headings weight 700 bold
 
 #### Navigation
 
-Navigation appears on each page.  The design remains consistent throughout, however the menu options change depending of whether a user or admin user is logged in or out. 
+Navigation appears on each page.  The design remains consistent throughout, however the menu options change depending of whether a user or admin user is logged in or out. The logo appears in the top left always as does the cart and login icons to the right. All other menus toggle to a hamburger menu on smaller screens.  Navigation consists of a search bar and links to products, Special Offers, Cake Showcase and Contact.  
 
 <details open>
-<summary>Navigation</summary> 
-<p align="center"><img src="#"></p>
+<summary>Navigation Large Screen</summary> 
+<p align="center">Navigation<img src="https://res.cloudinary.com/rockymiss/image/upload/v1677479608/mcgraths/features/nav_gd66gv.png"></p>
 
-<p align="center"><img src="#"></p>
+<p align="center">Navigation Smaller Screens<img src="https://res.cloudinary.com/rockymiss/image/upload/v1677479820/mcgraths/features/nav-burger_kno1c6.png"></p>
 
-<p align="center"><img src="#"></p>
+<p align="center">Navigation dropdown<img src="https://res.cloudinary.com/rockymiss/image/upload/v1677479822/mcgraths/features/nav_drop_ingqee.png"></p>
 
-<p align="center"><img src="#"></p>
 
 </details>
 
 
 #### Home Page
 
-This page is the landing page and is the first page that users will see when the site loads.  logo etc.
-Page info
+This page is the landing page and is the first page that users will see when the site loads.  The logo is clearly in the middle inviting the user to buy cake supplies.  When a user hovers over the logo in the centre of the screen the image disappears and the works 'Click to Shop' appear. 
 
 <details open>
-<summary>Image</summary> 
-<p align="center"><img src="#"></p>
+<summary>Click to Shop</summary>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1677480136/mcgraths/features/click-to-shop_qhvqss.png"></p>
 
-<p align="center"><img src="#"></p>
+<p align="center">Hover Effect<img src="https://res.cloudinary.com/rockymiss/image/upload/v1677480138/mcgraths/features/click-hover_bwlyn1.png"></p>
 </details>
 
 
-#### Page Name
+#### Products
 
-Page info
+Products can be displayed all at once in a ListView or individually in a detailed view.  There are different categories to choose from which can be found on the navigation bar.  If I user selects a category they will see the number of products in the shop as well as and option to return to the previous page.  A user can also sort the images in various different ways using a drop down button on the right hand side of the all products page.  To view an item a user can click view item which will bring them to a detailed view of the image where they can also add to their cart.   If a superuser is logged in they will see Edit and Delete buttons.  These will not be visible to a non-super user. 
 
 <details open>
-<summary>Image</summary> 
-<p align="center"><img src="#"></p>
+<summary>Products</summary> 
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1677480498/mcgraths/features/products_qsteat.png"></p>
 
-<p align="center"><img src="#"></p>
+<p align="center">Product View<img src="https://res.cloudinary.com/rockymiss/image/upload/v1677480566/mcgraths/features/detail-product_utiex6.png"></p>
+</details>
+
+<p align="center">Detail View<img src="https://res.cloudinary.com/rockymiss/image/upload/v1677480566/mcgraths/features/detail-product_utiex6.png"></p>
+</details>
+
+#### Cart
+
+From the Cart the user can see a list of products they added.  They can also choose to add, remove or delete items as they wish.  Payments are made through Stripe and once the user has finalised their items they can proceed to payment.  Before this however, they can add a discount.  Discounts are usually given out on the facebook page or by way of Monthly Newsletter to thank our customers for their support.
+
+<details open>
+<summary>Cart</summary> 
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1677480498/mcgraths/features/products_qsteat.png"></p>
+
+<p align="center">Discount<img src="https://res.cloudinary.com/rockymiss/image/upload/v1677481145/mcgraths/features/discount_gz8oyt.png"></p>
 </details>
 
 -----
@@ -269,9 +280,18 @@ Links to purchasers who are local cake makers.  This would show loyality to clie
 
 McRocks Cake Supplies has a facebook page for marketing to post content, update customers and get them engaged.  The most recent posts are offering a 10% discount on the website and showing off a product that is on sale on the website. 
 
-<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1677375702/mcgraths/cover_facebook_emm61e.png"></p>
+<p align="center">Facebook Cover<img src="https://res.cloudinary.com/rockymiss/image/upload/v1677375702/mcgraths/cover_facebook_emm61e.png"></p>
 
-<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1677375285/mcgraths/posts_and_info_jbrlmr.png"></p>
+<p align="center">Facebook Page<img src="https://res.cloudinary.com/rockymiss/image/upload/v1677375285/mcgraths/posts_and_info_jbrlmr.png"></p>
+
+
+## Instagram
+
+McRocks Cake Supplies also has an Instagram page for marketing to post content, update customers and get them engaged.  Using Instagram helps McRocks reach out to a wider audience.  The plan is to post competitions on Instragram requesting customers to post pictures of their cake bakes and they could win a Cake Supply hamper. 
+
+<p align="center">Instagram Features<img src="https://res.cloudinary.com/rockymiss/image/upload/v1677481434/mcgraths/features/unnamed_hcbedq.png"></p>
+
+<p align="center">Instagram Post<img src="https://res.cloudinary.com/rockymiss/image/upload/v1677481429/mcgraths/features/unnamed_geviog.png"></p>
 
 -----
 
