@@ -28,13 +28,9 @@
                                 <p class="card-title"><strong>Email {{ message.email }}</strong></p>
                                 <p class="card-text">Message: {{ message.message }}</p>
                                 <p class="card-text text-muted">Date: {{ message.date_created }}</p>
-                                
-                               
                                 <p>
-                                    
                                     <a href="{% url 'delete_message' message.pk %}" class="btn btn-primary buttons-all rounded p-2">Delete</a>
-                                  </p>
-                            
+                                </p>
                             </div>
                     </div>
               </div>

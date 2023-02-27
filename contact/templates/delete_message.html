@@ -9,18 +9,18 @@
     <div class="spacer py-5 m-0"></div>
     
         <div class="row justify-content-around ">
-<div class="col p-3">
-        <form method="post" class="text-center mb-2">
-            {% csrf_token %}
-            <p> Are you sure {{ user.username }}, that you would like to <strong>delete</strong> this message? </p>
-            <input class="grey-bg rounded p-1 fw-bold border-1" type="submit" value="Yes">
-        </form>    
+            <div class="col p-3">
+                <form method="post" class="text-center mb-2">
+                    {% csrf_token %}
+                    <p> Are you sure {{ user.username }}, that you would like to <strong>delete</strong> this message? </p>
+                    <input class="grey-bg rounded p-1 fw-bold border-1" type="submit" value="Yes">
+                </form>    
 
-        <form class="text-center" method="GET" action="{% url 'review_message' %}">
-            <input class="grey-bg rounded p-1 fw-bold border-1" type="submit" value="Go Back">
-        </form>
-    </div>
-</div>
+                 <form class="text-center" method="GET" action="{% url 'review_message' %}">
+                    <input class="grey-bg rounded p-1 fw-bold border-1" type="submit" value="Go Back">
+                </form>
+            </div>
+        </div>
 </div>
     
 {% endblock %}

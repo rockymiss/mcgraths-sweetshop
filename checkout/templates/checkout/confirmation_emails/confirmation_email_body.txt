@@ -5,9 +5,10 @@ Your order was successfull from McRocks Cake Supplies.  Please find information 
 Order Number: {{ order.order_number }}
 Order Date:  {{ order.date }}
 
-Order Total:
-Delivery Cost: 
-Grand Total: 
+Order Total: {{ order.order_total }}
+Discount: {{ order.discount }}
+Delivery Cost: {{ order.delivery }}
+Grand Total: {{ order.grand_total }}
 
 Your order will be shipped to: 
 

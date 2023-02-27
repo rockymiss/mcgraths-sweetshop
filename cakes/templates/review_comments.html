@@ -9,11 +9,10 @@
 
   <!--Main display for list of products -->
 
-  <div class="overlay"></div>
+<div class="overlay"></div>
 <div class="container-fluid pt-5  justify-content-center">
   <div class="spacer py-5 m-0"></div>
      
-
             <h1>Review Comments</h1>
 
             <a href="{% url 'management' %}" class="btn btn-outline-black rounded-0 btn-lg">
@@ -25,15 +24,11 @@
                     <div class="card m-3 p-2 border-1 cream-bg" style="width: auto;">
                         <h5 class="card-title">From: {{ comment.name }}</h5>
                             <div class="card-body">
-                                
-                                
                                 <p class="card-text">Comment: {{ comment.post.title | linebreaks }}</p>               
                                 <p>
-                                    
                                   <a href="{% url 'approve_comment' comment.pk %}" class="btn btn-primary buttons-all p-2">Approve Comment</a>
                                   <a href="{% url 'delete_comment' comment.pk %}" class="btn btn-primary buttons-all p-2">Delete Comment</a>
                                   </p>
-                            
                             </div>
                     </div>
               </div>

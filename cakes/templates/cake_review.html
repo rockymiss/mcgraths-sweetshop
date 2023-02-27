@@ -21,9 +21,7 @@
             <a href="{% url 'management' %}" class="btn btn-outline-black rounded-0 btn-lg">
               <i class="fas fa-chevron-left"> </i>
               <span class="text-uppercase">Back to Store Management</span></a>
-              
-          </div>
-
+            </div>
       </div>
 
         <div class="row justify-content-around ">
@@ -43,14 +41,8 @@
                               <a href="{% url 'cake_approve' cake.pk %}" class="btn btn-primary buttons-all p-2">Approve</a>
                               <a href="{% url 'cake_delete' cake.pk %}" class="btn btn-primary buttons-all p-2">Delete</a>
                             </p>
-    
-                            
-    
                         </div>
-                        
-                        
                 </div>
-               
             </div> 
             {% endfor %}
             {% endif %}
